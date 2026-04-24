@@ -1,0 +1,135 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.contact-secA {
+  margin-top: var(--headerheight);
+  padding: 100px 0 40px 0;
+}
+.contact-secA .flex-box {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background-image: url("/assets/images/contact/map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px;
+}
+.contact-secA .flex-box .col:first-child h1 {
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+.contact-secA .flex-box .col:first-child .col-flex {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.contact-secA .flex-box .col:first-child .col-flex figure {
+  height: 35px;
+  width: 35px;
+}
+.contact-secA .flex-box .col:first-child .col-flex figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contact-secA .flex-box .col:first-child .col-flex p {
+  max-width: 274px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+.contact-secA .flex-box .col:first-child .col-flex .action {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.contact-secB {
+  height: 95vh;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+}
+.contact-secB img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact-secB .banner-wrapper {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.contact-secB .banner-wrapper .form-sec {
+  width: 586px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  background: var(--white);
+  padding: 30px 50px;
+  margin-left: auto;
+}
+.contact-secB .banner-wrapper .form-sec h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  max-width: 471px;
+  margin: 0 auto 40px;
+}
+.contact-secB .banner-wrapper .form-sec form {
+  --item: 2;
+}
+.contact-secB .banner-wrapper .form-sec form .submit-btn {
+  margin: 20px auto 0;
+}
+.contact-secB .banner-wrapper .form-sec form .select-dropdown {
+  max-width: 100% !important;
+  width: 100%;
+  padding: 0px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+.contact-secB .banner-wrapper .form-sec form .select-dropdown img {
+  width: 17px;
+  height: 11px;
+}
+.contact-secB .banner-wrapper .form-sec form .select-dropdown .sel-display {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.contact-secB .banner-wrapper .form-sec form .select-dropdown .sel-panel {
+  width: 100%;
+}
+.contact-secB .banner-wrapper .form-sec form .select-dropdown .sel-panel .sel-panel-inner ul li {
+  white-space: nowrap;
+}
+
+.contact-secC {
+  line-height: 0;
+  height: 536px;
+}
+.contact-secC iframe {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=ContactUs.css.map */

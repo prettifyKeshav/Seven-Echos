@@ -1,0 +1,211 @@
+@import '../_var'
+
+.about-banner
+    margin-top: var(--headerheight)
+    background: #F8ECE6
+    padding: 60px 0
+    text-align: center
+    .flex-box
+        display: flex
+        justify-content: center
+        gap: 50px
+        align-items: center
+        .col:first-child
+            text-align: left
+            h2
+                font-weight: 400
+                font-size: 18px
+                color: #666666
+                text-transform: uppercase
+                margin-bottom: 10px
+            h1
+                font-weight: 700
+                color: $secondary
+                font-size: 36px
+                width: 510px
+                span
+                    color: $primary
+            a
+                margin-top: 60px
+
+        .col:last-child
+            figure
+                width: 546px
+                height: 362px
+                border-radius: 10px
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+
+.about-secA
+    padding: 50px 0 
+    .flex-box
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 100px
+        .col:first-child
+            figure
+                width: 362px
+                height: 360px
+                img 
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+        .col:last-child
+            max-width: 473px
+            h2
+                font-weight: 600
+                font-size: 24px
+                line-height: 1.2
+                margin-bottom: 20px
+                color: $black
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.3
+                color: #666666
+
+.about-secB
+    .banner
+        position: relative
+        height: calc( 100vh - 96px )
+        overflow: hidden
+        &::before
+            content: ""
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 27.23%, rgba(0, 0, 0, 0.7) 67.07%)
+        img 
+            height: 100%
+            width: 100%
+            object-fit: cover
+        .banner-wrapper
+            bottom: 25%
+            .tab-nav
+                display: flex
+                align-items: center
+                margin-bottom: 50px
+                gap: 70px
+                li
+                    font-weight: 700
+                    font-size: 36px
+                    line-height: 40px
+                    color: #FFFFFF66
+                    position: relative
+                    transition: 0.5s ease
+                    cursor: pointer
+                    &.active
+                        color: $white
+                        &::before
+                            width: 100%
+                    &::before
+                        content: ""
+                        position: absolute
+                        bottom: -10px
+                        left: 0
+                        width: 0%
+                        height: 1px
+                        background: $white
+                        transition: 0.5s ease
+            .tab-nav-content
+                .tabs
+                    max-width: 425px
+                    p
+                        color: #FFFFFFB2
+
+.about-secC
+    padding: 50px 0
+    h2
+        text-align: center
+        margin-bottom: 30px
+
+.our-values-card
+    border: 1px solid #DBDBDB
+    border-radius: 10px
+    height: 332px
+    padding: 30px
+    background: $white
+    transition: 0.4s ease
+    &:hover
+        background: linear-gradient(180deg, #FFFFFF 0%, #F8ECE6 100%)
+    figure
+        height: 70px
+        width: 70px
+        margin: 20px auto 30px
+        img
+            height: 100%
+            width: 100%
+            object-fit: contain
+    figcaption
+        h3
+            font-weight: 700
+            font-size: 20px
+            color: $black
+            text-align: center
+            margin-bottom: 7px
+
+        p
+            font-weight: 400
+            font-size: 16px
+            text-align: center
+            color: $text
+
+.about-secD
+    padding: 50px 0 
+    background: #F1F1F1
+    position: relative
+    overflow: hidden
+    .vector-img
+        z-index: 0
+        width: 486px
+        height: 414px
+        position: absolute
+        bottom: -22%
+        right: -12%
+        scale: -.7
+        img
+            height: 100%
+            width: 100%
+            object-fit: contain
+    .flex-box
+        display: flex
+        justify-content: center
+        gap: 70px
+        .col:last-child
+            flex: 0 1 50%
+            h2
+                font-weight: 400
+                font-size: 18px
+                color: $text
+                margin-bottom: 30px
+                text-transform: uppercase
+            h3
+                font-weight: 700
+                font-size: 32px
+                line-height: 38px
+                color: $secondary
+                max-width: 493px
+                margin-bottom: 70px
+            figure
+                width: 155px
+                height: 36px
+                margin-bottom: 20px
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+            .bottom
+                h4
+                    font-weight: 600
+                    color: $black
+                    font-size: 20px
+                    line-height: 26px
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    color: #000000B2

@@ -1,0 +1,572 @@
+@import '../_var'
+
+#Testimonials,#How_It_Works,#Ngo_Network,#Faqs
+  scroll-margin-top: 95px
+
+.ngo-landing-banner
+    margin-top: var(--headerheight)
+    background: #F8ECE6
+    padding: 100px 0 0 0 
+    line-height: 0
+    .flex-box
+        display: flex
+        justify-content: space-between
+        max-width: 980px
+        margin: auto
+        figcaption
+            max-width: 510px
+            h1
+                font-weight: 700
+                font-size: 36px
+                line-height: 1.1
+                color: $secondary
+                margin-bottom: 15px
+                span
+                    color: $primary
+            p
+                font-weight: 400
+                font-size: 18px
+                line-height: 24px
+                max-width: 394px
+                margin-bottom: 20px
+        figure
+            position: relative
+            img
+                position: relative
+                z-index: 1
+            .vector-img
+                width: 443px
+                height: 391px
+                position: absolute
+                bottom: -11%
+                left: -19%
+                z-index: 0
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+
+.ngo-landing-secA
+    padding: 50px 0 
+    h2
+        font-weight: 400
+        font-size: 18px
+        text-transform: uppercase
+        color: $text
+        text-align: center
+    h3
+        font-weight: 700
+        font-size: 36px
+        line-height: 1.1
+        text-align: center
+        color: #173254
+        max-width:  484px
+        margin: 10px auto 40px
+
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 20px
+        .col
+            border: 1px solid #D5D5D5
+            border-radius: 10px
+            padding: 20px
+            cursor: pointer
+            position: relative
+            overflow: hidden
+            height: 234px
+            transition: 0.5s ease
+            &::before
+                content: ""
+                position: absolute
+                inset: 0
+                z-index: 1
+                width: 100%
+                height: 100%
+                background: linear-gradient(180deg, #FFFFFF 0%, #F8ECE6 100%)
+                transition: 0.5s ease
+            &:hover
+                border: 1px solid $primary
+                .plus
+                    opacity: 0
+                &::before
+                    background: $primary
+                .col-wrap
+                    top: 34%
+                    figcaption
+                        h4
+                            color: $white
+                        p
+                            color: $white
+                            opacity: 1
+                            transform: translateY(0%)
+            .plus
+                position: absolute
+                bottom: 0
+                right: 0
+                z-index: 2
+                width: 33px
+                height: 33px
+                background: $white
+                border-radius: 7px
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 0 15px 15px 0
+                transition: 0.3s ease
+
+            .col-wrap
+                position: absolute
+                top: 65%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                z-index: 1
+                transition: 0.5s ease
+                figure
+                    width: 57px
+                    height: 57px
+                    margin: auto
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: contain
+                figcaption
+                    h4
+                        font-weight: 600
+                        color: $black
+                        font-size: 18px
+                        text-align: center
+                        margin: 20px 0 10px 0
+                        transition: 0.5s ease
+                    p
+                        font-weight: 400
+                        font-size: 14px
+                        text-align: center
+                        padding: 0 20px 
+                        color: $black
+                        transform: translateY(100%)
+                        transition: 0.7s ease
+                        opacity: 0
+
+.ngo-landing-secB
+    position: relative
+    background: linear-gradient(180deg, #173254 0%, #1F4370 100%)
+    padding: 60px 0 80px 0
+    h2
+        font-weight: 400
+        font-size: 18px
+        text-transform: uppercase
+        color: #FFFFFFB2
+        text-align: center
+    h3
+        font-weight: 700
+        font-size: 36px
+        line-height: 1.1
+        text-align: center
+        color: $white
+        max-width:  484px
+        margin: 10px auto 40px
+    .year-swiper-grid
+        display: flex
+        flex-direction: column
+    .swiper-card
+        display: grid
+        grid-template-columns: 1fr
+        gap: 3rem
+        align-items: center
+        width: 80%
+        margin: 0 auto
+        @include media(540)
+            width: 100%
+        .card-body
+            align-items: center
+            display: flex
+            justify-content: center
+            gap: 4rem            
+            @include media(768)
+                flex-direction: column-reverse
+                gap: 2rem
+            figure
+                width: 387px
+                height: 266px
+                border-radius: 10px
+                overflow: hidden
+                border-radius: 10px
+                flex: 1
+                @include media(540)
+                    width: 100%
+                    height: 100%
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            .card-content
+                flex: 1
+                max-width: 313px
+                @include media(768)
+                    max-width: 100%
+                    text-align: center
+                h5
+                    font-weight: 600
+                    font-size: 25px
+                    line-height: 35px
+                    color: $text
+                    margin-bottom: 15px 
+
+                    font-weight: 600
+                    font-size: 24px
+                    line-height: 26px
+                    color: $white
+                p
+                    color: $text
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 22px
+                    color: #FFFFFFB2
+                    // max-width: 313px
+                    margin-bottom: 30px
+                a
+                    padding: 10px 30px
+                    
+
+    .year-timeline
+        margin: 0px 0 55px
+        position: relative
+        flex: 1
+        @include media(768)
+            flex: 1 -50%
+            margin: 40px 0 15px
+        .container
+            max-width: 740px
+            @include media(1024)
+              max-width: 100%
+            @include media(991)
+                padding: 0 18px
+        .years-container
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        .year-dots
+            display: flex
+            justify-content: space-between
+            width: 100%
+            position: relative
+            flex-wrap: nowrap
+            overflow-x: auto
+            z-index: 2
+            @include media(540)
+                gap: 25px
+            &::-webkit-scrollbar
+                height: 4px
+            &::-webkit-scrollbar-track
+                box-shadow: unset
+                background: #6666662b
+            &::-webkit-scrollbar-thumb
+                background-color: $primary
+                border-radius: 10px
+                cursor: pointer
+            figure
+                width: 63px
+                height: 63px
+                opacity: 1
+                background: #455B76
+                border: 1px solid #66666633
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-bottom: 20px
+                transition: all 0.3s ease
+                line-height: 0
+                padding: 14px
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+                    opacity: 0.4
+                    transition: all 0.3s ease
+        .year-dot
+            display: flex
+            flex-direction: column
+            align-items: center
+            cursor: pointer
+            color: #A1A1A1
+            transition: all 0.3s ease
+            width: 100%
+            margin: 0 auto
+            text-align: center
+            font-family: Poppins
+            font-weight: 500
+            font-size: 16px
+            line-height: 24px
+            position: relative
+
+            @include media(1250)
+                font-size: 12px
+            @include media(768)
+            &.active
+                color: $white
+                figure
+                    background: $primary
+                    img
+                        opacity: 1
+        .timeline-line-left
+            position: absolute
+            top: 32px
+            left: 0
+            right: 0
+            height: 2px
+            background-color:  #3D5169
+            z-index: 1
+            width: 50%
+            @include media(540)
+                background: none
+        .timeline-line-right
+            position: absolute
+            top: 32px
+            right: 0
+            height: 2px
+            background-color: #3D5169
+            z-index: 1
+            width: 50%
+            @include media(540)
+                background: none
+    .swiper-parent
+      flex: 1
+      max-width: 1030px
+      margin: auto
+      @include media(768)
+        flex: 0 50%
+      .container
+        max-width: 80%
+        display: flex
+        justify-content: center
+        gap: 20px
+        @include media(1550)
+          max-width: 94%
+        @include media(1024)
+          max-width: 100%
+        @include media(768)
+            padding: 0 18px
+            flex-direction: column-reverse
+        .swiper-wrap
+            width: 100%
+            flex: 0 1 100%
+            position: relative 
+            @include media(768)
+                width: 100%
+            .swiper-wrapper
+                align-items: center
+            .swiper-nav
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                display: flex
+                justify-content: space-between
+                width: 100%
+                z-index: 999999
+                @include media(540)
+                    display: none
+                button
+                    width: 45px
+                    height: 45px
+                    // background-color: var(--white)
+                    border-radius: 50%
+                    border: 1px solid $white
+                    display: flex
+                    justify-content: center
+                    align-items:  center
+                    &:hover
+                        svg
+                            path
+                                stroke: $secondary
+                    &.swiper-button-disabled
+                        opacity: 0.5
+                        cursor: no-drop
+                    @include media(768)
+                      width: 35px
+                      height: 35px
+                    @include media(540)
+                      background: transparent
+                      box-shadow: none
+                    svg
+                        width: 30px
+                        height: 30px
+                        @include media(768)
+                          width: 25px
+                          height: 25px
+                        path
+                            stroke: $white
+                            fill: none
+                .specialization-prev
+                    transform: rotate(270deg)
+                .specialization-next
+                    transform: rotate(90deg)
+
+
+
+
+.ngo-landing-secC
+    padding: 50px 0 
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 100px
+        .col:first-child
+            h2
+                font-weight: 400
+                font-size: 18px
+                text-transform: uppercase
+                color: #666666
+            h3
+                font-weight: 700
+                font-size: 36px
+                line-height: 1.1
+                color: #173254
+                max-width:  484px
+                margin: 10px 0 20px
+            p
+                max-width: 470px
+                font-weight: 400
+                font-size: 16px
+                color: #666666
+                margin-bottom: 30px
+        .col:last-child
+            figure
+                width: 495px
+                height: 548px
+                position: relative
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+                    display: block
+                    @include media(540)
+                        object-fit: cover
+                .pointer
+                    position: absolute
+                    width: 18px
+                    height: 18px
+                    background: $primary
+                    border-radius: 50%
+                    border: 3px solid #e3e3e3
+                    cursor: pointer
+                    transform: translate(-50%, -50%)
+                    &.first
+                        top: 27.5%
+                        right: 65.4%
+                        @include media(540)
+                            right: 28.4%
+                    &.second
+                        top: 36%
+                        right: 76%
+                        @include media(540)
+                            right: 27%
+                    &.third
+                        top: 37%
+                        right: 53%
+                        @include media(540)
+                            right: 22.5%
+                    &.fourth
+                        top: 46%
+                        right: 62.5%
+                        @include media(540)
+                            right: 9%
+                    @keyframes pulse 
+                        0% 
+                            transform: scale(1)
+                            opacity: 1
+                        100% 
+                            transform: scale(2.5)
+                            opacity: 0
+                    &::after 
+                        content: ""
+                        position: absolute
+                        width: 18px
+                        height: 18px
+                        background: rgba(181, 60, 0, 0.4)
+                        border-radius: 50%
+                        top: -20%
+                        left: -29%
+                        transform: translate(-50%,-50%)
+                        animation: pulse 1.8s infinite
+                    &:hover .tooltip 
+                        opacity: 1
+                        bottom: 25px
+                    .tooltip 
+                        position: absolute
+                        bottom: 28px
+                        left: 50%
+                        transform: translateX(-50%)
+                        background: $primary
+                        color: #fff
+                        padding: 6px 16px
+                        border-radius: 5px
+                        white-space: nowrap
+                        opacity: 0
+                        pointer-events: none
+                        transition: 0.3s ease
+                        font-weight: 700
+                        font-size: 16px
+                        &::before
+                            content: ""
+                            position: absolute
+                            bottom: -6px
+                            left: 50%
+                            transform: translateX(-50%)
+                            width: 0
+                            height: 0
+                            border-left: 6px solid transparent
+                            border-right: 6px solid transparent
+                            border-top: 6px solid $primary
+
+.ngo-landing-secD
+    background: #F1F1F1
+    padding: 50px 0
+    .heading
+        h2
+            font-weight: 400
+            font-size: 18px
+            text-transform: uppercase
+            color: #666666
+            text-align: center
+        h3
+            font-weight: 700
+            font-size: 36px
+            line-height: 1.1
+            color: #173254
+            max-width:  484px
+            text-align: center
+            margin: 10px auto 50px  
+
+.faq-sec
+    padding: 50px 0
+    position: relative
+    .vector-img
+        width: 303px
+        height: 281px
+        position: absolute
+        bottom: -11%
+        left: -4%
+        z-index: 0
+        img
+            height: 100%
+            width: 100%
+            object-fit: contain
+    .flex-box
+        position: relative
+        .col:first-child
+            h2
+                font-weight: 700
+                font-size: 36px
+                line-height: 1.1
+                margin: 0 0 30px 0
+                max-width: 427px
+        .col:last-child
+            flex: 1
+            max-width: 60%
+            margin-left: auto

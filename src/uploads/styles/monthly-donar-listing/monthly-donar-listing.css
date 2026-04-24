@@ -1,0 +1,893 @@
+@charset "UTF-8";
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.monthly-donar-listing-banner {
+  margin-top: var(--headerheight);
+}
+.monthly-donar-listing-banner .banner {
+  height: calc(100vh - var(--headerheight));
+  overflow: hidden;
+  position: relative;
+}
+.monthly-donar-listing-banner .banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper {
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper {
+  background: var(--white);
+  width: 439px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper h1 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  max-width: 269px;
+  margin: auto;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper {
+  position: relative;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown {
+  width: 100%;
+  padding: 12px 16px 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: var(--white);
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  height: 50px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown img {
+  width: 17px;
+  height: 11px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown .sel-display {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--text);
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown .sel-panel {
+  width: 100%;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .select-wrapper .select-dropdown .sel-panel .sel-panel-inner ul li {
+  white-space: nowrap;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__input-wrapper {
+  width: 100%;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__input {
+  position: relative;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #666;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__input:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__presets {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__presets .most-popular {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 5%;
+  position: absolute;
+  top: -6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__preset-btn {
+  position: relative;
+  flex: 1;
+  padding: 14px 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: var(--white);
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__preset-btn:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__preset-btn.active {
+  border-color: var(--secondary);
+  background: #E4EDF8;
+  color: var(--secondary);
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__submit {
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-a);
+  transition: 0.8s ease;
+  z-index: -1;
+  border-radius: 10px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-b);
+  transition: 0.8s ease;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+.monthly-donar-listing-banner .banner .banner-wrapper .box-wrapper .donation-box__submit:hover::after {
+  opacity: 1;
+}
+
+.monthly-donar-listing-section {
+  padding: 50px 0 0 0;
+}
+.monthly-donar-listing-section .heading {
+  margin-bottom: 20px;
+}
+.monthly-donar-listing-section .grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 20px;
+  padding: 10px 0 60px;
+}
+
+:root {
+  --ink: #1c1b18;
+  --accent: #b86b3a;
+  --accent-light: rgba(184,107,58,0.12);
+  --muted: #7a7163;
+  --white: #ffffff;
+  --shadow: 0 32px 80px rgba(28,27,24,0.18);
+}
+
+.soh-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.soh-wrap {
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.soh-header {
+  margin-bottom: 56px;
+  display: none;
+}
+
+.soh-tag {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.soh-title {
+  font-size: clamp(38px, 5.5vw, 62px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.soh-title span {
+  color: var(--accent);
+}
+
+/* Body grid */
+.soh-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Left: Swiper ── */
+.soh-swiper-col {
+  position: relative;
+}
+
+/* Swiper overrides */
+.soh-swiper {
+  margin: 0 !important;
+  width: 100% !important;
+  height: 460px !important;
+  overflow: visible !important;
+}
+
+.soh-swiper .swiper-slide {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, opacity 0.4s ease !important;
+  cursor: pointer;
+}
+.soh-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.soh-swiper .swiper-slide:hover img {
+  transform: scale(1.04);
+}
+.soh-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.48;
+}
+.soh-swiper .swiper-slide-active {
+  z-index: 10 !important;
+}
+
+.slide-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28, 27, 24, 0.6) 0%, rgba(28, 27, 24, 0.05) 55%, transparent 100%);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+/* Vertical dots */
+.soh-dots {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+}
+
+.soh-dot {
+  width: 4px;
+  border-radius: 3px;
+  background: rgba(28, 27, 24, 0.18);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 5px;
+}
+.soh-dot.active {
+  height: 20px;
+  background: var(--secondary);
+}
+
+/* ── Right: Content ── */
+.soh-content {
+  display: flex;
+  flex-direction: column;
+  background: #F2F2F2;
+  padding: 30px 50px;
+  border-radius: 10px;
+  height: 100%;
+  justify-content: center;
+}
+
+.soh-desc {
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 40px;
+  max-width: 430px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Person row */
+.soh-person {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.soh-bar {
+  width: 2.5px;
+  height: 54px;
+  background: var(--secondary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.soh-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.soh-name {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.soh-age {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.soh-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.soh-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(28, 27, 24, 0.14);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all 0.24s ease;
+  box-shadow: 0 2px 10px rgba(28, 27, 24, 0.07);
+}
+.soh-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.soh-btn:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 107, 58, 0.32);
+}
+.soh-btn:active {
+  transform: translateY(0);
+}
+
+/* Content fade animation */
+@keyframes sohFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.soh-content-inner {
+  animation: sohFadeIn 0.46s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .soh-body {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .soh-swiper {
+    width: 180px !important;
+    height: 380px !important;
+  }
+  .soh-swiper-col {
+    display: flex;
+    justify-content: center;
+  }
+  .soh-dots {
+    right: -18px;
+  }
+}
+.monthly-donor-detail-secA {
+  padding: 50px 0 20px 0;
+}
+.monthly-donor-detail-secA .grid-box {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
+}
+.monthly-donor-detail-secA .grid-box .col-left {
+  flex: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-left h2 {
+  font-weight: 600;
+  color: black;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters {
+  margin: 30px 0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper {
+  width: 735px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figure {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption {
+  flex: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec {
+  background: #F8ECE6;
+  border-radius: 10px;
+  padding: 40px 40px 0 40px;
+  position: relative;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec h2 {
+  color: var(--secondary);
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec ul {
+  border-left: 1px solid var(--secondary);
+  padding-top: 10px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec ul li {
+  max-width: 402px;
+  padding: 0 0 30px 40px;
+  position: relative;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec ul li::before {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: -0.2%;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  background: var(--secondary);
+  border-radius: 50%;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec .vector-img {
+  width: 436px;
+  height: 404px;
+  position: absolute;
+  bottom: -30%;
+  right: -16%;
+  z-index: 0;
+  scale: -0.7;
+}
+.monthly-donor-detail-secA .grid-box .col-left .our-mission-sec .vector-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far {
+  margin: 30px 0 0 0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 25px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box figure {
+  max-width: 295px;
+  flex: 0 1 100%;
+  height: 377px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian {
+  flex: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper {
+  margin: 0;
+  border-radius: 0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper.open {
+  background: #F1F1F1;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper.open .title h4 {
+  padding: 24px 24px 0px 24px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper .title h4 {
+  padding: 18px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper a {
+  margin: 0px 24px 24px 24px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  padding: 14px 18px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-a);
+  transition: 0.8s ease;
+  z-index: -1;
+  border-radius: 10px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-b);
+  transition: 0.8s ease;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .impact-so-far .flex-box .impact-accordian .accordian-wrapper a:hover::after {
+  opacity: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution {
+  margin: 40px 0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution h2 {
+  margin-bottom: 30px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .contribution-swiper {
+  max-width: 850px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .contribution-swiper .swiper-slide figure {
+  height: 338px;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .contribution-swiper .swiper-slide figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .contribution-swiper .swiper-slide figcaption h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  color: var(--black);
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .contribution-swiper .swiper-slide figcaption p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--text);
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .swiper-pagination-progressbar {
+  position: relative;
+  height: 3px;
+  background: #D0D0D0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .swiper-pagination-progressbar-fill {
+  background: var(--secondary) !important;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  margin: 30px 0 0 0;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-pagination {
+  width: 84%;
+  position: relative;
+  z-index: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-pagination .swiper-pagination-progressbar-fill {
+  background: var(--white);
+}
+.monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  top: 9%;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: row;
+  margin: 0;
+  width: 12%;
+}
+@media only screen and (max-width: 1024px) {
+  .monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-nav {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-nav {
+    top: 6%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .monthly-donor-detail-secA .grid-box .col-left .contribution .custom-pagination .swiper-nav {
+    display: none;
+  }
+}
+.monthly-donor-detail-secA .grid-box .col-right {
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  position: sticky;
+  top: calc(var(--headerheight) + 20px);
+  padding: 30px;
+  width: 380px;
+  max-width: 380px;
+}
+.monthly-donor-detail-secA .grid-box .col-right h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  max-width: 80%;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__input-wrapper {
+  width: 100%;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #666;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__presets {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+  margin: 30px 0 20px 0;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__presets .most-popular {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 5%;
+  color: var(--primary);
+  position: absolute;
+  top: -6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__preset-btn {
+  position: relative;
+  flex: 1;
+  padding: 10px 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: var(--white);
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__preset-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.monthly-donor-detail-secA .grid-box .col-right .donation-box__preset-btn.active {
+  border-color: var(--primary);
+  background: #FAF2EB;
+  color: var(--primary);
+}
+.monthly-donor-detail-secA .grid-box .col-right .bottom-btn-submit {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.monthly-donor-detail-secA .grid-box .col-right .bottom-btn-submit a:first-child {
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+.monthly-donor-detail-secA .grid-box .col-right .bottom-btn-submit a:last-child {
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.monthly-donar-detail-secB {
+  padding: 50px 0;
+}
+.monthly-donar-detail-secB .heading h2 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.monthly-donar-detail-secB .grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.monthly-donar-detail-secB .grid-box .col {
+  border: 1px solid #DBDBDB;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.monthly-donar-detail-secB .grid-box .col figure {
+  height: 45px;
+  width: 45px;
+  margin: auto;
+}
+.monthly-donar-detail-secB .grid-box .col figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.monthly-donar-detail-secB .grid-box .col h4 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.monthly-donar-detail-secB .grid-box .col p {
+  max-width: 80%;
+  margin: auto;
+}
+
+.faq-sec {
+  padding: 50px 0;
+  background: #F8ECE6;
+  position: relative;
+}
+.faq-sec .vector-img {
+  width: 303px;
+  height: 281px;
+  position: absolute;
+  bottom: -11%;
+  left: -4%;
+  z-index: 0;
+}
+.faq-sec .vector-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.faq-sec .flex-box {
+  position: relative;
+}
+.faq-sec .flex-box .col:first-child h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  margin: 0 0 30px 0;
+  max-width: 427px;
+}
+.faq-sec .flex-box .col:last-child {
+  flex: 1;
+  max-width: 60%;
+  margin-left: auto;
+}
+
+.similar-missions {
+  padding: 50px 0;
+}
+.similar-missions h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=monthly-donar-listing.css.map */
