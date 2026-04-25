@@ -97,149 +97,94 @@
 .home-secC
     padding: 50px 0
     .heading
-        margin-bottom: 30px
+        margin-bottom: 20px
+        h2
+            line-height: 1
     .swiper-group
         .swiper
             .swiper-wrapper
                 padding: 10px 0 
-
-    .card-link 
-        display: block 
-        text-decoration: none 
-        color: inherit 
-        // width: 355px
-        padding: 8px
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
-        border-radius: 10px  
-        .hotel-card 
-            background: #fff 
-            transition: all 0.3s ease 
-            figure 
-                position: relative
-                line-height: 0
-                height: 260px 
-                .swiper
-                    height: 100%
-                    width: 100%
-                    .swiper-wrapper
-                        padding: 0 
-                    .banner
-                        height: 100%
-                        width: 100%
-                    .swiper-pagination
-                        .swiper-pagination-bullet-active
-                            opacity: 1 !important
-                        .swiper-pagination-bullet
-                            width: 9px
-                            height: 9px
-                            opacity: 0.3
-                            background: $white !important
-                    img 
-                        width: 100% 
-                        height: 100%
-                        object-fit: cover
-                .tag
-                    position: absolute 
-                    top: 0px 
-                    left: 0px 
-                    background: #049153
-                    color: #fff 
-                    padding: 6px 10px 
-                    font-size: 14px 
-                    line-height: 1.4
-                    border-bottom-right-radius: 12px
-                    z-index: 1
-                .wishlist-btn 
-                    position: absolute 
-                    top: 6px
-                    right: 6px
-                    width: 40px
-                    height: 40px
-                    background: #fff 
-                    border: none 
-                    border-radius: 50% 
-                    padding: 8px 
-                    cursor: pointer 
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.1) 
-                    z-index: 1
-            figcaption
-                padding: 10px 5px
-                .card-header 
-                    display: flex 
-                    justify-content: space-between 
-                    align-items: center 
-                    h3 
-                        font-size: 18px 
-                        margin: 0 
-                .rating 
-                    font-size: 14px 
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    gap: 5px
-                    line-height: 1
-                    img
-                        height: 14px
-                        width: 14px
-
-                .location 
-                    color: #DF6951 
-                    display: flex
-                    align-items: center
-                    gap: 6px
-                    font-size: 14px 
-                    padding: 8px 0 
-                .reviews 
-                    font-size: 14px 
-                    color: #8B94A4
-                    margin: 5px 0 15px
-                    display: flex
-                    align-items: center
-                    gap: 9px
-                    .rating-deci
-                        background: #F1F2F3
-                        color: #DF6951 
-                        font-weight: 600 
+    .bottom-btn
+        text-align: center
+        margin: 30px 0 0 0
+        height: fit-content
+        .view-all-btn
+            background: var(--secondary)
+            border: 1px solid var(--secondary)
+            color: var(--white)
+            padding: 9px 19px
+            font-size: 16px
+            font-weight: 400
+            border-radius: 8px
+            margin: 20px auto 0 
+            &:hover
+                background: transparent
+                color: var(--secondary)
+                
+.home-secD
+    padding: 50px 0
+    .swiper
+        max-width: 96%
+    .heading
+        text-align: center
+        margin-bottom: 30px
+        h2
+            margin-bottom: 10px
+            line-height: 1
+        p
+            max-width: 40%
+            margin: auto
+    ul
+        display: flex
+        justify-content: center
+        gap: 20px
+        align-items: center
+        margin-bottom: 30px
+        li
+            border-radius: 60px
+            padding: 12px 20px
+            transition: 0.5s ease
+            background: transparent
+            color: #4B5563
+            cursor: pointer
+            &.active
+                background: $secondary
+                color: $white
+    .swiper-group
+        .swiper
+            .swiper-wrapper
+                .swiper-slide
+                    a
+                        border-radius: 10px
+                        overflow: hidden
                         display: inline-block
-                        padding: 2px 10px
-                        border-radius: 30px
-                        border-top-right-radius: 0px
-                    .rating-detail
-                        color: #DF6951
-                .desc 
-                    font-size: 16px 
-                    color: #1F2226
-                    margin: 6px 0 25px 0
-                .card-footer 
-                    display: flex 
-                    justify-content: space-between 
-                    align-items: flex-end 
-                    margin-top: 10px 
-                .discount 
-                    background: #CDF8E5
-                    color: #06C270
-                    padding: 6px 14px
-                    border-radius: 20px 
-                    font-size: 14px
-                .price 
-                    text-align: right 
-                    .col
-                        display: flex
-                        align-items: center
-                        gap: 10px
-                        margin-bottom: 5px
-                        .old 
-                            text-decoration: line-through 
-                            color: #8B94A4
-                            font-size: 16px
-                            margin: 0 
-                            line-height: 1
-                        .new 
-                            font-size: 18px 
-                            font-weight: 700
-                            color: #121316
-                            margin: 0 
-                            line-height: 1
-                    .meta 
-                        font-size: 14px 
-                        color: #8B94A4
+                        line-height: 0
+
+.home-secE
+    margin: 20px 0 50px 0
+    background: #F9F6F1
+    border-radius: 10px
+    padding: 30px 50px 
+    .flex-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 50px
+        figcaption
+            flex: 1
+            h2
+                font-size: 52px
+                line-height: 1
+                margin-bottom: 20px
+            a
+                margin-top: 30px
+                display: inline-block
+        figure
+            width: 663px
+            height: 390px
+            border-radius: 20px
+            overflow: hidden
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover

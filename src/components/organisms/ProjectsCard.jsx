@@ -3,14 +3,13 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const VillasCard = ({
+const ProjectsCard = ({
     link,
     images,
     title,
@@ -25,8 +24,7 @@ const VillasCard = ({
     return (
 
         <>
-
-            <Link href={link} className="card-link">
+            <Link href={link} className="product-card">
                 <div className="hotel-card">
                     <figure>
                         <Swiper
@@ -93,4 +91,4 @@ const VillasCard = ({
     )
 }
 
-export default VillasCard
+export default ProjectsCard

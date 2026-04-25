@@ -748,7 +748,8 @@ h3 {
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: 600;
   line-height: 1.28;
 }
 
@@ -1080,74 +1081,6 @@ button {
   background: transparent;
   color: black !important;
   border-color: #000;
-}
-
-.bottom-btn {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 0;
-  margin-top: 20px;
-  position: relative;
-  transition: 0.5s ease;
-}
-@media only screen and (max-width: 768px) {
-  .bottom-btn {
-    margin: auto;
-    margin-top: 20px;
-  }
-}
-.bottom-btn::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--white);
-  transition: 0.5s ease;
-  z-index: -1;
-}
-.bottom-btn span {
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--white);
-  transition: 0.5s ease;
-}
-.bottom-btn:hover {
-  padding: 10px 14px;
-}
-.bottom-btn:hover span {
-  color: var(--black);
-}
-.bottom-btn:hover svg path {
-  stroke: var(--black) !important;
-}
-.bottom-btn:hover::before {
-  height: 100%;
-}
-.bottom-btn figure {
-  width: 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-  line-height: 0;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.bottom-btn figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.bottom-btn figure svg path {
-  stroke: var(--white) !important;
-  transition: 0.5s ease;
 }
 
 .model {

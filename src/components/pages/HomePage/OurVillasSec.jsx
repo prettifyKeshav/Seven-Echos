@@ -1,6 +1,7 @@
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import React from 'react'
-import { OurVillasCardsData } from '@/data/home/OurVillasCardsData'
+import Link from 'next/link'
+import { OurVillasCardsData } from '@/data/home/HomeData'
 
 const OurVillasSec = () => {
 
@@ -15,11 +16,19 @@ const OurVillasSec = () => {
 
                         <CustomSwiper
                             data={OurVillasCardsData}
-                            spaceBetween="20"
+                            spaceBetween="10"
                             speed="800"
                             slidesPerView="4"
-                            swiperSlideCard="VillasCard"
+                            swiperSlideCard="ProjectsCard"
+                            showPagination={false}
+                            navigation={true}
+                            swiperNavBtn="product-btn"
                         />
+
+                        <div className="bottom-btn">
+                            <Link href="/asdf" className="view-all-btn">View All</Link>
+                        </div>
+
                     </div>
                 </div>
             </section>

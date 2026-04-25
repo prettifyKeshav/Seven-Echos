@@ -1,42 +1,8 @@
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import React from 'react'
+import { HomesCraftedData } from '@/data/home/HomeData'
 
 const HomesCrafted = () => {
-
-    const CardsData = [
-        {
-            SwiperHref: "",
-            SwiperImage: "/assets/images/home/projects-1.jpg",
-            ImageWidth: "2948",
-            ImageHeight: "2948",
-            SwiperHeading: "Villa Serene Cove",
-            SwiperDescription: "Calangute, Goa"
-        },
-        {
-            SwiperHref: "",
-            SwiperImage: "/assets/images/home/projects-1.jpg",
-            ImageWidth: "2948",
-            ImageHeight: "2948",
-            SwiperHeading: "The Palm Haven",
-            SwiperDescription: "Anjuna, Goa"
-        },
-        {
-            SwiperHref: "",
-            SwiperImage: "/assets/images/home/projects-1.jpg",
-            ImageWidth: "2948",
-            ImageHeight: "2948",
-            SwiperHeading: "Casa Blu Vista",
-            SwiperDescription: "Colva, Goa"
-        },
-        {
-            SwiperHref: "",
-            SwiperImage: "/assets/images/home/projects-1.jpg",
-            ImageWidth: "2948",
-            ImageHeight: "2948",
-            SwiperHeading: "Azure Breeze Villa",
-            SwiperDescription: "Vagator, Goa"
-        }
-    ]
 
     return (
         <>
@@ -49,10 +15,11 @@ const HomesCrafted = () => {
                         </div>
                     </div>
                     <CustomSwiper
-                        data={CardsData}
+                        data={HomesCraftedData}
                         spaceBetween="0"
                         speed="800"
                         slidesPerView="1"
+                        showPagination={true}
 
                     />
                 </div>

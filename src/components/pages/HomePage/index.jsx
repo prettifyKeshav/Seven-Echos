@@ -1,9 +1,12 @@
 import Hero from '@/components/organisms/Hero'
 import React from 'react'
 import "@/uploads/styles/home/home.css"
+import "@/uploads/styles/component/component.css"
 import PeopleBehind from './PeopleBehind'
 import HomesCrafted from './HomesCrafted'
 import OurVillasSec from './OurVillasSec'
+import CoastalLivingSec from './CoastalLivingSec'
+import ShareHomeStory from './ShareHomeStory'
 
 const HomePage = () => {
     return (
@@ -16,6 +19,8 @@ const HomePage = () => {
             <PeopleBehind />
             <HomesCrafted />
             <OurVillasSec />
+            <CoastalLivingSec />
+            <ShareHomeStory />
         </>
     )
 }
