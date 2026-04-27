@@ -7,6 +7,9 @@ import HomesCrafted from './HomesCrafted'
 import OurVillasSec from './OurVillasSec'
 import CoastalLivingSec from './CoastalLivingSec'
 import ShareHomeStory from './ShareHomeStory'
+import GuestExperiences from './GuestExperiences'
+import Amenities from './Amenities'
+import NewHomes from './NewHomes'
 
 const HomePage = () => {
     return (
@@ -21,6 +24,9 @@ const HomePage = () => {
             <OurVillasSec />
             <CoastalLivingSec />
             <ShareHomeStory />
+            <GuestExperiences />
+            <Amenities />
+            <NewHomes />
         </>
     )
 }

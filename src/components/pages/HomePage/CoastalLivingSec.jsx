@@ -1,12 +1,10 @@
 "use client"
-import CoastalLivingCard from '@/components/organisms/CoastalLivingCard'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { CoastalLivingCardData } from '@/data/home/HomeData'
 
 const CoastalLivingSec = () => {
     const [activeTab, setActiveTab] = useState(0)
-
-
     return (
         <>
             <section>
@@ -19,12 +17,16 @@ const CoastalLivingSec = () => {
 
                         <ul className="tab-nav">
                             {
-                                CardData?.map(({ title }, i) => <li onClick={() => setActiveTab(i)} className={activeTab === i ? "active" : ""} key={i}>{title}</li>)
+                                CoastalLivingCardData.map(({ title }, i) => {
+                                    return (
+                                        <li onClick={() => setActiveTab(i)} className={activeTab === i ? "active" : ""} key={i}>{title}</li>
+                                    )
+                                })
                             }
                         </ul>
 
                         <CustomSwiper
-                            data={CardData[activeTab].list}
+                            data={CoastalLivingCardData[activeTab].list}
                             spaceBetween="20"
                             speed="800"
                             slidesPerView="4"
@@ -40,122 +42,3 @@ const CoastalLivingSec = () => {
 }
 
 export default CoastalLivingSec
-
-const CardData = [
-    {
-        title: "North Goa (Popular & Lively)",
-        list: [
-            {
-                SwiperImage: "/assets/images/home/coastal-living/4.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Panaji",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/3.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Bardez",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/2.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Calangute",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/1.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Assagao",
-            },
-        ]
-    },
-    {
-        title: "Central Goa / Panaji (Cultural)",
-        list: [
-            {
-                SwiperImage: "/assets/images/home/coastal-living/1.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Assagao",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/2.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Calangute",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/3.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Bardez",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/4.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Panaji",
-            }
-        ]
-    },
-    {
-        title: "South Goa (Quiet & Scenic)",
-        list: [
-            {
-                SwiperImage: "/assets/images/home/coastal-living/1.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Assagao",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/2.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Calangute",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/3.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Bardez",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/4.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Panaji",
-            }
-        ]
-    },
-    {
-        title: "Others",
-        list: [
-            {
-                SwiperImage: "/assets/images/home/coastal-living/1.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Assagao",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/2.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Calangute",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/3.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Bardez",
-            },
-            {
-                SwiperImage: "/assets/images/home/coastal-living/4.jpg",
-                ImageWidth: "915",
-                ImageHeight: "477",
-                SwiperHeading: "Panaji",
-            }
-        ]
-    }
-]
