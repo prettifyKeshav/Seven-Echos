@@ -18,6 +18,8 @@ const HomePage = () => {
                 imgSrc="/assets/images/home/home-banner.jpg"
                 imgHeight="626"
                 imgWidth="1028"
+                heading="Where Every Stay Feels Like Coming Home"
+                description="Stay at the finest villas, bungalows, apartments/flats that feel like home."
             />
             <PeopleBehind />
             <HomesCrafted />

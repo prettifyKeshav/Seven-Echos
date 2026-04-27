@@ -28,7 +28,7 @@ const Header = () => {
                 <div className="colB">
                     <ul>
                         <li>
-                            <Link href="/" >Company</Link>
+                            <Link href="/about-us" >Company</Link>
                         </li>
                         <li>
                             <Link href="/" >Goa Travel Guide</Link>
