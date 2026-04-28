@@ -1,0 +1,113 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.BecomeAnHost-secB {
+  padding: 50px 0;
+}
+.BecomeAnHost-secB .heading {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.BecomeAnHost-secB .heading h2 {
+  margin-bottom: 5px;
+}
+
+.BecomeAnHost-secC {
+  padding: 50px 0;
+}
+.BecomeAnHost-secC h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.BecomeAnHost-secC .grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.BecomeAnHost-secC .grid-box .col {
+  box-shadow: 0px 0px 69.21px 28px rgba(0, 0, 0, 0.0509803922);
+  padding: 20px 30px 50px 30px;
+  border-radius: 10px;
+}
+.BecomeAnHost-secC .grid-box .col:nth-child(3) {
+  grid-column: span 2;
+}
+.BecomeAnHost-secC .grid-box .col h4 {
+  color: var(--secondary);
+  font-size: 34px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.BecomeAnHost-secC .grid-box .col h3 {
+  font-size: 18px;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+.BecomeAnHost-secC .grid-box .col p {
+  font-size: 14px;
+  color: var(--text);
+}
+.BecomeAnHost-secC .grid-box .col ul {
+  padding-left: 20px;
+}
+.BecomeAnHost-secC .grid-box .col ul li {
+  list-style-type: decimal;
+  margin-bottom: 5px;
+}
+
+.BecomeAnHost-secD {
+  padding: 50px 0;
+}
+.BecomeAnHost-secD h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.BecomeAnHost-secD .accordian-wrapper {
+  background: #FFFBF6;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.BecomeAnHost-secD .accordian-wrapper.open .title {
+  padding: 40px 20px 0px 20px;
+}
+.BecomeAnHost-secD .accordian-wrapper.open .title .ico {
+  scale: 0;
+}
+.BecomeAnHost-secD .accordian-wrapper .title {
+  padding: 30px 20px;
+  position: relative;
+}
+.BecomeAnHost-secD .accordian-wrapper .title h4 {
+  font-size: 24px;
+}
+.BecomeAnHost-secD .accordian-wrapper .title .ico {
+  width: 33px;
+  height: 33px;
+  line-height: 0;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  transition: 0.5s ease;
+}
+.BecomeAnHost-secD .accordian-wrapper .title .ico img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.BecomeAnHost-secD .accordian-wrapper p {
+  color: #626060;
+  padding: 10px 20px 40px 20px;
+}/*# sourceMappingURL=BecomeAnHost.css.map */

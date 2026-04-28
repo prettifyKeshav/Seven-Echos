@@ -1,12 +1,12 @@
 import Accordion from '@/components/organisms/Accordion'
 import React from 'react'
-import { AccordianData } from '@/data/about/AboutData'
+import { AccordianData } from '@/data/BecomeAnHost/BecomeAnHostData'
 
 const Faq = () => {
     return (
         <>
             <section>
-                <div className="about-secE">
+                <div className="BecomeAnHost-secD">
                     <div className="container">
                         <h2>Frequently Asked Question</h2>
 

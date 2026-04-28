@@ -1,0 +1,83 @@
+@import '../_var'
+
+.BecomeAnHost-secB
+    padding: 50px 0 
+    .heading
+        text-align: left
+        margin-bottom: 30px
+        h2
+            margin-bottom: 5px
+
+
+.BecomeAnHost-secC
+    padding: 50px 0 
+    h2
+        text-align: center
+        margin-bottom: 30px
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px
+        .col
+            box-shadow: 0px 0px 69.21px 28px #0000000D
+            padding: 20px 30px 50px 30px
+            border-radius: 10px
+            &:nth-child(3)
+                grid-column: span 2
+
+            h4
+                color: $secondary
+                font-size: 34px
+                margin-bottom: 10px
+                line-height: 1
+            h3
+                font-size: 18px
+                color: $secondary
+                margin-bottom: 10px
+            p
+                font-size: 14px
+                color: $text
+            ul
+                padding-left: 20px
+                li
+                    list-style-type: decimal
+                    margin-bottom: 5px
+
+
+
+.BecomeAnHost-secD
+    padding: 50px 0 
+    h2
+        text-align: center  
+        font-weight: 700
+        margin-bottom: 40px
+    .accordian-wrapper
+        background: #FFFBF6
+        margin-bottom: 20px
+        border-radius: 20px
+        cursor: pointer
+        &.open
+            .title
+                padding: 40px 20px 0px 20px
+                .ico
+                    scale: 0
+        .title
+            padding: 30px 20px
+            position: relative
+            h4
+                font-size: 24px
+            .ico
+                width: 33px
+                height: 33px
+                line-height: 0
+                position: absolute
+                top: 29px
+                right: 30px
+                transition: 0.5s ease
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+        p
+            color: #626060
+            padding: 10px 20px 40px 20px

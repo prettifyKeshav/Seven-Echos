@@ -178,6 +178,26 @@
   color: #8B94A4;
 }
 
+.testimonials-card {
+  width: 50%;
+}
+.testimonials-card figure {
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+.testimonials-card figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials-card figcaption p {
+  width: 90%;
+}
+
 .swiper-group {
   position: relative;
 }
