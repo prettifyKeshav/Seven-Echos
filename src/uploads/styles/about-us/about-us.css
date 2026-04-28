@@ -106,4 +106,133 @@
 .about-secB figure figcaption p {
   color: #626060;
   width: 80%;
+}
+
+.about-secC {
+  padding: 50px 0;
+}
+.about-secC .heading {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 40px;
+}
+.about-secC .heading h2 {
+  margin-bottom: 10px;
+}
+.about-secC .flex-box {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.about-secC .flex-box .col figure {
+  width: 383px;
+  height: 510px;
+  border-top-left-radius: 600px;
+  border-top-right-radius: 600px;
+  overflow: hidden;
+}
+.about-secC .flex-box .col figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-secC .flex-box .col figcaption {
+  margin-top: 20px;
+}
+.about-secC .flex-box .col figcaption h5 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about-secD {
+  padding: 50px 0;
+}
+.about-secD .flex-box {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.about-secD .flex-box .col:first-child {
+  width: auto;
+}
+.about-secD .flex-box .col:first-child p {
+  max-width: 300px;
+}
+.about-secD .flex-box .col:last-child {
+  flex: 0 1 50%;
+}
+.about-secD .flex-box .col:last-child .grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.about-secD .flex-box .col:last-child .grid-box .grid-box-item {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+.about-secD .flex-box .col:last-child .grid-box .grid-box-item figure {
+  width: 180px;
+  height: 95px;
+  margin: 0 auto 20px;
+  line-height: 0;
+}
+.about-secD .flex-box .col:last-child .grid-box .grid-box-item figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-secD .flex-box .col:last-child .grid-box .grid-box-item h5 {
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.about-secE {
+  padding: 50px 0;
+}
+.about-secE h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.about-secE .accordian-wrapper {
+  background: #FFFBF6;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.about-secE .accordian-wrapper.open .title {
+  padding: 40px 20px 0px 20px;
+}
+.about-secE .accordian-wrapper.open .title .ico {
+  scale: 0;
+}
+.about-secE .accordian-wrapper .title {
+  padding: 30px 20px;
+  position: relative;
+}
+.about-secE .accordian-wrapper .title h4 {
+  font-size: 24px;
+}
+.about-secE .accordian-wrapper .title .ico {
+  width: 33px;
+  height: 33px;
+  line-height: 0;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  transition: 0.5s ease;
+}
+.about-secE .accordian-wrapper .title .ico img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-secE .accordian-wrapper p {
+  color: #626060;
+  padding: 10px 20px 40px 20px;
 }/*# sourceMappingURL=about-us.css.map */

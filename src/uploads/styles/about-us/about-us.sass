@@ -76,3 +76,104 @@
                 color: #626060
                 width: 80%
 
+.about-secC
+    padding: 50px 0 
+    .heading
+        text-align: center
+        max-width: 60%
+        margin: 0 auto 40px
+        h2
+            margin-bottom: 10px
+    .flex-box
+        display: flex
+        justify-content: center
+        gap: 100px
+        .col
+            figure
+                width: 383px
+                height: 510px
+                border-top-left-radius: 600px
+                border-top-right-radius: 600px
+                overflow: hidden
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+            figcaption
+                margin-top: 20px
+                h5
+                    font-weight: 700
+                    font-size: 24px
+                
+.about-secD
+    padding: 50px 0 
+    .flex-box
+        display: flex
+        justify-content: center
+        gap: 100px
+        .col:first-child
+            width: auto
+            h2
+                aap ki nazron ne samjha
+            p
+                max-width: 300px
+        .col:last-child
+            flex: 0 1 50%
+            .grid-box
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                gap: 20px
+                .grid-box-item
+                    border: 1px solid #cccccc
+                    border-radius: 10px
+                    padding: 30px
+                    text-align: center
+                    figure
+                        width: 180px
+                        height: 95px
+                        margin: 0 auto 20px
+                        line-height: 0
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    h5
+                        font-weight: 700
+                        font-size: 29px
+
+.about-secE
+    padding: 50px 0 
+    h2
+        text-align: center  
+        font-weight: 700
+        margin-bottom: 40px
+    .accordian-wrapper
+        background: #FFFBF6
+        margin-bottom: 20px
+        border-radius: 20px
+        cursor: pointer
+        &.open
+            .title
+                padding: 40px 20px 0px 20px
+                .ico
+                    scale: 0
+        .title
+            padding: 30px 20px
+            position: relative
+            h4
+                font-size: 24px
+            .ico
+                width: 33px
+                height: 33px
+                line-height: 0
+                position: absolute
+                top: 29px
+                right: 30px
+                transition: 0.5s ease
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+        p
+            color: #626060
+            padding: 10px 20px 40px 20px

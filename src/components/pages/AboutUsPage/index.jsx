@@ -3,6 +3,9 @@ import React from 'react'
 import ExperiencesReside from './ExperiencesReside'
 import "@/uploads/styles/about-us/about-us.css"
 import VisionMission from './VisionMission'
+import Management from './Management'
+import AwardsAccolades from './AwardsAccolades'
+import Faq from './Faq'
 
 const AboutUsPage = () => {
     return (
@@ -17,6 +20,9 @@ const AboutUsPage = () => {
             />
             <ExperiencesReside />
             <VisionMission />
+            <Management />
+            <AwardsAccolades />
+            <Faq />
         </>
     )
 }
