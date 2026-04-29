@@ -11,6 +11,181 @@
     left: 100%;
   }
 }
+.BecomeAnHost-banner {
+  position: relative;
+  padding-top: calc(50px + var(--headerheight));
+  padding-bottom: 50px;
+  position: relative;
+  background-image: url("/assets/images/becomeanhost/become-an-host-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.BecomeAnHost-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(58, 58, 58, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-banner .bg-background .container {
+    padding: 0;
+  }
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {
+  max-width: 442px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+@media only screen and (max-width: 1024px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {
+    max-width: 100%;
+    line-height: 1.2;
+    font-size: 40px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {
+    max-width: 100%;
+    font-size: 25px;
+    line-height: 1.1;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col p {
+  color: white;
+  margin-bottom: 30px;
+  max-width: 512px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child {
+  width: 600px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: var(--white);
+  padding: 30px 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 20px;
+  font-family: Poppins;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 20px;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group.full {
+  grid-column: span 2;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group .file-wrapper {
+  border: 1px dashed #D6D3D1;
+  padding: 30px 16px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group .file-wrapper figure {
+  width: 40px;
+  height: 40px;
+  line-height: 0;
+  margin: 0 auto 10px;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group .file-wrapper figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group .file-wrapper p {
+  font-size: 16px;
+  color: #A8A29E;
+  font-family: Poppins;
+  text-align: center;
+  margin: 0;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group .file-wrapper .file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group label {
+  font-family: Poppins;
+  color: #57534E;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 7px;
+  display: inline-block;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group input {
+  border: 1px solid #D6D3D1;
+  padding: 7px 20px 7px 10px;
+  font-size: 14px;
+  border-radius: 7px;
+  font-family: Poppins;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .form-wrapper .form-group input:focus {
+  border: 1px solid #F3541C;
+  outline: 4px solid #FEE7D6;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .btn {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: inline-block;
+  transition: 0.5s ease;
+  font-family: Poppins;
+  font-weight: 600;
+}
+.BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child .btn:hover {
+  background: #f99f20;
+}
+.BecomeAnHost-banner.about-banner {
+  height: 73vh;
+}
+
+.BecomeAnHost-secA {
+  padding: 50px 0;
+}
+.BecomeAnHost-secA .heading {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.BecomeAnHost-secA .heading h2 {
+  margin-bottom: 5px;
+}
+.BecomeAnHost-secA .swiper-nav {
+  top: -14%;
+}
+
 .BecomeAnHost-secB {
   padding: 50px 0;
 }
@@ -20,6 +195,9 @@
 }
 .BecomeAnHost-secB .heading h2 {
   margin-bottom: 5px;
+}
+.BecomeAnHost-secB .swiper-nav {
+  top: -14%;
 }
 
 .BecomeAnHost-secC {

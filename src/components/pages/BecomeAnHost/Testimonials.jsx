@@ -1,5 +1,4 @@
 import CustomSwiper from '@/components/organisms/CustomSwiper'
-import TestimonialsCard from '@/components/organisms/TestimonialsCard'
 import React from 'react'
 
 const Testimonials = () => {
@@ -13,15 +12,17 @@ const Testimonials = () => {
                             <p>No hidden costs, no unexpected surprises our commitment to transparency truly sets us apart.</p>
                         </div>
 
-                        <TestimonialsCard />
-
-                        {/* <CustomSwiper
-                            data={HomesCraftedData}
+                        <CustomSwiper
+                            data={CardData}
+                            swiperSlideCard="TestimonialsCard"
                             spaceBetween="20"
                             speed="800"
                             slidesPerView="2"
-                            showPagination={true}
-                        /> */}
+                            swiperNavBtn=""
+                            swiperNavClass=""
+                            navigation={true}
+                            showPagination={false}
+                        />
                     </div>
                 </div>
             </section>
@@ -31,38 +32,33 @@ const Testimonials = () => {
 
 export default Testimonials
 
-
-const HomesCraftedData = [
+const CardData = [
     {
-        SwiperHref: "",
-        SwiperImage: "/assets/images/becomeanhost/transparency/1.jpg",
-        ImageWidth: "2948",
-        ImageHeight: "2948",
-        SwiperHeading: "Villa Serene Cove",
-        SwiperDescription: "Calangute, Goa"
+        figureImg: "/assets/images/becomeanhost/transparency/1.jpg",
+        userImg: "/assets/images/becomeanhost/transparency/user1.png",
+        description: "The day I metSeven Echoes team, their professionalism, commitment & collaborative spirit left a positive impact, which encouraged me to work together. 5 months since I entered a partnership, together we've streamlined operations & built a convincing foundations to achieve key milestones in the future.",
+        userName: "Vikas Arora",
+        userLocation: "Ekant Villa, Goa"
     },
     {
-        SwiperHref: "",
-        SwiperImage: "/assets/images/becomeanhost/transparency/2.jpg",
-        ImageWidth: "2948",
-        ImageHeight: "2948",
-        SwiperHeading: "The Palm Haven",
-        SwiperDescription: "Anjuna, Goa"
+        figureImg: "/assets/images/becomeanhost/transparency/2.jpg",
+        userImg: "/assets/images/becomeanhost/transparency/user1.png",
+        description: "The day I metSeven Echoes team, their professionalism, commitment & collaborative spirit left a positive impact, which encouraged me to work together. 5 months since I entered a partnership, together we've streamlined operations & built a convincing foundations to achieve key milestones in the future.",
+        userName: "Vikas Arora",
+        userLocation: "Ekant Villa, Goa"
     },
     {
-        SwiperHref: "",
-        SwiperImage: "/assets/images/home/projects-1.jpg",
-        ImageWidth: "2948",
-        ImageHeight: "2948",
-        SwiperHeading: "Casa Blu Vista",
-        SwiperDescription: "Colva, Goa"
+        figureImg: "/assets/images/becomeanhost/transparency/1.jpg",
+        userImg: "/assets/images/becomeanhost/transparency/user1.png",
+        description: "The day I metSeven Echoes team, their professionalism, commitment & collaborative spirit left a positive impact, which encouraged me to work together. 5 months since I entered a partnership, together we've streamlined operations & built a convincing foundations to achieve key milestones in the future.",
+        userName: "Vikas Arora",
+        userLocation: "Ekant Villa, Goa"
     },
     {
-        SwiperHref: "",
-        SwiperImage: "/assets/images/home/projects-1.jpg",
-        ImageWidth: "2948",
-        ImageHeight: "2948",
-        SwiperHeading: "Azure Breeze Villa",
-        SwiperDescription: "Vagator, Goa"
-    }
+        figureImg: "/assets/images/becomeanhost/transparency/2.jpg",
+        userImg: "/assets/images/becomeanhost/transparency/user1.png",
+        description: "The day I metSeven Echoes team, their professionalism, commitment & collaborative spirit left a positive impact, which encouraged me to work together. 5 months since I entered a partnership, together we've streamlined operations & built a convincing foundations to achieve key milestones in the future.",
+        userName: "Vikas Arora",
+        userLocation: "Ekant Villa, Goa"
+    },
 ]

@@ -1,14 +1,14 @@
 import React from 'react'
 
-const CustomInput = ({
-  placeholder,
-  inputType
-}) => {
+const CustomInput = ({ isFull, ...item }) => {
   return (
     <>
-      <input type={inputType} placeholder={placeholder} />
+      <div className={`form-group ${isFull ? "full" : ""}`}>
+        <label htmlFor="">{item.formLabel}</label>
+        <input type={item.inputType} placeholder={item.placeholder} />
+      </div>
     </>
   )
 }
 
-export default CustomInput
+export default CustomInput  
