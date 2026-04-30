@@ -34,7 +34,7 @@ const Header = () => {
                             <Link href="/" >Goa Travel Guide</Link>
                         </li>
                         <li>
-                            <Link href="/" >List Your Property</Link>
+                            <Link href="/become-an-host" >List Your Property</Link>
                         </li>
                         <li>
                             <Link href="/" >Our journal</Link>

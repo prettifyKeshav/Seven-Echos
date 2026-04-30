@@ -198,6 +198,65 @@
         p
             font-size: 16px
             max-width: 90%
+    
+.form-group
+    position: relative
+    .custom-select-box
+        border: 1px solid #d6d3d1
+        border-radius: 7px
+        width: 100%
+        max-width: 100%
+        padding: 7px 20px 7px 10px
+        font-family: Poppins
+        font-size: 14px
+        display: inline-block
+        cursor: pointer
+
+    .custom-select-list
+        border: 1px solid #ccc
+        margin-top: 5px
+        background: #fff
+        border-radius: 5px
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 2
+
+        max-height: 0
+        opacity: 0
+        transform: translateY(-6px)
+        overflow: hidden
+        pointer-events: none
+        transition: max-height 0.28s ease, opacity 0.22s ease, transform 0.22s ease
+        &::-webkit-scrollbar
+            width: 8px
+            background: $black
+        &::-webkit-scrollbar-track
+            box-shadow: none
+        &::-webkit-scrollbar-thumb
+            background-color: $white
+        &.open
+            max-height: 200px
+            opacity: 1
+            transform: translateY(0)
+            pointer-events: all
+            overflow-y: auto
+    .option 
+        padding: 8px 10px
+        cursor: pointer
+        font-family: Poppins
+        font-size: 14px
+        display: inline-block
+        width: 100%
+        transition: 0.3s ease
+        &:hover 
+            background: $secondary
+            color: $white
+        &.selected 
+            background: $secondary
+            color: #fff
+
+
 
 .swiper-group
     position: relative

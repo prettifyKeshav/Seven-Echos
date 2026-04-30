@@ -18,7 +18,7 @@ const ProjectsCard = ({
     location,
     reviews,
     description,
-    pricing
+    pricing,
 }) => {
 
     return (

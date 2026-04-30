@@ -1,0 +1,47 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.project-banner {
+  height: 80vh;
+}
+.project-banner .bg-wrapper {
+  text-align: center;
+}
+.project-banner .bg-wrapper h1 {
+  margin: 0 auto 20px;
+}
+.project-banner .bg-wrapper p {
+  margin: 0 auto 20px;
+}
+
+.projects-sec {
+  margin: 50px 0;
+}
+.projects-sec .flex-box {
+  display: flex;
+  gap: 40px;
+}
+.projects-sec .flex-box aside {
+  width: 330px;
+  height: 600px;
+  background: #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+.projects-sec .flex-box .cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 1;
+  background: #ccc;
+}/*# sourceMappingURL=projects.css.map */
