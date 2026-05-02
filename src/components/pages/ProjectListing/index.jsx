@@ -1,6 +1,7 @@
 import Hero from '@/components/organisms/Hero'
 import React from 'react'
 import "@/uploads/styles/projects/projects.css"
+import "@/uploads/styles/component/component.css"
 import Cards from './Cards'
 
 

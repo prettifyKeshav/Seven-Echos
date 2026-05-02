@@ -13,11 +13,12 @@ const Cards = () => {
                             <aside>
                                 Filter
                             </aside>
+
                             <div className="cards-wrapper">
                                 {
-                                    OurVillasCardsData.map((item) => {
-                                        <ProjectsCard {...item} />
-                                    })
+                                    OurVillasCardsData.map((item, i) => (
+                                        <ProjectsCard key={i} {...item} />
+                                    ))
                                 }
                             </div>
                         </div>
