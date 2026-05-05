@@ -20,10 +20,82 @@
             background: #ccc
             border-radius: 10px
             padding: 20px
+            position: sticky
+            top: calc( var(--headerheight) + 20px )
         .cards-wrapper
             display: grid
             grid-template-columns: repeat(3,1fr)
             gap: 20px
             flex: 1
-            background: #ccc
+            .product-card
+                .hotel-card
+                    figure
+                        width: 272px
+                        height: 230px
 
+// Project Detail Sass ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.project-detail-page
+    .project-detail-secA
+        margin-top: calc( var(--headerheight) + 50px  )
+        padding: 0 0 50px 0
+        .breadcrumb
+            display: flex
+            align-items: center
+            gap: 30px
+            margin-bottom: 40px
+            li
+                a
+                    color: #8B94A4
+                    &.active
+                        color: $black
+        .fancybox-sec
+            .grid-box
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                gap: 15px
+                position: relative
+                .more-img-ico
+                    position: absolute
+                    right: 20px
+                    bottom: 20px
+                    z-index: 1
+                    background: #00000099
+                    border-radius: 10px
+                    padding: 7px 20px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: white 
+                    gap: 10px
+                    pointer-events: none
+                    figure
+                        line-height: 0
+                        width: 20px
+                        height: 20px
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    p
+                        color: $white
+                        font-size: 20px
+                .col
+                    border-radius: 10px
+                    overflow: hidden
+                    line-height: 0
+                    display: none
+                    &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5)
+                        display: block
+                    &:nth-child(5)
+
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: cover
+                    &:nth-child(1)
+                        grid-column: span 2
+                        grid-row: span 2
+
+
+            

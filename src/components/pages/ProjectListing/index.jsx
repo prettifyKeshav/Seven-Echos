@@ -4,7 +4,6 @@ import "@/uploads/styles/projects/projects.css"
 import "@/uploads/styles/component/component.css"
 import Cards from './Cards'
 
-
 const ProjectListingPage = () => {
     return (
         <>

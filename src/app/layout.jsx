@@ -1,6 +1,7 @@
 import { Source_Serif_4 } from 'next/font/google';
 import "@/uploads/styles/header/header.css"
 import MainTemplate from '@/components/templates/MainTemplate';
+import { NotFoundProvider } from '@/context/useNotFoundContext';
 
 const sourceSerif4 = Source_Serif_4({
   subsets: ['latin'],
@@ -20,9 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en" data-scroll-behavior="smooth" className={sourceSerif4.variable}>
 
       <body>
-        <MainTemplate>
-          {children}
-        </MainTemplate>
+        <NotFoundProvider>
+          <MainTemplate>
+            {children}
+          </MainTemplate>
+        </NotFoundProvider>
       </body>
 
     </html>

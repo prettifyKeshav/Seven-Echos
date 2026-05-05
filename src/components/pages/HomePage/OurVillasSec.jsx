@@ -26,7 +26,7 @@ const OurVillasSec = () => {
                         />
 
                         <div className="bottom-btn">
-                            <Link href="/asdf" className="view-all-btn">View All</Link>
+                            <Link href="/projects" className="view-all-btn">View All</Link>
                         </div>
 
                     </div>

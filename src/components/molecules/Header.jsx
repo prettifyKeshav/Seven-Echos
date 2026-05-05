@@ -3,9 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useNotFound } from "@/context/useNotFoundContext";
 
 const Header = () => {
     const [isFixed, setIsFixed] = useState(false);
+    const { isNotFound } = useNotFound()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,8 +19,28 @@ const Header = () => {
         }
     }, [])
 
+    // const [isFixed, setIsFixed] = useState(false);
+    // const [isNotFound, setIsNotFound] = useState(false);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsFixed(window.scrollY > 50);
+    //     };
+    //     window.addEventListener("scroll", handleScroll);
+    //     // check if not-found-banner exists
+    //     const checkNotFound = () => {
+    //         const el = document.querySelector(".not-found-banner");
+    //         setIsNotFound(!!el);
+    //     };
+    //     checkNotFound();
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
+
+
+
     return (
-        <header className={`${isFixed ? "header-fixed" : ""}`}>
+        <header className={`${isFixed || isNotFound ? "header-fixed" : ""}`}>
             <div className="container-fluid header-wrapper">
                 <div className="colA">
                     <Link href="/" className="logo">

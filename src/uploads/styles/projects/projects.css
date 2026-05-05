@@ -37,11 +37,88 @@
   background: #ccc;
   border-radius: 10px;
   padding: 20px;
+  position: sticky;
+  top: calc(var(--headerheight) + 20px);
 }
 .projects-sec .flex-box .cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   flex: 1;
-  background: #ccc;
+}
+.projects-sec .flex-box .cards-wrapper .product-card .hotel-card figure {
+  width: 272px;
+  height: 230px;
+}
+
+.project-detail-page .project-detail-secA {
+  margin-top: calc(var(--headerheight) + 50px);
+  padding: 0 0 50px 0;
+}
+.project-detail-page .project-detail-secA .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.project-detail-page .project-detail-secA .breadcrumb li a {
+  color: #8B94A4;
+}
+.project-detail-page .project-detail-secA .breadcrumb li a.active {
+  color: var(--black);
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  position: relative;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .more-img-ico {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 7px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  pointer-events: none;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .more-img-ico figure {
+  line-height: 0;
+  width: 20px;
+  height: 20px;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .more-img-ico figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .more-img-ico p {
+  color: var(--white);
+  font-size: 20px;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .col {
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  display: none;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(1), .project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(2), .project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(3), .project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(4), .project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(5) {
+  display: block;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .col img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-detail-page .project-detail-secA .fancybox-sec .grid-box .col:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
 }/*# sourceMappingURL=projects.css.map */
