@@ -29,7 +29,7 @@ const Hero = () => {
                         <li><Link href="/" className="active">Villa Arts</Link></li>
                     </ul>
 
-                    <div className="fancybox-sec">
+                    <div className="project-detail-banner">
                         <div className="grid-box">
                             {GalleryBannerImg.map((item, index) => (
                                 <Link
@@ -51,6 +51,16 @@ const Hero = () => {
                                     <Image src="/assets/icon/image-gallery-ico.svg" width={20} height={20} alt="ico" ></Image>
                                 </figure>
                                 <p>{GalleryBannerImg.length - 5}+</p>
+                            </div>
+                        </div>
+
+                        <div className="project-info">
+                            <div className="col">
+                                <h3>Valla Arts </h3>
+                            </div>
+
+                            <div className="col">
+
                             </div>
                         </div>
                     </div>

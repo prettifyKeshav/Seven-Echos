@@ -10,6 +10,7 @@ import ShareHomeStory from './ShareHomeStory'
 import GuestExperiences from './GuestExperiences'
 import Amenities from './Amenities'
 import NewHomes from './NewHomes'
+import ReasonStay from './ReasonStay'
 
 const HomePage = () => {
     return (
@@ -26,6 +27,7 @@ const HomePage = () => {
             <OurVillasSec />
             <CoastalLivingSec />
             <ShareHomeStory />
+            <ReasonStay />
             <GuestExperiences />
             <Amenities />
             <NewHomes />
