@@ -212,17 +212,45 @@
                 width: 100%
                 height: 100%
                 background: linear-gradient(#0000 10%, #000000bf 100%)
-            img
+                z-index: 1
+            figure
+                position: relative
                 height: 100%
                 width: 100%
-                object-fit: cover
-            figcaption
-                position: absolute
-                bottom: 0
-                left: 0
-                padding: 20px 
-                h4
-                    color: $white
+                line-height: 0
+                &:hover
+                    @include shine
+                    img
+                        scale: 1.2
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+                    transition: 0.5s ease
+                figcaption
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    padding: 20px 
+                    z-index: 1 
+                    h4
+                        color: $white
+                        line-height: 1.1
+                        margin-bottom: 20px
+                    .bottom-flex
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        gap: 40px
+                        p
+                            color: $white
+                        button
+                            border: 1px solid $white
+                            color: $white
+                            background: #00000080
+                            padding: 8px 20px
+                            border-radius: 25px
+
 .home-secF
     margin: 20px 0 50px 0
     background: #F9F6F1

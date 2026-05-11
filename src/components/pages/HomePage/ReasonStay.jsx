@@ -13,70 +13,22 @@ const ReasonStay = () => {
                     </div>
 
                     <div className="grid-box">
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/1.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
-
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/2.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
-
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/3.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
-
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/4.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
-
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/5.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
-                        <Link href="/" className="col">
-                            <Image src="/assets/images/home/reason-stay/6.jpg" width={413} height={300} alt="ico" ></Image>
-                            <figcaption>
-                                <h4>Family Getaways & Reunions</h4>
-                                <div className="bottom-flex">
-                                    <p>Spacious stays made for comfort and togetherness.</p>
-                                    <button>Explore</button>
-                                </div>
-                            </figcaption>
-                        </Link>
+                        {ReasonStayData.map((item, i) => {
+                            return (
+                                <Link href={item.cardHref} className="col" key={i}>
+                                    <figure>
+                                        <Image src={item.figureImage} width={413} height={300} alt="ico" ></Image>
+                                        <figcaption>
+                                            <h4>{item.title}</h4>
+                                            <div className="bottom-flex">
+                                                <p>{item.description}</p>
+                                                <button>Explore</button>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </Link>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -85,3 +37,43 @@ const ReasonStay = () => {
 }
 
 export default ReasonStay
+
+
+const ReasonStayData = [
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/1.jpg',
+        title: "Family Getaways & Reunions",
+        description: "Spacious stays made for comfort and togetherness.",
+    },
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/2.jpg',
+        title: "Friends' Vacations & Group Retreats",
+        description: "Ideal for groups with private spaces and fun amenities.",
+    },
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/3.jpg',
+        title: "Parties & Bachelorettes",
+        description: "Celebrate in style with poolside vibes and privacy.",
+    },
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/4.jpg',
+        title: "Intimate Weddings & Pre-Wedding Stays",
+        description: "Elegant spaces with picture-perfect backdrops.",
+    },
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/5.jpg',
+        title: "Honeymoons & Romantic Escapes",
+        description: "Secluded, cozy, and crafted for unforgettable moments.",
+    },
+    {
+        cardHref: "/",
+        figureImage: '/assets/images/home/reason-stay/6.jpg',
+        title: "Workations, Offsites & Dealer Meets",
+        description: "Quiet, work-friendly spaces with fast Wi-Fi.",
+    }
+]
