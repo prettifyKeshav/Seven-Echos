@@ -325,6 +325,11 @@
                     fill: $white
 
 .coastal-living-card
+    &:hover
+        figure
+            @include shine
+        img
+            scale: 1.1
     figure
         border-radius: 25px
         overflow: hidden
@@ -333,7 +338,10 @@
             height: 100%
             width: 100%
             object-fit: cover
+            transition: 0.5s ease
     figcaption
         h4
             margin-top: 20px
             line-height: 1.2
+            color: $black
+            

@@ -407,6 +407,30 @@
   fill: var(--white);
 }
 
+.coastal-living-card:hover figure {
+  position: relative;
+}
+.coastal-living-card:hover figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.coastal-living-card:hover figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.coastal-living-card:hover img {
+  scale: 1.1;
+}
 .coastal-living-card figure {
   border-radius: 25px;
   overflow: hidden;
@@ -417,8 +441,10 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.5s ease;
 }
 .coastal-living-card figcaption h4 {
   margin-top: 20px;
   line-height: 1.2;
+  color: var(--black);
 }/*# sourceMappingURL=component.css.map */

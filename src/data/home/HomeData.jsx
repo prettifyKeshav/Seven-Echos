@@ -263,24 +263,28 @@ export const CoastalLivingCardData = [
         title: "North Goa (Popular & Lively)",
         list: [
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/4.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Panaji",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/3.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Bardez",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/2.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Calangute",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/1.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
@@ -292,24 +296,28 @@ export const CoastalLivingCardData = [
         title: "Central Goa / Panaji (Cultural)",
         list: [
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/1.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Assagao",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/2.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Calangute",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/3.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Bardez",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/4.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
@@ -321,24 +329,28 @@ export const CoastalLivingCardData = [
         title: "South Goa (Quiet & Scenic)",
         list: [
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/1.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Assagao",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/2.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Calangute",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/3.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Bardez",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/4.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
@@ -350,24 +362,28 @@ export const CoastalLivingCardData = [
         title: "Others",
         list: [
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/1.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Assagao",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/2.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Calangute",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/3.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
                 SwiperHeading: "Bardez",
             },
             {
+                cardHref: "/",
                 SwiperImage: "/assets/images/home/coastal-living/4.jpg",
                 ImageWidth: "915",
                 ImageHeight: "477",
