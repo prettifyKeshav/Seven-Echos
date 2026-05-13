@@ -12,6 +12,7 @@ import { useState } from "react";
 import CoastalLivingCard from "./CoastalLivingCard";
 import TestimonialsCard from "./TestimonialsCard";
 import WhatForYouCard from "./WhatForYouCard";
+import PopularThingsCard from "../pages/ProjectListing/ProductDetail/PopularThingsCard";
 
 const CustomSwiper = ({
     data = [],
@@ -53,18 +54,19 @@ const CustomSwiper = ({
                                             swiperSlideCard === "CoastalLivingCard" ? (<CoastalLivingCard {...item} />) :
                                                 swiperSlideCard === "TestimonialsCard" ? (<TestimonialsCard {...item} />) :
                                                     swiperSlideCard === "WhatForYouCard" ? <WhatForYouCard {...item} /> :
-                                                        < Link href={item.SwiperHref} >
-                                                            <div className="banner">
-                                                                <Image src={item.SwiperImage} width={item.ImageWidth} height={item.ImageHeight} alt="img"></Image>
+                                                        swiperSlideCard === "PopularThingsCard" ? <PopularThingsCard {...item} /> :
+                                                            < Link href={item.SwiperHref} >
+                                                                <div className="banner">
+                                                                    <Image src={item.SwiperImage} width={item.ImageWidth} height={item.ImageHeight} alt="img"></Image>
 
-                                                                <div className="container">
-                                                                    <div className="banner-wrapper">
-                                                                        <h3>{item.SwiperHeading}</h3>
-                                                                        <p>{item.SwiperDescription}</p>
+                                                                    <div className="container">
+                                                                        <div className="banner-wrapper">
+                                                                            <h3>{item.SwiperHeading}</h3>
+                                                                            <p>{item.SwiperDescription}</p>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </Link>
+                                                            </Link>
                                     }
                                 </SwiperSlide>
                             )

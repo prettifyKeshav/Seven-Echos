@@ -447,4 +447,54 @@
   margin-top: 20px;
   line-height: 1.2;
   color: var(--black);
+}
+
+.popular-things-card figure {
+  height: 263px;
+  border-radius: 19.2px;
+  overflow: hidden;
+  position: relative;
+  line-height: 0;
+}
+.popular-things-card figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular-things-card figure .flex-box {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-things-card figure .flex-box .things-category {
+  background: rgba(255, 255, 255, 0.7490196078);
+  backdrop-filter: blur(6px);
+  border: 1.2px solid red;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+.popular-things-card figure .flex-box .things-category p {
+  font-size: 14px;
+}
+.popular-things-card figure .flex-box .distance {
+  border: 1.2px solid #DDDFE3;
+  background: rgba(255, 255, 255, 0.7490196078);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+.popular-things-card figure .flex-box .distance p {
+  font-size: 14px;
+}
+.popular-things-card figcaption {
+  padding: 15px 0 0 0;
+}
+.popular-things-card figcaption h4 {
+  font-size: 24px;
 }/*# sourceMappingURL=component.css.map */

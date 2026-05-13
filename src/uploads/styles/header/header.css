@@ -1083,6 +1083,33 @@ button {
   border-color: #000;
 }
 
+.btn-border {
+  color: #faa935;
+  border: 1px solid #faa935;
+  border-radius: 12px;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-border:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+.btn-border figure {
+  line-height: 0;
+  width: 25px;
+  height: 25px;
+}
+.btn-border figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .model {
   position: fixed;
   top: 0;
