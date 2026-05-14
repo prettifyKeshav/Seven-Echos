@@ -388,7 +388,7 @@
   fill: var(--white);
 }
 .swiper-nav button:hover {
-  background: transparent;
+  background: var(--white);
 }
 .swiper-nav button:hover svg path {
   fill: var(--secondary);
@@ -472,24 +472,24 @@
   justify-content: space-between;
   align-items: center;
 }
-.popular-things-card figure .flex-box .things-category {
+.popular-things-card figure .flex-box .col:first-child {
   background: rgba(255, 255, 255, 0.7490196078);
   backdrop-filter: blur(6px);
-  border: 1.2px solid red;
+  border: 1.2px solid #DDDFE3;
   border-radius: 25px;
   padding: 5px 10px;
 }
-.popular-things-card figure .flex-box .things-category p {
+.popular-things-card figure .flex-box .col:first-child p {
   font-size: 14px;
 }
-.popular-things-card figure .flex-box .distance {
+.popular-things-card figure .flex-box .col:last-child {
   border: 1.2px solid #DDDFE3;
   background: rgba(255, 255, 255, 0.7490196078);
   backdrop-filter: blur(6px);
   border-radius: 25px;
   padding: 5px 10px;
 }
-.popular-things-card figure .flex-box .distance p {
+.popular-things-card figure .flex-box .col:last-child p {
   font-size: 14px;
 }
 .popular-things-card figcaption {
@@ -497,4 +497,216 @@
 }
 .popular-things-card figcaption h4 {
   font-size: 24px;
+}
+
+.similar-properties-card {
+  border: 1.2px solid #DDDFE3;
+  padding: 10px;
+  border-radius: 10px;
+  height: 264px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 440px 1fr 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.similar-properties-card .image-slider {
+  height: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.similar-properties-card .image-slider img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.similar-properties-card .card-content {
+  padding: 1.1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.similar-properties-card .card-content .top-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.similar-properties-card .card-content .top-flex .rating-badge {
+  display: flex;
+  gap: 10px;
+}
+.similar-properties-card .card-content .top-flex .rating-badge .col {
+  display: flex;
+  flex-direction: column;
+}
+.similar-properties-card .card-content .top-flex .rating-badge .col .rating-label {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.similar-properties-card .card-content .top-flex .rating-badge .col .rating-reviews {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 12.8px;
+  text-align: right;
+  color: #8B94A4;
+}
+.similar-properties-card .card-content .top-flex .rating-badge .rating-score {
+  background: #F1F2F3;
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 7px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.similar-properties-card .card-content .top-flex .villa-name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+.similar-properties-card .card-content .villa-meta {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0 0 0 10px;
+}
+.similar-properties-card .card-content .villa-meta .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+}
+.similar-properties-card .card-content .villa-meta .meta-icon {
+  font-size: 1rem;
+}
+.similar-properties-card .card-content .details-label {
+  line-height: 1;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.similar-properties-card .card-content .bottom-box {
+  display: flex;
+  justify-content: space-between;
+}
+.similar-properties-card .card-content .bottom-box .amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3rem 0rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 0 0 10px;
+}
+.similar-properties-card .card-content .bottom-box .amenities-grid .amenity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1F2226;
+  font-weight: 400;
+  font-size: 14px;
+}
+.similar-properties-card .card-content .bottom-box .amenities-grid .amenity .amenity-icon {
+  font-size: 0.9rem;
+}
+.similar-properties-card .card-content .bottom-box .more-details {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  color: var(--secondary);
+  text-align: right;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+.similar-properties-card .card-content .bottom-box .more-details:hover svg {
+  transform: translateX(5px);
+}
+.similar-properties-card .card-content .bottom-box .more-details svg {
+  width: 21px;
+  height: 21px;
+  transition: 0.5s ease;
+}
+.similar-properties-card .pricing-panel {
+  border-left: 1.2px solid #DDDFE3;
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.similar-properties-card .pricing-panel .not-available {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28.8px;
+  text-align: center;
+  margin-top: 60px;
+  color: #383E48;
+}
+.similar-properties-card .pricing-panel .discount-tag {
+  color: #06c270;
+  background: #cdf8e5;
+  border-radius: 28.8px;
+  gap: 9.6px;
+  padding: 2px 11px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.similar-properties-card .pricing-panel .price-block {
+  text-align: right;
+}
+.similar-properties-card .pricing-panel .price-block .flex-box {
+  justify-content: right;
+  gap: 10px;
+}
+.similar-properties-card .pricing-panel .price-block .price-original {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #8B94A4;
+  text-decoration: line-through;
+  line-height: 1;
+}
+.similar-properties-card .pricing-panel .price-block .price-current {
+  font-weight: 500;
+  line-height: 1;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.similar-properties-card .pricing-panel .price-block .price-per-night {
+  font-weight: 400;
+  font-size: 14px;
+  color: #383E48;
+}
+.similar-properties-card .pricing-panel .price-block .price-total {
+  font-size: 18px;
+  font-weight: 400;
+  color: #383E48;
+  margin-top: 4px;
+}
+.similar-properties-card .pricing-panel .price-block .price-total span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26.4px;
+  text-align: right;
+}
+.similar-properties-card .pricing-panel .btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+}
+.similar-properties-card .pricing-panel .btn.disable {
+  background: #F1F2F3;
+  border: 1px solid #F1F2F3;
+  color: #B5BAC2;
+  cursor: no-drop;
 }/*# sourceMappingURL=component.css.map */

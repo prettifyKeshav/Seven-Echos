@@ -5,6 +5,7 @@ import { CoastalLivingCardData } from '@/data/home/HomeData'
 
 const CoastalLivingSec = () => {
     const [activeTab, setActiveTab] = useState(0)
+    
     return (
         <>
             <section>

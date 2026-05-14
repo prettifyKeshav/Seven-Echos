@@ -309,7 +309,7 @@
             path
                 fill: $white
         &:hover
-            background: transparent
+            background: $white
             svg
                 path
                     fill: $secondary
@@ -365,15 +365,15 @@
             display: flex
             justify-content: space-between
             align-items: center
-            .things-category
+            .col:first-child
                 background: #FFFFFFBF   
                 backdrop-filter: blur(6px)
-                border: 1.2px solid red
+                border: 1.2px solid #DDDFE3
                 border-radius: 25px
                 padding: 5px 10px
                 p
                     font-size: 14px
-            .distance
+            .col:last-child
                 border: 1.2px solid #DDDFE3
                 background: #FFFFFFBF   
                 backdrop-filter: blur(6px)
@@ -386,3 +386,185 @@
         h4
             font-size: 24px
     
+.similar-properties-card
+    border: 1.2px solid #DDDFE3
+    padding: 10px
+    border-radius: 10px
+    height: 264px
+    width: 100%
+    display: grid
+    grid-template-columns: 440px 1fr 200px
+    overflow: hidden
+    position: relative
+    margin-bottom: 20px
+    .image-slider
+        height: 100%
+        border-radius: 7px
+        overflow: hidden
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+        
+    .card-content 
+        padding: 1.1rem 1rem 1rem 
+        display: flex 
+        flex-direction: column 
+        gap: 0.55rem 
+        .top-flex
+            display: flex
+            justify-content: space-between
+            // margin-bottom: 10px
+            .rating-badge 
+                display: flex
+                gap: 10px
+                .col
+                    display: flex
+                    flex-direction: column
+                    .rating-label 
+                        color: $secondary
+                        font-weight: 500
+                        font-size: 18px
+                        text-align: right
+                        line-height: 1
+                        margin-bottom: 5px
+                    .rating-reviews
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 12.8px
+                        text-align: right
+                        color: #8B94A4
+
+                .rating-score
+                    background: #F1F2F3
+                    color: $secondary
+                    font-size: 16px
+                    font-weight: 600
+                    padding: 6px 7px
+                    border-top-right-radius: 10px
+                    border-bottom-right-radius: 10px
+                    border-bottom-left-radius: 10px
+            .villa-name 
+                font-weight: 500
+                font-size: 24px
+                line-height: 28.8px
+        .villa-meta 
+            display: flex 
+            gap: 1.25rem 
+            padding: 0 0 0 10px
+            .meta-item 
+                display: flex 
+                align-items: center 
+                gap: 0px
+                flex-direction: column
+                font-weight: 500
+                font-size: 16px
+
+            .meta-icon 
+                font-size: 1rem 
+        .details-label 
+            line-height: 1
+            font-weight: 500
+            font-size: 18px
+            margin-top: 20px
+        .bottom-box
+            display: flex
+            justify-content: space-between
+            .amenities-grid 
+                display: grid 
+                grid-template-columns: repeat(3, 1fr)
+                gap: .3rem 0rem
+                width: fit-content
+                padding: 0 0 0 10px
+                .amenity 
+                    display: flex 
+                    align-items: center 
+                    gap: 6px 
+                    color: #1F2226
+                    font-weight: 400
+                    font-size: 14px
+                    .amenity-icon 
+                        font-size: 0.9rem
+            .more-details
+                margin-top: auto
+                display: inline-flex
+                align-items: center
+                color: var(--secondary)
+                text-align: right
+                margin-bottom: 5px
+                font-size: 18px
+                font-weight: 500
+                line-height: 1
+                &:hover 
+                    svg
+                        transform: translateX(5px)
+                svg 
+                    width: 21px 
+                    height: 21px 
+                    transition: 0.5s ease
+    .pricing-panel
+        // width: 155px
+        border-left: 1.2px solid #DDDFE3
+        padding: 1rem 1rem 1rem
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between 
+        gap: 1.5rem
+        .not-available
+            font-weight: 400
+            font-size: 24px
+            line-height: 28.8px
+            text-align: center
+            margin-top: 60px
+            color: #383E48
+
+        .discount-tag 
+            color: #06c270
+            background: #cdf8e5
+            border-radius: 28.8px
+            gap: 9.6px
+            padding: 2px 11px
+            font-size: 16px
+            font-weight: 500
+        .price-block 
+            text-align: right 
+            .flex-box
+                justify-content: right
+                gap: 10px
+            .price-original 
+                font-weight: 400
+                font-size: 16px
+                text-align: center
+                color: #8B94A4
+                text-decoration: line-through
+                line-height: 1
+            .price-current 
+                font-weight: 500
+                line-height: 1
+                font-size: 20px
+                line-height: 20px
+                text-align: center
+            .price-per-night 
+                font-weight: 400
+                font-size: 14px
+                color: #383E48
+            .price-total 
+                font-size: 18px
+                font-weight: 400
+                color: #383E48
+                margin-top: 4px 
+                span 
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 26.4px
+                    text-align: right  
+        .btn
+            width: 100%
+            font-weight: 700
+            font-size: 18px
+            &.disable
+                background: #F1F2F3
+                border: 1px solid #F1F2F3
+                color: #B5BAC2
+                cursor: no-drop

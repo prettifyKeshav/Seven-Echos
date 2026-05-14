@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 // import PopularThingsCard from './PopularThingsCard'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
+import SimilarProperties from './SimilarProperties'
 
 const DetailSec = () => {
     return (
@@ -177,8 +178,6 @@ const DetailSec = () => {
                         <div className="heading">
                             <h2>12 Most Popular Things to Do Nearby</h2>
 
-                            {/* <PopularThingsCard /> */}
-
                             <CustomSwiper
                                 data={PopularThingsCardData}
                                 spaceBetween="20"
@@ -188,12 +187,22 @@ const DetailSec = () => {
                                 showPagination={false}
                                 navigation={true}
                                 swiperNavClass="center-full-full"
-                                swiperNavBtn="product-btn"
                             />
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section>
+                <div className="project-detail-secF">
+                    <div className="container">
+                        <div className="heading">
+                            <h2>Similar Properties</h2>
+                        </div>
+                        <SimilarProperties />
+                    </div>
+                </div>
+            </section >
 
         </>
     )
@@ -205,33 +214,49 @@ const PopularThingsCardData = [
     {
         figureImage: "/assets/images/project/detail/popular-things/1.jpg",
         heading: "Beach",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/2.jpg",
         heading: "Flamenco Show",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/3.jpg",
         heading: "Musica Tour",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/4.jpg",
         heading: "Cafe",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/1.jpg",
         heading: "Beach",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/2.jpg",
         heading: "Flamenco Show",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/3.jpg",
         heading: "Musica Tour",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     },
     {
         figureImage: "/assets/images/project/detail/popular-things/4.jpg",
         heading: "Cafe",
+        thingsCategory: "Beach",
+        distance: "600 m away",
     }
 ]
