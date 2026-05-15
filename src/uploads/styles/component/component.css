@@ -515,12 +515,32 @@
   height: 100%;
   border-radius: 7px;
   overflow: hidden;
+  position: relative;
 }
-.similar-properties-card .image-slider img {
+.similar-properties-card .image-slider .swiper {
+  height: 100%;
+  width: 100%;
+}
+.similar-properties-card .image-slider .swiper .swiper-wrapper .swiper-slide img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.similar-properties-card .image-slider .swiper .swiper-button-prev, .similar-properties-card .image-slider .swiper .swiper-button-next {
+  top: 50% !important;
+  width: 38px;
+  height: 38px;
+  border-radius: 120px;
+  background: rgba(0, 0, 0, 0.5019607843);
+  padding: 9px;
+}
+.similar-properties-card .image-slider .swiper .swiper-button-prev svg path, .similar-properties-card .image-slider .swiper .swiper-button-next svg path {
+  fill: var(--white);
+}
+.similar-properties-card .image-slider .swiper .swiper-button-prev.swiper-button-disabled, .similar-properties-card .image-slider .swiper .swiper-button-next.swiper-button-disabled {
+  cursor: no-drop;
+  pointer-events: auto;
 }
 .similar-properties-card .card-content {
   padding: 1.1rem 1rem 1rem;
@@ -709,4 +729,43 @@
   border: 1px solid #F1F2F3;
   color: #B5BAC2;
   cursor: no-drop;
+}
+
+.accordian-wrapper {
+  background: #FFFBF6;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.accordian-wrapper.open .title {
+  padding: 40px 20px 0px 20px;
+}
+.accordian-wrapper.open .title .ico {
+  scale: 0;
+}
+.accordian-wrapper .title {
+  padding: 30px 20px;
+  position: relative;
+}
+.accordian-wrapper .title h4 {
+  font-size: 24px;
+}
+.accordian-wrapper .title .ico {
+  width: 33px;
+  height: 33px;
+  line-height: 0;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  transition: 0.5s ease;
+}
+.accordian-wrapper .title .ico img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.accordian-wrapper p {
+  color: #626060;
+  padding: 10px 20px 40px 20px;
 }/*# sourceMappingURL=component.css.map */

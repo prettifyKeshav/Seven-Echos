@@ -1,24 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-// import PopularThingsCard from './PopularThingsCard'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import SimilarProperties from './SimilarProperties'
+import { reviewsData } from '@/data/ProductDetails/ProductDetails'
+import { policiyData } from '@/data/ProductDetails/ProductDetails'
+import { popularThingsCardData } from '@/data/ProductDetails/ProductDetails'
+import FaqSection from './FaqSection'
+import BookingSummary from './BookingSummary'
+// import { faqData } from '@/data/ProductDetails/ProductDetails'
 
 const DetailSec = () => {
+    const [activeTab, setActiveTab] = useState("overview");
+
+    const tabs = [
+        { id: "overview", label: "Overview" },
+        { id: "location", label: "Location" },
+        { id: "most-popular-things", label: "Most Popular Things" },
+        { id: "similar-properties", label: "Similar Properties" },
+        { id: "policy", label: "Policy" },
+        { id: "reviews", label: "Reviews" },
+        { id: "faq", label: "Faq" },
+    ];
     return (
         <>
             <section>
                 <div className="project-detail-secB">
                     <div className="container">
-                        <ul className='tab'>
-                            <li className='active'>Overview</li>
-                            <li>About Home</li>
-                            <li>Spaces</li>
-                            <li>Experiences</li>
-                            <li>Location</li>
-                            <li>Policy</li>
-                            <li>Reviews</li>
+                        <ul className="tab">
+                            {tabs.map((tab) => (
+                                <li
+                                    key={tab.id}
+                                    className={activeTab === tab.id ? "active" : ""}
+                                    onClick={() => setActiveTab(tab.id)}
+                                >
+                                    <Link href={`#${tab.id}`}>
+                                        {tab.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
 
                         <Link href="/" className='btn-borchure'>
@@ -31,7 +51,7 @@ const DetailSec = () => {
                 </div>
             </section>
 
-            <section>
+            <section id='overview'>
                 <div className="project-detail-secC">
                     <div className="container">
                         <div className="flex-box">
@@ -89,14 +109,14 @@ const DetailSec = () => {
                                 </div>
                             </div>
                             <div className="flex-box-item">
-
+                                <BookingSummary />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section id='location'>
                 <div className="project-detail-secD">
                     <div className="container">
                         <div className="heading">
@@ -109,19 +129,19 @@ const DetailSec = () => {
                         <div className="flex-box">
                             <div className="flex-box-item">
                                 <ul>
-                                    <li className='btn-border'>
+                                    <li className='active'>
                                         <figure>
                                             <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
                                         </figure>
                                         Restaurant & Cafe
                                     </li>
 
-                                    <li className='btn-border'>
+                                    <li>
                                         <Image src="/assets/icon/location.svg" width={25} height={25} alt='ico' ></Image>
                                         Tourist Attraction
                                     </li>
 
-                                    <li className='btn-border'>
+                                    <li>
                                         <Image src="/assets/icon/transport.svg" width={25} height={25} alt='ico' ></Image>
                                         Transport
                                     </li>
@@ -172,14 +192,14 @@ const DetailSec = () => {
                 </div>
             </section>
 
-            <section>
+            <section id='most-popular-things'>
                 <div className="project-detail-secE">
                     <div className="container">
                         <div className="heading">
                             <h2>12 Most Popular Things to Do Nearby</h2>
 
                             <CustomSwiper
-                                data={PopularThingsCardData}
+                                data={popularThingsCardData}
                                 spaceBetween="20"
                                 speed="800"
                                 slidesPerView="4"
@@ -193,7 +213,7 @@ const DetailSec = () => {
                 </div>
             </section>
 
-            <section>
+            <section id='similar-properties'>
                 <div className="project-detail-secF">
                     <div className="container">
                         <div className="heading">
@@ -204,59 +224,172 @@ const DetailSec = () => {
                 </div>
             </section >
 
+            <section id='policy'>
+                <div className="project-detail-secG">
+                    <div className="container">
+                        <div className="heading">
+                            <h2>Policies</h2>
+                            <p>Lazur Hotel Apartments takes special requests - add in the next step!</p>
+                        </div>
+
+                        <div className="property-table-card">
+                            <table>
+                                <tbody>
+                                    {
+                                        policiyData.map((item, i) => {
+                                            return (
+                                                <tr key={i}>
+                                                    <td className="icon-cell">
+                                                        <Image src={item.icon} width={25} height={25} alt={item.title} />
+                                                    </td>
+                                                    <td>{item.title}</td>
+                                                    <td>{item.description}</td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id='reviews'>
+                <div className="project-detail-secH" >
+                    <div className="container">
+                        <div className="heading">
+                            <h2>Reviews</h2>
+                        </div>
+                        <div className="overall-badge">
+                            <span className="score">5.0</span>
+                            <span className="label">Excellent</span>
+                            <span className="count">1,269 reviews</span>
+                        </div>
+
+                        <div className="flex-box">
+                            <div className="ratings-grid">
+                                <div className="bar-chart">
+                                    <div className="bar-row">
+                                        <span className="bar-num">5</span>
+                                        <div className="bar-track">
+                                            <div className="bar-fill" style={{ width: "90" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="bar-row">
+                                        <span className="bar-num">4</span>
+                                        <div className="bar-track">
+                                            <div className="bar-fill" style={{ width: "6%" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="bar-row">
+                                        <span className="bar-num">3</span>
+                                        <div className="bar-track">
+                                            <div className="bar-fill" style={{ width: "2%" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="bar-row">
+                                        <span className="bar-num">2</span>
+                                        <div className="bar-track">
+                                            <div className="bar-fill" style={{ width: "1%" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="bar-row">
+                                        <span className="bar-num">1</span>
+                                        <div className="bar-track">
+                                            <div className="bar-fill" style={{ width: "1%" }}></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="category-scores">
+                                <div className="category-item">
+                                    <div className="inner-flex">
+                                        <Image src="/assets/images/project/detail/reviews-ico/home-star.svg" width={20} height={20} alt='ico'></Image>
+                                        <p>Amenities</p>
+                                    </div>
+                                    <p className="cat-score">5.0</p>
+                                </div>
+
+                                <div className="category-item">
+                                    <div className="inner-flex">
+                                        <Image src="/assets/images/project/detail/reviews-ico/home-star.svg" width={20} height={20} alt='ico'></Image>
+                                        <p>Cleanliness</p>
+                                    </div>
+                                    <p className="cat-score">5.0</p>
+                                </div>
+
+                                <div className="category-item">
+                                    <div className="inner-flex">
+                                        <Image src="/assets/images/project/detail/reviews-ico/home-star.svg" width={20} height={20} alt='ico'></Image>
+                                        <p>Communication</p>
+                                    </div>
+                                    <p className="cat-score">5.0</p>
+                                </div>
+
+                                <div className="category-item">
+                                    <div className="inner-flex">
+                                        <Image src="/assets/images/project/detail/reviews-ico/home-star.svg" width={20} height={20} alt='ico'></Image>
+                                        <p>Location</p>
+                                    </div>
+                                    <p className="cat-score">5.0</p>
+                                </div>
+
+                                <div className="category-item">
+                                    <div className="inner-flex">
+                                        <Image src="/assets/images/project/detail/reviews-ico/home-star.svg" width={20} height={20} alt='ico'></Image>
+                                        <p>Value</p>
+                                    </div>
+                                    <p className="cat-score">5.0</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="reviews-cards">
+                            {reviewsData.map((item, index) => (
+                                <div className="review-card" key={index}>
+                                    <div className="review-header">
+                                        <div className="reviewer-info">
+                                            <figure>
+                                                <Image
+                                                    src={item.reviewerImage}
+                                                    width={38}
+                                                    height={38}
+                                                    alt={item.reviewerName}
+                                                />
+                                            </figure>
+
+                                            <div>
+                                                <h5 className="reviewer-name">{item.reviewerName}</h5>
+                                                <p className="review-date">{item.reviewDate}</p>
+                                            </div>
+                                        </div>
+
+                                        <span className="review-score">{item.reviewScore}</span>
+                                    </div>
+
+                                    <p className="review-text">{item.reviewText}</p>
+
+                                    <button className="show-more">Show More</button>
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id='faq'>
+                <div className="project-detail-secI">
+                    <div className="container">
+                        <FaqSection />
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
 
 export default DetailSec
-
-const PopularThingsCardData = [
-    {
-        figureImage: "/assets/images/project/detail/popular-things/1.jpg",
-        heading: "Beach",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/2.jpg",
-        heading: "Flamenco Show",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/3.jpg",
-        heading: "Musica Tour",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/4.jpg",
-        heading: "Cafe",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/1.jpg",
-        heading: "Beach",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/2.jpg",
-        heading: "Flamenco Show",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/3.jpg",
-        heading: "Musica Tour",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    },
-    {
-        figureImage: "/assets/images/project/detail/popular-things/4.jpg",
-        heading: "Cafe",
-        thingsCategory: "Beach",
-        distance: "600 m away",
-    }
-]

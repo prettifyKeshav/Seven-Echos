@@ -2133,6 +2133,35 @@ button {
   animation: spin 20s linear infinite;
 }
 
+.product-not-found {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+.product-not-found.not-found2 {
+  position: relative;
+}
+.product-not-found .nt-fnd-wrp {
+  text-align: center;
+}
+.product-not-found .nt-fnd-wrp img {
+  filter: grayscale(1);
+}
+.product-not-found .nt-fnd-wrp .ico {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale(1);
+}
+.product-not-found .nt-fnd-wrp p {
+  color: #666666;
+  font-size: 24px;
+  margin: 0px 0 3rem;
+}
+
 header {
   position: fixed;
   top: 0;

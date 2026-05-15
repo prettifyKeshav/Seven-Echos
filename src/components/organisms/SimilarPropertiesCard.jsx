@@ -4,11 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
-const SimilarPropertiesCard = ({ title, ...item }) => {
+const SimilarPropertiesCard = ({ ...item }) => {
     return (
         <>
             <div className="similar-properties-card">
@@ -16,8 +16,10 @@ const SimilarPropertiesCard = ({ title, ...item }) => {
                 <div className="image-slider">
                     <Swiper
                         spaceBetween={0}
-                        speed={500}
+                        speed={900}
                         slidesPerView={1}
+                        navigation={true}
+                        modules={[Navigation]}
                     >
                         {item.images.map((img, index) => (
                             <SwiperSlide key={index}>
@@ -190,205 +192,3 @@ const SimilarPropertiesCard = ({ title, ...item }) => {
 }
 
 export default SimilarPropertiesCard
-
-// const SimilarPropertiesCardData = [
-//     {
-
-//         id: 1,
-//         title: "Superior Villa",
-
-//         rating: {
-//             label: "Excellent",
-//             reviews: "1,240 reviews",
-//             score: "5.0",
-//         },
-//         tabCategory: "2 Beds",
-//         singleBeds: 2,
-//         persons: 2,
-
-//         details: [
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/bread-slice.svg",
-//                 label: "Breakfast",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/wifi.svg",
-//                 label: "Free Wifi",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/sea.svg",
-//                 label: "Sea View",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/arrows-expand.svg",
-//                 label: "30 m2",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/no-smoking.svg",
-//                 label: "No Smoking",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/winter.svg",
-//                 label: "Air Conditioner",
-//             },
-//         ],
-
-//         images: [
-//             "/assets/images/project/detail/similar-properties/1.jpg",
-//             "/assets/images/project/detail/similar-properties/2.jpg",
-//             "/assets/images/project/detail/similar-properties/3.jpg",
-//             "/assets/images/project/detail/similar-properties/4.jpg",
-//         ],
-
-//         pricing: {
-//             discount: "15% off",
-//             originalPrice: "₹7,500",
-//             currentPrice: "₹5,000",
-//             nights: 5,
-//             totalPrice: "₹25,000",
-//         },
-
-//         link: "#",
-//     },
-
-//     {
-//         id: 2,
-//         title: "Luxury Suite",
-
-//         rating: {
-//             label: "Wonderful",
-//             reviews: "980 reviews",
-//             score: "4.8",
-//         },
-//         tabCategory: "3 Beds",
-//         doubleBeds: 1,
-//         singleBeds: 2,
-//         persons: 2,
-
-//         details: [
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/bread-slice.svg",
-//                 label: "Breakfast",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/wifi.svg",
-//                 label: "Free Wifi",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/sea.svg",
-//                 label: "Mountain View",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/arrows-expand.svg",
-//                 label: "45 m2",
-//             },
-//         ],
-
-//         images: [
-//             "/assets/images/project/detail/similar-properties/2.jpg",
-//             "/assets/images/project/detail/similar-properties/3.jpg",
-//         ],
-
-//         pricing: {
-//             discount: "10% off",
-//             originalPrice: "₹9,000",
-//             currentPrice: "₹8,100",
-//             nights: 3,
-//             totalPrice: "₹24,300",
-//         },
-
-//         link: "#",
-//     },
-
-//     {
-//         id: 3,
-//         title: "Family Deluxe Room",
-
-//         rating: {
-//             label: "Good",
-//             reviews: "540 reviews",
-//             score: "4.3",
-//         },
-//         tabCategory: "1 Bed",
-//         doubleBeds: 1,
-//         persons: 4,
-
-//         available: false,
-
-//         details: [
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/wifi.svg",
-//                 label: "Free Wifi",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/sea.svg",
-//                 label: "Garden View",
-//             },
-//         ],
-
-//         images: [
-//             "/assets/images/project/detail/similar-properties/5.jpg",
-//             "/assets/images/project/detail/similar-properties/6.jpg",
-//         ],
-
-//         link: "#",
-//     },
-
-//     {
-//         id: 4,
-//         title: "Superior Villa",
-
-//         rating: {
-//             label: "Excellent",
-//             reviews: "1,240 reviews",
-//             score: "5.0",
-//         },
-//         tabCategory: "1 Bed",
-//         singleBeds: 1,
-//         persons: 2,
-
-//         details: [
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/bread-slice.svg",
-//                 label: "Breakfast",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/wifi.svg",
-//                 label: "Free Wifi",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/sea.svg",
-//                 label: "Sea View",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/arrows-expand.svg",
-//                 label: "30 m2",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/no-smoking.svg",
-//                 label: "No Smoking",
-//             },
-//             {
-//                 icon: "/assets/icon/project-detail/similar-card/winter.svg",
-//                 label: "Air Conditioner",
-//             },
-//         ],
-
-//         images: [
-//             "/assets/images/project/detail/similar-properties/1.jpg",
-//             "/assets/images/project/detail/similar-properties/2.jpg",
-//             "/assets/images/project/detail/similar-properties/3.jpg",
-//             "/assets/images/project/detail/similar-properties/4.jpg",
-//         ],
-
-//         pricing: {
-//             discount: "15% off",
-//             originalPrice: "₹7,500",
-//             currentPrice: "₹5,000",
-//             nights: 5,
-//             totalPrice: "₹25,000",
-//         },
-
-//         link: "#",
-//     },
-// ];
