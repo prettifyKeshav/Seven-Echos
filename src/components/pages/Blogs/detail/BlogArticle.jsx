@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BlogArticle = () => {
@@ -108,7 +109,49 @@ const BlogArticle = () => {
           </div>
           <div className="sidebar">
             <div className="social">
-              
+              <h4>Follow Us</h4>
+              <ul>
+                {socialStat.map((item, index) => (
+                  <li key={index}>
+                    <Link href="/">
+                      <Image
+                        src={item.icon}
+                        width={24}
+                        height={24}
+                        alt="stat"
+                      />
+                      <span>{item.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="">
+                Subscription Subscribe to our newsletter and receive a selection
+                of cool articles every weeks
+              </p>
+            </div>
+
+            <div className="latest-article">
+              <h4>The Latest</h4>
+
+              <div className="rowA">
+                {latestBlog.map(({image, date, readTime, title}, index) => {
+                  return (
+                    <Link href={`/blogs/${title.replaceAll(" ", "-")}`} key={index} className="latest-blog-card">
+                      <Image
+                        src={image}
+                        width={300}
+                        height={300}
+                        alt="artcile image"
+                      />
+                      <figcaption>
+                          <h4>{title}</h4>
+                          <p><span>{date}</span> <span>-</span> <span><Image src="/assets/icon/watch.svg" width={24} height={24} alt="clock" /> {readTime}</span></p>
+                      </figcaption>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -131,5 +174,36 @@ const socialStat = [
   {
     icon: "/assets/icon/pinterest.svg",
     label: "25",
+  },
+];
+
+const latestBlog = [
+  {
+    title:
+      "Lorem ipsum dolor sit amet consectetur. Lectus mattis ut blandit suspendisse massa massa. Dignissim.",
+    date: "June 21,2022",
+    readTime: "2 minute read",
+    image: "/assets/images/blog/blog 2.jpg",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet consectetur. Lectus mattis ut blandit suspendisse massa massa. Dignissim.",
+    date: "June 21,2022",
+    readTime: "2 minute read",
+    image: "/assets/images/blog/blog 3.jpg",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet consectetur. Lectus mattis ut blandit suspendisse massa massa. Dignissim.",
+    date: "June 21,2022",
+    readTime: "2 minute read",
+    image: "/assets/images/blog/blog 4.jpg",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet consectetur. Lectus mattis ut blandit suspendisse massa massa. Dignissim.",
+    date: "June 21,2022",
+    readTime: "2 minute read",
+    image: "/assets/images/blog/blog 5.jpg",
   },
 ];

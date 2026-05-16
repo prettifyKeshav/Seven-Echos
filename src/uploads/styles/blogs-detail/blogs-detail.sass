@@ -98,6 +98,88 @@
             img
                 margin: 26px 0
         .sidebar
+            h4
+                color: #000
+                font-size: 24px
+                font-weight: 400
+            ul
+                margin-top: 24px
+                display: flex
+                flex-wrap: wrap
+                gap: 30px
+                li
+                    a
+                        display: flex
+                        align-items: center
+                        gap: 4px
+                        cursor: pointer
+                        flex-direction: column
+                        color: #000
+            p
+                font-size: 18px
+                line-height: 1.4
+                font-weight: 500
+                margin-top: 24px
+                color: #121416
+            .latest-article
+                margin-top: 30px
+                h4
+                    font-size: 22px
+                    font-weight: 400
+                .rowA
+                    margin-top: 30px
+                    .latest-blog-card
+                        &:not(:last-child)
+                            margin-bottom: 25px
+                        width: 100%
+                        height: 250px
+                        position: relative
+                        display: block
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            background-color: #00000085
+                            z-index: 1
+                        figcaption
+                            position: absolute
+                            inset: 0
+                            padding: 20px
+                            z-index: 2
+                            display: flex
+                            flex-direction: column
+                            h4
+                                line-height: 1.2
+                                color: #fff
+                                flex: 1
+                            p
+                                color: #fff
+                                font-size: 16px
+                                font-weight: 400
+                                opacity: 80%
+                                display: flex
+                                gap: 10px
+                                span
+                                    display: flex
+                                    align-items: center
+                                    gap: 4px
+                                    img
+                                        width: 15px
+                                        height: 15px
+                                        object-fit: contain
+                                        display: block
+                                        filter: brightness(0) invert(1)
+
+
+
+
 
 
 
