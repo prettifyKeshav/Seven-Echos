@@ -122,4 +122,17 @@
 }
 .blog-secB .container .blog-article img {
   margin: 26px 0;
+}
+.blog-secC {
+  padding: 50px 0;
+}
+.blog-secC .container h4 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.blog-secC .container .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
 }/*# sourceMappingURL=blogs-detail.css.map */

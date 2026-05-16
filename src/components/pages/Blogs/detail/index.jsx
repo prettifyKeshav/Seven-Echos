@@ -2,6 +2,8 @@ import Hero from "@/components/organisms/Hero";
 import React from "react";
 import BlogArticle from "./BlogArticle";
 import "@/uploads/styles/blogs-detail/blogs-detail.css";
+import "@/uploads/styles/blogs/blogs.css";
+import MoreArticle from "./MoreArticle";
 
 const BlogDetail = () => {
   return (
@@ -15,6 +17,8 @@ const BlogDetail = () => {
         description="Lorem ipsum dolor sit amet consectetur. Diam."
       />
       <BlogArticle />
+      <MoreArticle />
+
     </>
   );
 };
