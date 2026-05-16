@@ -1,6 +1,7 @@
 import Hero from "@/components/organisms/Hero";
 import React from "react";
 import BlogArticle from "./BlogArticle";
+import "@/uploads/styles/blogs-detail/blogs-detail.css";
 
 const BlogDetail = () => {
   return (
