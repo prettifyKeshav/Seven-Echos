@@ -128,7 +128,92 @@ const BookingDetailPage = () => {
                             </div>
 
                             <div className="col">
+                                <div className="hotel-info">
+                                    <Image src="/assets/images/booking-detail/villa-arts.jpg" width={100} height={100} alt="Villa Arts" ></Image>
 
+                                    <div className="hotel-content">
+                                        <div className="hotel-title">
+                                            <h3>Villa Arts</h3>
+
+                                            <div className="stars">
+                                                ★ ★ ★ ★ ★
+                                            </div>
+                                        </div>
+
+                                        <p className="location">Assago, Goa</p>
+
+                                        <div className="rating">
+                                            <span className="score">5.0</span>
+                                            <span className="excellent">Excellent</span>
+                                            <span className="reviews">1,260 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="booking-details">
+                                    <div className="dates">
+                                        <div className="date-box">
+                                            <div className="label">
+                                                <Image src="/assets/icon/calendar.svg" width={20} height={20} alt='calendar' ></Image>
+                                                <span>Check-in</span>
+                                            </div>
+                                            <h4>08/14/2025</h4>
+                                        </div>
+
+                                        <div className="divider"></div>
+
+                                        <div className="date-box">
+                                            <div className="label">
+                                                <Image src="/assets/icon/calendar.svg" width={20} height={20} alt='calendar' ></Image>
+                                                <span>Check-out</span>
+                                            </div>
+                                            <h4>08/19/2025</h4>
+                                        </div>
+                                    </div>
+
+                                    <div className="guests">
+                                        <h4>Rooms and Guests</h4>
+                                        <p>1 rooms, 2 adults</p>
+                                    </div>
+                                </div>
+
+                                <div className="price-section">
+                                    <h4>Price details:</h4>
+
+                                    <div className="price-row">
+                                        <span>₹5000 x 5 nights</span>
+                                        <span>₹ 25000</span>
+                                    </div>
+
+                                    <div className="price-row discount">
+                                        <span>Coupon Discount</span>
+                                        <span>-₹5000</span>
+                                    </div>
+
+                                    <p className="coupon">Coupon - “Welcome10”</p>
+
+                                    <div className="price-row">
+                                        <span>GST</span>
+                                        <span>₹ 2,000</span>
+                                    </div>
+
+                                    <div className="total-row">
+                                        <div>
+                                            <h3>Total INR</h3>
+                                            <small>Includes Taxes and platform fee</small>
+                                        </div>
+
+                                        <h2>₹ 22,000</h2>
+                                    </div>
+                                </div>
+
+                                <button className="pay-btn">
+                                    Proceed to pay ₹22,000
+                                </button>
+
+                                <p className="terms">
+                                    By proceeding you agree to our <a href="#"> privacy policy </a> and <a href="#"> T&C </a>
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -22,10 +22,10 @@ const Footer = () => {
                 <div className="col-md">
                   <h6>COMPANY</h6>
                   <ul>
-                    <li><Link href="/">About Us</Link></li>
+                    <li><Link href="/about-us">About Us</Link></li>
                     <li><Link href="/">Legal Information</Link></li>
                     <li><Link href="/">Contact Us</Link></li>
-                    <li><Link href="/">Blogs</Link></li>
+                    <li><Link href="/blogs">Blogs</Link></li>
                   </ul>
                 </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                     <li><Link href="/">Find a Property</Link></li>
                     <li><Link href="/">How To Host?</Link></li>
                     <li><Link href="/">Why Us?</Link></li>
-                    <li><Link href="/">FAQs</Link></li>
+                    <li><Link href="/faq">FAQs</Link></li>
                     <li><Link href="/">Rental Guides</Link></li>
                   </ul>
                 </div>

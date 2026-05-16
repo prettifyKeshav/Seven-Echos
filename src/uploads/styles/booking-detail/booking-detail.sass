@@ -158,12 +158,170 @@
 
         .col:last-child
             width: 405px
-            height: 382px
+            height: fit-content
             border: 1.2px solid #B5BAC2
             border-radius: 14.4px
             box-shadow: 0px 2.4px 24px 0px #0000001F
             position: sticky
             top: calc( 20px + var(--headerheight) )
+            padding: 20px 
+
+            .hotel-info 
+                display: flex 
+                gap: 14px 
+                margin-bottom: 18px 
+                img 
+                    width: 92px 
+                    height: 92px 
+                    border-radius: 10px 
+                    object-fit: cover 
+            .hotel-content 
+                flex: 1 
+            .hotel-title 
+                display: flex 
+                justify-content: space-between 
+                align-items: center 
+                gap: 10px
+                h3 
+                    font-size: 18px
+                    font-weight: 600
+                .stars 
+                    color: #FDA118
+                    font-size: 14px 
+                    white-space: nowrap 
+            .location 
+                color: #777 
+                margin-top: 6px 
+                font-size: 14px 
+            .rating 
+                margin-top: 12px 
+                display: flex 
+                align-items: center 
+                gap: 6px 
+                flex-wrap: wrap 
+                .score 
+                    background: #F1F2F3
+                    color: #FDA118
+                    padding: 2px 6px 
+                    border-top-left-radius: 10px
+                    border-bottom-left-radius: 10px
+                    border-bottom-right-radius: 10px
+                    font-size: 13px 
+                    font-weight: 600 
+                .excellent 
+                    color: #ff9900 
+                    font-weight: 600 
+                    font-size: 14px 
+                .reviews 
+                    color: #888 
+                    font-size: 13px 
+            .booking-details 
+                border: 1.2px solid #DDDFE3
+                border-radius: 10px 
+                overflow: hidden 
+                .dates 
+                    display: flex 
+                    align-items: center 
+                    padding: 12px
+                    .date-box 
+                        flex: 1 
+                        align-items: center
+                        .label 
+                            display: flex
+                            color: #555 
+                            font-size: 14px 
+                            margin-bottom: 8px 
+                            gap: 10px
+                            span
+                                color: #2B3037
+                        h4 
+                            font-size: 15px 
+                            font-weight: 400
+                            color: #383E48 
+                    .divider 
+                        width: 1px 
+                        height: 48px 
+                        background: #ddd 
+                        margin: 0 16px 
+                .guests 
+                    border-top: 1px solid #ddd 
+                    padding: 12px
+                    h4 
+                        font-size: 15px 
+                        margin-bottom: 6px 
+                        color: #2B3037
+                    p 
+                        color: #2B3037
+                        font-size: 14px 
+            .price-section 
+                margin-top: 20px 
+                h4 
+                    margin-bottom: 14px 
+                    font-size: 16px 
+                    color: #2B3037
+                .price-row 
+                    display: flex 
+                    justify-content: space-between 
+                    margin-bottom: 3px 
+                    color: #656F81
+                    font-size: 15px 
+                .discount 
+                    color: #656F81 
+                    font-weight: 500 
+                    span:last-child
+                        color:#30EA3C
+                        font-weight: 400
+                        font-size: 16px
+ 
+                .coupon 
+                    color: #30EA3C
+                    margin-bottom: 12px 
+                    font-size: 14px 
+                .total-row
+                    border-top: 1px solid #ddd 
+                    padding-top: 14px
+                    margin-top: 12px 
+                    display: flex 
+                    justify-content: space-between 
+                    align-items: flex-start 
+                    h3 
+                        font-size: 18px 
+                        margin-bottom: 4px 
+                        color: #2B3037
+                    small 
+                        color: #656F81
+                        font-size: 10px 
+                    h2 
+                        font-size: 22px 
+                        font-weight: 600 
+                        color: #2B3037
+            .pay-btn 
+                width: 100% 
+                background: #FDA118
+                border: none 
+                height: 41px
+                border-radius: 10px 
+                color: #fff 
+                font-size: 18px 
+                font-weight: 600 
+                cursor: pointer 
+                margin-top: 20px 
+                &:hover 
+                    opacity: 0.9 
+            .terms 
+                text-align: center 
+                color: #656F81
+                font-size: 13px 
+                font-weight: 400
+                margin-top: 14px 
+                line-height: 1.5 
+                a 
+                    color: #FDA118
+                    text-decoration: none 
+
+
+
+
 
 .booking-detail-secB
     padding: 0 0 40px 0

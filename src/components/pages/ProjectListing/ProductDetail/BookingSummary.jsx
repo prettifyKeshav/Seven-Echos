@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "@/components/pages/ProjectListing/ProductDetail/BookingSummary.module.css";
+import Link from "next/link";
 
 export default function BookingSummary() {
   const [promoCode, setPromoCode] = useState("");
@@ -109,7 +110,7 @@ export default function BookingSummary() {
         </div>
 
         {/* Book Now */}
-        <button className={styles.bookBtn}>Book Now</button>
+        <Link href="/booking-detail" className={styles.bookBtn} style={{textAlign:"center"}}>Book Now</Link>
 
         {/* Connect With Host */}
         <button className={styles.hostBtn}>

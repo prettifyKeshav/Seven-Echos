@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNotFound } from "@/context/useNotFoundContext";
 import { useModal } from "@/hooks/useModal";
-import BookingDetailPage from "../pages/BookingDetailPage";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -23,7 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${isFixed || isNotFound || BookingDetailPage ? "header-fixed" : ""}`}>
+    <header className={`${isFixed || isNotFound ? "header-fixed" : ""}`}>
       <div className="container-fluid header-wrapper">
         <div className="colA">
           <Link href="/" className="logo">
@@ -47,7 +46,7 @@ const Header = () => {
               <Link href="/become-an-host">List Your Property</Link>
             </li>
             <li>
-              <Link href="/">Our journal</Link>
+              <Link href="/">Our Journal</Link>
             </li>
           </ul>
         </div>

@@ -200,12 +200,201 @@
 }
 .booking-detail-secA .flex-box .col:last-child {
   width: 405px;
-  height: 382px;
+  height: -moz-fit-content;
+  height: fit-content;
   border: 1.2px solid #B5BAC2;
   border-radius: 14.4px;
   box-shadow: 0px 2.4px 24px 0px rgba(0, 0, 0, 0.1215686275);
   position: sticky;
   top: calc(20px + var(--headerheight));
+  padding: 20px;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-info {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-info img {
+  width: 92px;
+  height: 92px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-content {
+  flex: 1;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.booking-detail-secA .flex-box .col:last-child .hotel-title .stars {
+  color: #FDA118;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.booking-detail-secA .flex-box .col:last-child .location {
+  color: #777;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.booking-detail-secA .flex-box .col:last-child .rating {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.booking-detail-secA .flex-box .col:last-child .rating .score {
+  background: #F1F2F3;
+  color: #FDA118;
+  padding: 2px 6px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.booking-detail-secA .flex-box .col:last-child .rating .excellent {
+  color: #ff9900;
+  font-weight: 600;
+  font-size: 14px;
+}
+.booking-detail-secA .flex-box .col:last-child .rating .reviews {
+  color: #888;
+  font-size: 13px;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details {
+  border: 1.2px solid #DDDFE3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates .date-box {
+  flex: 1;
+  align-items: center;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates .date-box .label {
+  display: flex;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates .date-box .label span {
+  color: #2B3037;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates .date-box h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #383E48;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .dates .divider {
+  width: 1px;
+  height: 48px;
+  background: #ddd;
+  margin: 0 16px;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .guests {
+  border-top: 1px solid #ddd;
+  padding: 12px;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .guests h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #2B3037;
+}
+.booking-detail-secA .flex-box .col:last-child .booking-details .guests p {
+  color: #2B3037;
+  font-size: 14px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section {
+  margin-top: 20px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section h4 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #2B3037;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  color: #656F81;
+  font-size: 15px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .discount {
+  color: #656F81;
+  font-weight: 500;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .discount span:last-child {
+  color: #30EA3C;
+  font-weight: 400;
+  font-size: 16px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .coupon {
+  color: #30EA3C;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .total-row {
+  border-top: 1px solid #ddd;
+  padding-top: 14px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .total-row h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #2B3037;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .total-row small {
+  color: #656F81;
+  font-size: 10px;
+}
+.booking-detail-secA .flex-box .col:last-child .price-section .total-row h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2B3037;
+}
+.booking-detail-secA .flex-box .col:last-child .pay-btn {
+  width: 100%;
+  background: #FDA118;
+  border: none;
+  height: 41px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.booking-detail-secA .flex-box .col:last-child .pay-btn:hover {
+  opacity: 0.9;
+}
+.booking-detail-secA .flex-box .col:last-child .terms {
+  text-align: center;
+  color: #656F81;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.booking-detail-secA .flex-box .col:last-child .terms a {
+  color: #FDA118;
+  text-decoration: none;
 }
 
 .booking-detail-secB {
