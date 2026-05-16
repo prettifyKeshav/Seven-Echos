@@ -549,6 +549,17 @@ small {
   display: block;
 }
 
+.vertical-scroll::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+.vertical-scroll::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.vertical-scroll::-webkit-scrollbar-thumb {
+  background-color: #faa935;
+}
+
 .gray-bg {
   background: #F3F3F3;
 }
@@ -2164,51 +2175,56 @@ button {
 
 .enquire-modal {
   max-width: 707px;
-  max-height: 80vh;
-  height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
   top: 100%;
   left: 50%;
   transform: translate(-50%, 0);
   background: var(--white);
   border-radius: 15px;
   transition: 0.5s ease;
-  padding: 20px 40px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .enquire-modal.is-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.enquire-modal .modal-body h2 {
+.enquire-modal .modal-body {
+  max-height: 80vh;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px 40px;
+}
+.enquire-modal .modal-body .content h2 {
   font-size: 32px;
   font-weight: 500;
   text-align: center;
   margin-bottom: 5px;
 }
-.enquire-modal .modal-body p {
+.enquire-modal .modal-body .content p {
   text-align: center;
   font-size: 18px;
   line-height: 1.2;
   max-width: 80%;
   margin: auto;
 }
-.enquire-modal .modal-body form {
+.enquire-modal .modal-body .content form {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
-.enquire-modal .modal-body form label span {
+.enquire-modal .modal-body .content form label span {
   display: block;
   margin-bottom: 8px;
   font-size: 16px;
   color: #666;
 }
-.enquire-modal .modal-body form label span sup {
+.enquire-modal .modal-body .content form label span sup {
   color: red;
 }
-.enquire-modal .modal-body form label input, .enquire-modal .modal-body form label textarea {
+.enquire-modal .modal-body .content form label input, .enquire-modal .modal-body .content form label textarea {
   border: 1px solid #D9D9D9;
   padding: 12px 10px;
   width: 100%;
@@ -2216,16 +2232,16 @@ button {
   outline: 0;
   font-size: 18px;
 }
-.enquire-modal .modal-body form label:nth-of-type(3), .enquire-modal .modal-body form label:nth-of-type(4) {
+.enquire-modal .modal-body .content form label:nth-of-type(3), .enquire-modal .modal-body .content form label:nth-of-type(4), .enquire-modal .modal-body .content form label:nth-of-type(5) {
   grid-column: span 2;
 }
-.enquire-modal .modal-body form .btn {
+.enquire-modal .modal-body .content form .btn {
   grid-column: span 2;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
-.enquire-modal .close {
+.enquire-modal .modal-body .close {
   width: 33.59px;
   height: 33.59px;
   position: absolute;
@@ -2239,7 +2255,7 @@ button {
   cursor: pointer;
   border: 1px solid #faa935;
 }
-.enquire-modal .close img {
+.enquire-modal .modal-body .close img {
   width: 15px;
   height: 15px;
 }
