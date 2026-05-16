@@ -35,7 +35,7 @@ const Footer = () => {
                     <li><Link href="/">Find a Property</Link></li>
                     <li><Link href="/">How To Host?</Link></li>
                     <li><Link href="/">Why Us?</Link></li>
-                    <li><Link href="/faq">FAQs</Link></li>
+                    <li><Link href="/">FAQs</Link></li>
                     <li><Link href="/">Rental Guides</Link></li>
                   </ul>
                 </div>
