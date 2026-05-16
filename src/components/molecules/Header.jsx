@@ -87,7 +87,7 @@ const Header = () => {
                 </li>
               ))}
               <li>
-                <figure><Image src="/assets/icon/share.svg" width={24} height={24} alt="share" ></Image> </figure> Make an enquiry
+                <figure><Image src="/assets/icon/share.svg"  width={24} height={24} alt="share" ></Image> </figure> Make an enquiry
               </li>
             </ul>
           </button>
