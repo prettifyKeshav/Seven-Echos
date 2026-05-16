@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Motion from '@/components/organisms/Animate'
 
 const GuestExperiences = () => {
     return (
@@ -8,26 +9,30 @@ const GuestExperiences = () => {
                 <div className="container">
                     <div className="home-secF">
                         <div className="flex-box">
-                            <figcaption>
-                                <h2>Curated Guest Experiences</h2>
-                                <p>Stay at the finest villas, bungalows, apartments/flats that feel like home.</p>
-                            </figcaption>
+                            <Motion variant='fadeRight'>
+                                <figcaption>
+                                    <h2>Curated Guest Experiences</h2>
+                                    <p>Stay at the finest villas, bungalows, apartments/flats that feel like home.</p>
+                                </figcaption>
+                            </Motion>
 
-                            <div className="grid-box">
-                                {
-                                    BoxData.map((item, i) => {
-                                        return (
-                                            <div className="grid-box-item" key={i}>
-                                                <figure>
-                                                    <Image src={item.figureImage} width={25} height={25} alt="ico" ></Image>
-                                                </figure>
-                                                <h4>{item.heading}</h4>
-                                                <p>{item.desc}</p>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
+                            <Motion variant='fadeLeft'>
+                                <div className="grid-box">
+                                    {
+                                        BoxData.map((item, i) => {
+                                            return (
+                                                <div className="grid-box-item" key={i}>
+                                                    <figure>
+                                                        <Image src={item.figureImage} width={25} height={25} alt="ico" ></Image>
+                                                    </figure>
+                                                    <h4>{item.heading}</h4>
+                                                    <p>{item.desc}</p>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </Motion>
                         </div>
                     </div>
                 </div>

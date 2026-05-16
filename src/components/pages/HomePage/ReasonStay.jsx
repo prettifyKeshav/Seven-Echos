@@ -1,35 +1,40 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Motion from '@/components/organisms/Animate'
 
 const ReasonStay = () => {
     return (
         <>
             <div className="home-secE-2">
                 <div className="container" >
-                    <div className="heading">
-                        <h2>If You Have A Reason, We Have A Stay</h2>
-                        <p>From quiet escapes to big celebrations find a home that matches your moment.</p>
-                    </div>
+                    <Motion variant='fadeUp'>
+                        <div className="heading">
+                            <h2>If You Have A Reason, We Have A Stay</h2>
+                            <p>From quiet escapes to big celebrations find a home that matches your moment.</p>
+                        </div>
+                    </Motion>
 
-                    <div className="grid-box">
-                        {ReasonStayData.map((item, i) => {
-                            return (
-                                <Link href={item.cardHref} className="col" key={i}>
-                                    <figure>
-                                        <Image src={item.figureImage} width={413} height={300} alt="ico" ></Image>
-                                        <figcaption>
-                                            <h4>{item.title}</h4>
-                                            <div className="bottom-flex">
-                                                <p>{item.description}</p>
-                                                <button>Explore</button>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </Link>
-                            )
-                        })}
-                    </div>
+                    <Motion variant='fadeUp'>
+                        <div className="grid-box">
+                            {ReasonStayData.map((item, i) => {
+                                return (
+                                    <Link href={item.cardHref} className="col" key={i}>
+                                        <figure>
+                                            <Image src={item.figureImage} width={413} height={300} alt="ico" ></Image>
+                                            <figcaption>
+                                                <h4>{item.title}</h4>
+                                                <div className="bottom-flex">
+                                                    <p>{item.description}</p>
+                                                    <button>Explore</button>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </Link>
+                                )
+                            })}
+                        </div>
+                    </Motion>
                 </div>
             </div>
         </>

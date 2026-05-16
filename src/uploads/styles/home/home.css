@@ -214,6 +214,7 @@
   background: #F9F6F1;
   border-radius: 10px;
   padding: 30px 40px;
+  overflow: hidden;
 }
 .home-secE .flex-box {
   display: flex;
