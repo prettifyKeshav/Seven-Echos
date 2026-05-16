@@ -2253,6 +2253,189 @@ header .header-wrapper .colB ul .ham-parent .ham-btn span:nth-child(3) {
   top: 18px;
   left: 0px;
 }
+header .header-wrapper .colC {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .header-wrapper .colC .btn-contact {
+  position: relative;
+}
+header .header-wrapper .colC .btn-contact:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 244px;
+  height: 12px;
+  background: transparent;
+  pointer-events: none;
+}
+header .header-wrapper .colC .btn-contact:hover:before {
+  pointer-events: auto;
+}
+header .header-wrapper .colC .btn-contact:hover .contact-options {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+header .header-wrapper .colC .btn-contact .contact-options {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease;
+  transform: translateY(10px);
+  width: 244px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px 0px rgba(68, 68, 68, 0.0784313725);
+  background: var(--white);
+  position: absolute;
+  top: 120%;
+  right: 0;
+  z-index: 5;
+  padding: 16px;
+}
+header .header-wrapper .colC .btn-contact .contact-options li {
+  width: 100%;
+}
+header .header-wrapper .colC .btn-contact .contact-options li:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+header .header-wrapper .colC .btn-contact .contact-options li:last-child:hover {
+  background-color: rgba(253, 161, 24, 0.231372549);
+  border-color: #FDA118;
+}
+header .header-wrapper .colC .btn-contact .contact-options li:not(:last-child) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E0E0E0;
+}
+header .header-wrapper .colC .btn-contact .contact-options li:not(:first-child) {
+  padding-top: 12px;
+}
+header .header-wrapper .colC .btn-contact .contact-options li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  border-radius: 12px;
+}
+header .header-wrapper .colC .btn-contact .contact-options li a:hover {
+  background-color: rgba(253, 161, 24, 0.231372549);
+  border-color: #FDA118;
+}
+header .header-wrapper .colC .btn-contact .contact-options li figure {
+  height: 24px;
+  width: 24px;
+}
+header .header-wrapper .colC .btn-contact .contact-options li figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header-wrapper .colC .user-profile {
+  position: relative;
+}
+header .header-wrapper .colC .user-profile:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 244px;
+  height: 12px;
+  background: transparent;
+  pointer-events: none;
+}
+header .header-wrapper .colC .user-profile:hover:before {
+  pointer-events: auto;
+}
+header .header-wrapper .colC .user-profile:hover .user-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+header .header-wrapper .colC .user-profile figure {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+header .header-wrapper .colC .user-profile figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header-wrapper .colC .user-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease;
+  transform: translateY(10px);
+  width: 244px;
+  background: var(--white);
+  position: absolute;
+  right: 0;
+  top: 120%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0px 4px 16px 0px rgba(68, 68, 68, 0.0784313725);
+}
+header .header-wrapper .colC .user-menu li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  color: #000;
+  font-size: 14px;
+}
+header .header-wrapper .colC .user-menu li:not(:last-child) {
+  margin-bottom: 16px;
+}
+header .header-wrapper .colC .user-menu li:first-child {
+  border-bottom: 1px solid #E0E0E0;
+}
+header .header-wrapper .colC .user-menu li:first-child a {
+  padding: 8px 8px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  background: #F8F8F8;
+}
+header .header-wrapper .colC .user-menu li:last-child {
+  padding: 0 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #E0E0E0;
+}
+header .header-wrapper .colC .user-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  width: 100%;
+  padding: 0 8px;
+}
+header .header-wrapper .colC .user-menu li figure {
+  width: 24px;
+  height: 24px;
+}
 
 footer {
   position: relative;
