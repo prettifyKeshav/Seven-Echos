@@ -6,7 +6,7 @@ const ReasonStay = () => {
     return (
         <>
             <div className="home-secE-2">
-                <div className="container">
+                <div className="container" >
                     <div className="heading">
                         <h2>If You Have A Reason, We Have A Stay</h2>
                         <p>From quiet escapes to big celebrations find a home that matches your moment.</p>

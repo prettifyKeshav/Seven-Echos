@@ -8,7 +8,7 @@ const ShareHomeStory = () => {
             <section>
                 <div className="container">
                     <div className="home-secE">
-                        <div className="flex-box">
+                        <div className="flex-box" >
                             <figcaption>
                                 <h2>Share Your Home, Share Your Story</h2>
                                 <p>Share your home’s warmth with people who truly value it.</p>

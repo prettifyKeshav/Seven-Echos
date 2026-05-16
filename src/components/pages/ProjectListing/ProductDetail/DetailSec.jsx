@@ -372,7 +372,7 @@ const DetailSec = () => {
 
                                     <p className="review-text">{item.reviewText}</p>
 
-                                    <button className="show-more">Show More</button>
+                                    <button type='button' className="show-more">Show More</button>
                                 </div>
                             ))}
                         </div>

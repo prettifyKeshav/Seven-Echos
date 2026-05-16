@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Motion from './Animate'
 
 const Hero = ({
     imgSrc,
@@ -15,13 +16,15 @@ const Hero = ({
                 <div className="bg-background">
                     <Image src={imgSrc} height={imgHeight} width={imgWidth} alt='banner image'></Image>
                     <div className="container">
-                        <div className="bg-wrapper">
-                            <h1>{heading}</h1>
-                            <p>{description}</p>
+                        <div className="bg-wrapper" >
+                            <Motion variant="fadeUp">
+                                <h1>{heading}</h1>
+                                <p>{description}</p>
+                            </Motion>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
