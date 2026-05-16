@@ -32,16 +32,23 @@
             gap: 50px
 
 
+            
 .blog-card
     figure
         height: 280.38px
         overflow: hidden
         position: relative
+        @include shine
+        
         img
             object-fit: cover
             width: 100%
             height: 100%
             display: inline-block
+            transition: all 0.5s ease
+        &:hover
+            img
+                transform: scale(1.1)
         .blog-tags
             position: absolute
             top: 12px

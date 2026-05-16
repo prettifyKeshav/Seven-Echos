@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogList = () => {
   return (
@@ -11,12 +12,17 @@ const BlogList = () => {
                 <div key={index} className="blog-card">
                   <div className="img-wrapper">
                     <figure>
-                      <Image
-                        src={image}
-                        width={331}
-                        height={331}
-                        alt="blog image"
-                      ></Image>
+                      <Link
+                        href={`/blogs/${title.trim().replaceAll(" ", "-").toLowerCase()}`}
+                      >
+                        {" "}
+                        <Image
+                          src={image}
+                          width={331}
+                          height={331}
+                          alt="blog image"
+                        ></Image>
+                      </Link>
                       <div className="blog-tags">
                         {tags?.map((item, index) => {
                           return <span key={index}>{item}</span>;
@@ -25,8 +31,7 @@ const BlogList = () => {
                     </figure>
                     <figcaption className="about-blog">
                       <p className="">
-                        <strong>{title}</strong> {" "}
-                        {description}
+                        <strong>{title}</strong> {description}
                       </p>
 
                       <p>

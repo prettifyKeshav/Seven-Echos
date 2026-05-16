@@ -51,6 +51,25 @@
   height: 280.38px;
   overflow: hidden;
   position: relative;
+  position: relative;
+}
+.blog-card figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.blog-card figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
 }
 .blog-card figure img {
   -o-object-fit: cover;
@@ -58,6 +77,10 @@
   width: 100%;
   height: 100%;
   display: inline-block;
+  transition: all 0.5s ease;
+}
+.blog-card figure:hover img {
+  transform: scale(1.1);
 }
 .blog-card figure .blog-tags {
   position: absolute;

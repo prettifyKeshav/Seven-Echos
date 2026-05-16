@@ -5,11 +5,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNotFound } from "@/context/useNotFoundContext";
 import { useModal } from "@/hooks/useModal";
+import BookingDetailPage from "../pages/BookingDetailPage";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const { isNotFound } = useNotFound();
   const { openModal } = useModal();
+
+  const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +25,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${isFixed || isNotFound ? "header-fixed" : ""}`}>
+    <header className={`${isFixed || isNotFound || BookingDetailPage ? "header-fixed" : ""}`}>
       <div className="container-fluid header-wrapper">
         <div className="colA">
           <Link href="/" className="logo">
@@ -46,80 +49,100 @@ const Header = () => {
               <Link href="/become-an-host">List Your Property</Link>
             </li>
             <li>
-              <Link href="/">Our Journal</Link>
+              <Link href="/">Our journal</Link>
             </li>
           </ul>
         </div>
 
-        <div className="colC">
-          <button className="btn btn-contact">
-            Get in Touch
-            <ul className="contact-options">
-              {contactOptions.map(({ title, icon, href }, index) => (
-                <li key={index}>
-                  <a href={href}>
-                    <figure>
-                      <Image
-                        src={icon}
-                        width={24}
-                        height={24}
-                        alt={title}
-                      ></Image>
-                    </figure>
-                    {title}
-                  </a>
+          <div className="colC">
+            <button className="btn btn-contact">
+              Get in Touch
+              <ul className="contact-options">
+                {contactOptions.map(({ title, icon, href }, index) => (
+                  <li key={index}>
+                    <a href={href}>
+                      <figure>
+                        <Image
+                          src={icon}
+                          width={24}
+                          height={24}
+                          alt={title}
+                        ></Image>
+                      </figure>
+                      {title}
+                    </a>
+                  </li>
+                ))}
+                <li onClick={() => openModal("enquire")}>
+                  <figure>
+                    <Image
+                      src="/assets/icon/share.svg"
+                      width={24}
+                      height={24}
+                      alt="share"
+                    ></Image>{" "}
+                  </figure>{" "}
+                  Make an enquiry
                 </li>
-              ))}
-              <li onClick={() => openModal("enquire")}>
-                <figure><Image src="/assets/icon/share.svg" width={24} height={24} alt="share" ></Image> </figure> Make an enquiry
-              </li>
-            </ul>
-          </button>
+              </ul>
+            </button>
 
-          <div className="user-profile">
-            <figure>
-              <Image
-                src="/assets/images/profile/user.jpg"
-                width={48}
-                height={48}
-                alt="user"
-              ></Image>
-            </figure>
-            <ul className="user-menu">
-              {userMenu.map(({ title, image }, index) => (
-                <li key={index}>
-                  <a href="">
-                    <figure>
-                      <Image
-                        src={image}
-                        width={24}
-                        height={24}
-                        alt={title}
-                      ></Image>
-                    </figure>
-                    {title}
-                  </a>
-                </li>
-              ))}
-              <li>
+            {isLogin ? (
+              <div className="user-profile">
                 <figure>
                   <Image
-                    src="/assets/icon/logout.svg"
-                    width={24}
-                    height={24}
-                    alt="heart"
+                    src="/assets/images/profile/user.jpg"
+                    width={48}
+                    height={48}
+                    alt="user"
                   ></Image>
                 </figure>
-                Logout
-              </li>
-            </ul>
+                <ul className="user-menu">
+                  {userMenu.map(({ title, image }, index) => (
+                    <li key={index}>
+                      <a href="">
+                        <figure>
+                          <Image
+                            src={image}
+                            width={24}
+                            height={24}
+                            alt={title}
+                          ></Image>
+                        </figure>
+                        {title}
+                      </a>
+                    </li>
+                  ))}
+                  <li onClick={() => setIsLogin(false)}>
+                    <figure>
+                      <Image
+                        src="/assets/icon/logout.svg"
+                        width={24}
+                        height={24}
+                        alt="heart"
+                      ></Image>
+                    </figure>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <button
+                onClick={() => openModal("auth")}
+                className="btn-border btn-signin"
+              >
+                {" "}
+                Sign In{" "}
+              </button>
+            )}
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <AuthModal setIsLogin={setIsLogin} />
+    </>
   );
 };
-export default Header
+export default Header;
 
 const userMenu = [
   {
