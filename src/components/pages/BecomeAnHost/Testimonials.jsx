@@ -1,3 +1,4 @@
+import Motion from '@/components/organisms/Animate'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import React from 'react'
 
@@ -7,22 +8,24 @@ const Testimonials = () => {
             <section>
                 <div className="BecomeAnHost-secB">
                     <div className="container">
-                        <div className="heading">
-                            <h2>Transparency is key</h2>
-                            <p>No hidden costs, no unexpected surprises our commitment to transparency truly sets us apart.</p>
-                        </div>
+                        <Motion variant='fadeUp'>
+                            <div className="heading">
+                                <h2>Transparency is key</h2>
+                                <p>No hidden costs, no unexpected surprises our commitment to transparency truly sets us apart.</p>
+                            </div>
 
-                        <CustomSwiper
-                            data={CardData}
-                            swiperSlideCard="TestimonialsCard"
-                            spaceBetween="20"
-                            speed="800"
-                            slidesPerView="2"
-                            swiperNavBtn=""
-                            swiperNavClass=""
-                            navigation={true}
-                            showPagination={false}
-                        />
+                            <CustomSwiper
+                                data={CardData}
+                                swiperSlideCard="TestimonialsCard"
+                                spaceBetween="20"
+                                speed="800"
+                                slidesPerView="2"
+                                swiperNavBtn=""
+                                swiperNavClass=""
+                                navigation={true}
+                                showPagination={false}
+                            />
+                        </Motion>
                     </div>
                 </div>
             </section>

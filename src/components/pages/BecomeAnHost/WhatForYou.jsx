@@ -1,3 +1,4 @@
+import Motion from '@/components/organisms/Animate'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import React from 'react'
 
@@ -6,24 +7,26 @@ const WhatForYou = () => {
         <>
             <section>
                 <div className="BecomeAnHost-secA">
-                    <div className="container">
-                        <div className="heading">
-                            <h2>What's in it for you</h2>
-                            <p>End-to-end hosting and property care designed to protect your home and maximize its potential.</p>
-                        </div>
+                    <Motion variant='fadeUp'>
+                        <div className="container">
+                            <div className="heading">
+                                <h2>What's in it for you</h2>
+                                <p>End-to-end hosting and property care designed to protect your home and maximize its potential.</p>
+                            </div>
 
-                        <CustomSwiper
-                            data={CardData}
-                            swiperSlideCard="WhatForYouCard"
-                            spaceBetween="20"
-                            speed="800"
-                            slidesPerView="4"
-                            swiperNavBtn=""
-                            swiperNavClass=""
-                            navigation={true}
-                            showPagination={false}
-                        />
-                    </div>
+                            <CustomSwiper
+                                data={CardData}
+                                swiperSlideCard="WhatForYouCard"
+                                spaceBetween="20"
+                                speed="800"
+                                slidesPerView="4"
+                                swiperNavBtn=""
+                                swiperNavClass=""
+                                navigation={true}
+                                showPagination={false}
+                            />
+                        </div>
+                    </Motion>
                 </div>
             </section>
         </>

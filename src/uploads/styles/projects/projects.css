@@ -49,15 +49,16 @@
   padding: 20px;
   position: sticky;
   top: calc(var(--headerheight) + 20px);
+  display: none;
 }
 .projects-sec .flex-box .cards-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   flex: 1;
 }
 .projects-sec .flex-box .cards-wrapper .product-card .hotel-card figure {
-  width: 272px;
+  width: 287px;
   height: 230px;
 }
 
@@ -75,7 +76,7 @@
 .project-detail-page .project-detail-secA .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   margin-bottom: 40px;
 }
 .project-detail-page .project-detail-secA .breadcrumb li a {
@@ -83,6 +84,9 @@
 }
 .project-detail-page .project-detail-secA .breadcrumb li a.active {
   color: var(--black);
+}
+.project-detail-page .project-detail-secA .breadcrumb span {
+  line-height: 1;
 }
 .project-detail-page .project-detail-secA .project-detail-banner .grid-box {
   display: grid;
@@ -290,6 +294,8 @@
   box-shadow: 0px 2.4px 24px 0px rgba(0, 0, 0, 0.1215686275);
   padding: 20px;
   width: 420px;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 20px;
 }
 .project-detail-page .project-detail-secD .map-wrapper {

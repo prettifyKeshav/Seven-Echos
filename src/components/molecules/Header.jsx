@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNotFound } from "@/context/useNotFoundContext";
 import { useModal } from "@/hooks/useModal";
+import BookingDetailPage from "../pages/BookingDetailPage";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -137,6 +138,30 @@ const Header = () => {
     </header>
   );
 };
+    return (
+        <header className={`${isFixed || isNotFound || BookingDetailPage ? "header-fixed" : ""}`}>
+            <div className="container-fluid header-wrapper">
+                <div className="colA">
+                    <Link href="/" className="logo">
+                        <Image src="/assets/logo.svg" width={80} height={77} alt="logo"></Image>
+                    </Link>
+                </div>
+                <div className="colB">
+                    <ul>
+                        <li>
+                            <Link href="/about-us" >Company</Link>
+                        </li>
+                        <li>
+                            <Link href="/" >Goa Travel Guide</Link>
+                        </li>
+                        <li>
+                            <Link href="/become-an-host" >List Your Property</Link>
+                        </li>
+                        <li>
+                            <Link href="/" >Our journal</Link>
+                        </li>
+                    </ul>
+                </div>
 
 export default Header;
 

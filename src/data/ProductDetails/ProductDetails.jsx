@@ -1,3 +1,54 @@
+export const GalleryBannerImg = [
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/1.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/2.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/3.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/4.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/5.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/1.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/2.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/3.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/4.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/5.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/1.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/2.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/3.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/4.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/5.jpg",
+    },
+    {
+        figureImage: "/assets/images/project/detail/fancybox-img/1.jpg",
+    }
+];
+
 export const similarPropertiesCardData = [
 
     {
