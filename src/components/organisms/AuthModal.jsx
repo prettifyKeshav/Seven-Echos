@@ -61,7 +61,7 @@ const AuthModal = ({setIsLogin}) => {
             <div className={`model-body ${showOTP ? "hide-model" : ""}`}>
                 <div className="title">
                     <div className="icon">
-                        <Image src="/assets/images/logo.svg" width="68" height="64" alt="Logo"></Image>
+                        <Image src="/assets/logo.svg" width="68" height="64" alt="Logo"></Image>
                     </div>
                     <h2>Login</h2>
                 </div>
@@ -98,7 +98,7 @@ const AuthModal = ({setIsLogin}) => {
             <div className={`model-body otp-model-body ${showOTP ? "" : "hide-model"}`}>
 
                 <Link href="" className='back-btn' onClick={handleBack}>
-                    <Image src="/assets/icon/back-btn.svg" width={9} height={16} alt="back btn"></Image>
+                    {/* <Image src="/assets/icon/back-btn.svg" width={9} height={16} alt="back btn"></Image> */}
                     <p>Back</p>
                 </Link>
 
