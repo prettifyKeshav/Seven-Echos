@@ -1,0 +1,212 @@
+@import '../_var'
+
+.booking-detail-secA
+    margin-top: calc( var(--headerheight) + 50px  )
+    padding: 0 0 40px 0
+    .breadcrumb
+        display: flex
+        align-items: center
+        gap: 10px
+        margin-bottom: 40px
+        li
+            a
+                color: #8B94A4
+                &.active
+                    color: $black
+        span
+            line-height: 1
+    .heading
+        margin-bottom: 15px
+        h2
+            font-size: 28px
+            color: #454C58
+        p
+            color: #8B94A4
+
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 100px
+        position: relative
+        .col:first-child
+            flex: 1
+            .group
+                padding-bottom: 40px
+                margin-bottom: 40px
+                border-bottom: 1.2px solid #DDDFE3
+                h4
+                    font-size: 20px
+                    margin-bottom: 10px
+                .inner-flex
+                    display: flex
+                    justify-content: space-between
+                    align-items: baseline
+                    margin-bottom: 20px
+                    &:last-child
+                        margin-bottom: 0
+                    h5
+                        font-weight: 500
+                        font-size: 18px
+                        color: #454C58
+                    p
+                        color: #656F81
+                    a
+                        color: #2B3037
+                        text-decoration: underline                
+
+                .gust-flex
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-bottom: 15px
+                    h4
+                        color: #454C58
+                    .rig
+                        display: flex
+                        justify-content: right
+                        align-items: center
+                        gap: 20px
+                        a
+                            font-size: 18px
+                            font-weight: 500
+                            color: #2B3037
+                            display: flex
+                            align-items: center
+                            gap: 5px
+                            span
+                                width: 20px
+                                height: 20px
+                                line-height: 0
+                                img
+                                    height: 100%
+                                    width: 100%
+                                    object-fit: contain
+                .form-wrapper
+                    display: grid
+                    grid-template-columns: repeat(2,1fr)
+                    gap: 20px 20px
+                    .form-group
+                        &.full
+                            grid-column: span 2
+                        .file-wrapper
+                            border: 1px dashed #D6D3D1
+                            padding: 30px 16px
+                            border-radius: 10px
+                            position: relative
+                            cursor: pointer
+                            figure
+                                width: 40px
+                                height: 40px
+                                line-height: 0
+                                margin: 0 auto 10px
+                                img
+                                    height: 100%
+                                    width: 100%
+                                    object-fit: contain
+                            p
+                                font-size: 16px
+                                color: #A8A29E
+                                font-family: Poppins
+                                text-align: center
+                                margin: 0
+                            .file-input
+                                position: absolute
+                                width: 100%
+                                height: 100%
+                                top: 0
+                                left: 0
+                                opacity: 0
+                                cursor: pointer
+
+                        label
+                            font-family: Poppins
+                            color: #57534E
+                            font-weight: 500
+                            line-height: 1
+                            margin-bottom: 7px
+                            display: inline-block
+                        input 
+                            border: 1px solid #D6D3D1
+                            padding: 7px 20px 7px 10px 
+                            font-size: 14px
+                            border-radius: 7px
+                            font-family: Poppins
+                            display: inline-block
+                            width: 100%
+                            max-width: 100%
+                            &:focus
+                                border: 1px solid #F3541C
+                                outline: 4px solid #FEE7D6
+            .bottom-sec-group
+                .group
+                    margin-bottom: 15px
+                    padding-bottom: 10px
+                    border: none
+                    h5
+                        font-weight: 500
+                        font-size: 20px
+                        color: #454C58
+                        font-family: Roboto
+                        font-weight: 500
+                        margin-bottom: 5px
+                    p
+                        color: #656F81
+                    a
+                        color: $secondary
+                        margin-top: 10px
+
+
+        .col:last-child
+            width: 405px
+            height: 382px
+            border: 1.2px solid #B5BAC2
+            border-radius: 14.4px
+            box-shadow: 0px 2.4px 24px 0px #0000001F
+            position: sticky
+            top: calc( 20px + var(--headerheight) )
+
+.booking-detail-secB
+    padding: 0 0 40px 0
+    .heading
+        margin-bottom: 15px
+        h2
+            font-size: 28px
+            color: #454C58
+        p
+            color: #8B94A4
+    .property-table-card 
+        background: #ffffff 
+        border: 1px solid #e0e0e0 
+        border-radius: 12px 
+        overflow: hidden
+        margin-top: 30px
+        table 
+            width: 100% 
+            border-collapse: collapse 
+        td 
+            padding: 8px 20px
+            border-bottom: 1px solid #f0f0f0 
+            font-size: 15px 
+            color: #000000
+        tr 
+            &:last-child 
+                td 
+                    border-bottom: none 
+            td
+                &:nth-child(2)
+                    width: 340px
+                    font-weight: 600
+                    padding: 8px 20px 8px 8px
+                    
+        .icon-cell 
+            width: 40px
+            color: #000000
+            padding-right: 0 
+            i
+                font-size: 18px 
+                vertical-align: middle 
+        .distance-cell 
+            text-align: right 
+            color: #000000
+            font-size: 14px 
+            white-space: nowrap 

@@ -47,7 +47,7 @@ const ExperiencesReside = () => {
                                     <Image src="/assets/images/about/experince/3.jpg" width={782} height={338} alt="ico" ></Image>
                                 </figure>
                             </Motion>
-                            <Motion variant='fadeRight'>
+                            <Motion variant='fadeLeft'>
                                 <figcaption>
                                     <p>The name “Seven Echoes” is inspired by the seven circles of life—the many phases, moods, and journeys we move through over time. Each stay is imagined as one of these circles, a moment within a larger continuum. The “echoes” are the feelings and memories that linger long after you leave—the soft imprint of a sunrise on the balcony, a quiet conversation in the living room, the stillness of a slow morning. Together, Seven Echoes speaks to travel that doesn’t just pass by, but gently stays with you.</p>
                                 </figcaption>

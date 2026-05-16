@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroFormSec from './HeroFormSec'
+import Motion from '@/components/organisms/Animate'
 
 const Hero = () => {
     return (
@@ -10,12 +11,16 @@ const Hero = () => {
                     <div className="container">
                         <div className="bg-wrapper">
                             <div className="col">
-                                <h1>Place Your Home in Trusted Hands</h1>
-                                <p>From daily care to guest experience, we manage every detail with quiet excellence.</p>
+                                <Motion variant='fadeUp'>
+                                    <h1>Place Your Home in Trusted Hands</h1>
+                                    <p>From daily care to guest experience, we manage every detail with quiet excellence.</p>
+                                </Motion>
                             </div>
 
                             <div className="col">
-                                <HeroFormSec />
+                                <Motion variant='fadeUp'>
+                                    <HeroFormSec />
+                                </Motion>
                             </div>
                         </div>
                     </div>
