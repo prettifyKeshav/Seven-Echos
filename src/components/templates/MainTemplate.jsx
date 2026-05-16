@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../molecules/Header'
 import Footer from '../molecules/Footer'
+import Overlay from '../organisms/Overlay'
+import EnquireModal from '../organisms/EnquireModal'
 
 const MainTemplate = ({ children }) => {
     return (
@@ -8,6 +10,8 @@ const MainTemplate = ({ children }) => {
             <Header />
             {children}
             <Footer />
+            <Overlay />
+            <EnquireModal />
         </>
     )
 }

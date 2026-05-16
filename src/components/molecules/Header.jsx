@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNotFound } from "@/context/useNotFoundContext";
+import { useModal } from "@/hooks/useModal";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const { isNotFound } = useNotFound();
+  const {openModal} = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +88,7 @@ const Header = () => {
                   </a>
                 </li>
               ))}
-              <li>
+              <li onClick={() => openModal("enquire")}>
                 <figure><Image src="/assets/icon/share.svg"  width={24} height={24} alt="share" ></Image> </figure> Make an enquiry
               </li>
             </ul>
