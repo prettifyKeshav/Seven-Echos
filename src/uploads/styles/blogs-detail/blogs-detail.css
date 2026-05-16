@@ -74,4 +74,52 @@
 .similar-blogs h2 {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.blog-secB {
+  padding: 50px 0;
+}
+.blog-secB .container .row {
+  display: grid;
+  grid-template-columns: 72px 1fr 315px;
+  gap: 50px;
+}
+.blog-secB .container .blog-stat .stat-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-secB .container .blog-stat .stat-card:nth-of-type(2) {
+  margin-top: 60px;
+}
+.blog-secB .container .blog-stat .stat-card span {
+  font-size: 16px;
+}
+.blog-secB .container .blog-stat .stat-card span:nth-of-type(1) {
+  margin-top: 8px;
+}
+.blog-secB .container .blog-stat .social-stat {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.blog-secB .container .blog-stat .social-stat li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-direction: column;
+  width: 100%;
+  color: #000;
+}
+.blog-secB .container .blog-article {
+  color: #666666;
+}
+.blog-secB .container .blog-article p {
+  font-weight: 400;
+}
+.blog-secB .container .blog-article img {
+  margin: 26px 0;
 }/*# sourceMappingURL=blogs-detail.css.map */

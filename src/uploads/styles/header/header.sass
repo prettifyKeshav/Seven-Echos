@@ -1,5 +1,5 @@
 @import ../_common
-    
+
 header
     position: fixed
     top: 0
@@ -42,7 +42,7 @@ header
                 gap: 40px
                 li
                     a
-                        line-height: 1                        
+                        line-height: 1
                         font-weight: 400
                         font-size: 16px
                         color: $white
@@ -59,7 +59,7 @@ header
                         margin-left: auto
                         flex-direction: column
                         gap: 8px
-                        --lineheight:2px
+                        --lineheight: 2px
                         position: relative
                         span
                             display: block
@@ -82,13 +82,16 @@ header
             display: flex
             align-items: center
             gap: 15px
+            .btn-signin
+                border-radius: 50px
+                padding: 10px 32px
             .btn-contact
                 position: relative
                 &:before
                     content: ""
                     position: absolute
                     top: 100%
-                    right:0
+                    right: 0
                     width: 244px
                     height: 12px
                     background: transparent
@@ -157,14 +160,13 @@ header
                                 height: 100%
                                 object-fit: cover
 
-
             .user-profile
                 position: relative
                 &:before
                     content: ""
                     position: absolute
                     top: 100%
-                    right:0
+                    right: 0
                     width: 244px
                     height: 12px
                     background: transparent
@@ -219,10 +221,10 @@ header
                             border: 1px solid #E0E0E0
                             background: #F8F8F8
                     &:last-child
-                            padding: 0 8px
-                            margin-top: 10px
-                            padding-top: 10px
-                            border-top: 1px solid #E0E0E0
+                        padding: 0 8px
+                        margin-top: 10px
+                        padding-top: 10px
+                        border-top: 1px solid #E0E0E0
                     a
                         display: flex
                         align-items: center
@@ -233,9 +235,6 @@ header
                     figure
                         width: 24px
                         height: 24px
-
-
-                
 
 footer
     position: relative
@@ -271,7 +270,7 @@ footer
                 gap: 20px
                 a
                     padding: 9px 18px
-                        
+
     .bottom-sec
         padding: 50px 0 80px 0
         @include media(540)
@@ -323,7 +322,7 @@ footer
                 @include media(768)
                     display: grid
                     grid-template-columns: 0.7fr 0.7fr 1fr
-                    gap: 40px 20px 
+                    gap: 40px 20px
                 @include media(540)
                     display: grid
                     grid-template-columns: repeat(2,1fr)
@@ -338,10 +337,10 @@ footer
                         color: $white
                         margin-bottom: 15px
                         text-transform: uppercase
-                    ul 
+                    ul
                         li
                             transition: 0.5s ease
-                            margin-bottom: 10px 
+                            margin-bottom: 10px
                             a
                                 font-weight: 400
                                 font-size: 16px
@@ -394,7 +393,7 @@ footer
                         margin-top: 20px
     .bottom-footer
         border-top: 1px solid #C9C9C9
-        padding: 20px 40px 
+        padding: 20px 40px
         display: flex
         justify-content: space-between
         align-items: center
@@ -420,7 +419,7 @@ footer
                 font-weight: 400
                 @include media(540)
                     line-height: 1.1
-            
+
         ul
             display: flex
             justify-content: center
@@ -498,8 +497,8 @@ footer
             z-index: 1
             position: relative
             input:not(.no-focus):focus ~ label,textarea:not(.no-focus):focus ~ label
-                color: $black
-            label,input 
+            color: $black
+            label,input
                 color: $black
             .form-group input.valid ~ label,textarea.valid ~ label
                 color: $black
@@ -523,7 +522,7 @@ footer
         //         color: white
         //         &::before
         //             opacity: 0
-          
+
 .video-pop
     left: 0
     right: 0
@@ -633,7 +632,7 @@ footer
         width: 100%
         height: 100%
         background: linear-gradient(180deg, rgba(58, 58, 58, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%)
-    .bg-background 
+    .bg-background
         video,img
             position: absolute
             top: 0
@@ -689,7 +688,6 @@ footer
     &.about-banner
         height: 73vh
 
-
 .not-found-banner
     height: 100vh
     position: relative
@@ -708,7 +706,6 @@ footer
             margin: 0 auto 30px
             font-size: 20px
             max-width: 520px
-
 
 // MODELS =========================================>
 
@@ -773,7 +770,7 @@ footer
             img,svg
                 width: 70px
                 height: auto
-                path 
+                path
                     fill: #000
         .nav-list
             width: 100%
@@ -838,7 +835,7 @@ footer
         path
             stroke: $black
     .model-body
-        padding: 0 35px 30px 
+        padding: 0 35px 30px
         height: 100%
         overflow-y: auto
         margin-top: 40px
@@ -855,7 +852,7 @@ footer
                 line-height: 0
                 margin: 0 auto 25px
                 svg
-                    path 
+                    path
                         fill: #000
                 img
                     width: 100%
@@ -868,7 +865,7 @@ footer
                 color: black
 
         .form
-            --gaptb: 15px 
+            --gaptb: 15px
             --item: 1
             --labelbefore: var(--text)
             --labelafter: #000
@@ -984,7 +981,7 @@ footer
                 font-size: 18px
                 line-height: 1.2
         .form
-            .otp-box 
+            .otp-box
                 display: flex
                 gap: 10px
                 justify-content: center
@@ -999,10 +996,10 @@ footer
                     outline: none
                     transition: 0.2s
                     color: #666666
-                    .otp-box input:focus 
+                    .otp-box input:focus
                         border-color: #007bff
-                        box-shadow: 0 0 4px rgba(0,123,255,0.4)                
-        .resend-otp         
+                        box-shadow: 0 0 4px rgba(0,123,255,0.4)
+        .resend-otp
             text-align: center
             margin: 40px auto
             p

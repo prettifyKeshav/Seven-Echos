@@ -1424,7 +1424,7 @@ button {
   text-decoration: underline;
 }
 .website-content p, .website-content ul {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .website-content ul {
   padding-left: 18px;
@@ -1454,7 +1454,7 @@ button {
   width: 10px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--primary);
+  background: #faa935;
 }
 @media only screen and (max-width: 520px) {
   .website-content ul li::before {
@@ -2329,7 +2329,7 @@ header .header-wrapper .colB ul .ham-parent .ham-btn {
   margin-left: auto;
   flex-direction: column;
   gap: 8px;
-  --lineheight:2px;
+  --lineheight: 2px;
   position: relative;
 }
 header .header-wrapper .colB ul .ham-parent .ham-btn span {
@@ -2357,6 +2357,10 @@ header .header-wrapper .colC {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+header .header-wrapper .colC .btn-signin {
+  border-radius: 50px;
+  padding: 10px 32px;
 }
 header .header-wrapper .colC .btn-contact {
   position: relative;
@@ -2918,7 +2922,7 @@ footer .bottom-footer ul p {
   z-index: 1;
   position: relative;
 }
-.enquire-pop .model-body .form input:not(.no-focus):focus ~ label, .enquire-pop .model-body .form textarea:not(.no-focus):focus ~ label {
+.enquire-pop .model-body .form {
   color: var(--black);
 }
 .enquire-pop .model-body .form label, .enquire-pop .model-body .form input {
