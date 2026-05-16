@@ -2,6 +2,7 @@ import { Source_Serif_4 } from 'next/font/google';
 import "@/uploads/styles/header/header.css"
 import MainTemplate from '@/components/templates/MainTemplate';
 import { NotFoundProvider } from '@/context/useNotFoundContext';
+import ReduxProvider from '@/store/provider';
 
 const sourceSerif4 = Source_Serif_4({
   subsets: ['latin'],
@@ -22,12 +23,13 @@ export default function RootLayout({ children }) {
 
       <body>
         <NotFoundProvider>
-          <MainTemplate>
-            {children}
-          </MainTemplate>
+          <ReduxProvider>
+            <MainTemplate>
+              {children}
+            </MainTemplate>
+          </ReduxProvider>
         </NotFoundProvider>
       </body>
-
     </html>
   );
 }
