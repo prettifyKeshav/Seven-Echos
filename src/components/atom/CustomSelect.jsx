@@ -6,7 +6,8 @@ const CustomSelect = ({
     options = [],
     isFull = false,
     value,
-    onChange
+    onChange,
+    placeholder = "Select",
 }) => {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -29,11 +30,11 @@ const CustomSelect = ({
         <div className={`form-group ${isFull ? "full" : ""}`} ref={dropdownRef}>
             <label>{label}</label>
 
-            {/* Selected box */}
             <div
-                className="custom-select-box"
-                onClick={() => setIsOpen(!isOpen)} >
-                {selectedLabel || "Select"}
+                className={`custom-select-box ${isOpen ? "active" : ""}`}
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {selectedLabel || placeholder}
             </div>
 
             <ul className={`custom-select-list ${isOpen ? "open" : ""}`}>

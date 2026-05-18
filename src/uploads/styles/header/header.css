@@ -2284,6 +2284,15 @@ header::before {
 header.header-fixed::before, header.header-fill::before {
   height: 100%;
 }
+header.white-header::before {
+  background: var(--white);
+}
+header.white-header .colB ul li a {
+  color: var(--black) !important;
+}
+header.white-header .colB ul li a:hover {
+  color: #FAA935 !important;
+}
 header .colA {
   flex: 0 1 115px;
 }

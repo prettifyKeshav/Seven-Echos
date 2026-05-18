@@ -43,9 +43,10 @@
   z-index: 1;
 }
 .BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {
-  max-width: 442px;
+  max-width: 510px;
   margin-bottom: 20px;
   color: var(--white);
+  font-size: 68px;
 }
 @media only screen and (max-width: 1024px) {
   .BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {

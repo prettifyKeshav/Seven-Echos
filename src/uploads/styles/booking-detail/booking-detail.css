@@ -398,53 +398,96 @@
 }
 
 .booking-detail-secB {
-  padding: 0 0 40px 0;
+  padding: 50px 0 170px;
+  overflow: hidden;
 }
 .booking-detail-secB .heading {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .booking-detail-secB .heading h2 {
+  line-height: 1;
+}
+.booking-detail-secB .swiper-group .swiper-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booking-detail-secB .swiper-group .swiper {
+  overflow: initial !important;
+}
+.booking-detail-secB .swiper-group .swiper .swiper-wrapper {
+  padding: 10px 0;
+}
+.booking-detail-secB .bottom-btn {
+  text-align: center;
+  margin: 30px 0 0 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.booking-detail-secB .bottom-btn .view-all-btn {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--white);
+  padding: 9px 19px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  margin: 20px auto 0;
+}
+.booking-detail-secB .bottom-btn .view-all-btn:hover {
+  background: transparent;
+  color: var(--secondary);
+}
+
+.booking-detail-secC {
+  padding: 0 0 40px 0;
+  transform: translateY(-120px);
+}
+.booking-detail-secC .heading {
+  margin-bottom: 15px;
+}
+.booking-detail-secC .heading h2 {
   font-size: 28px;
   color: #454C58;
 }
-.booking-detail-secB .heading p {
+.booking-detail-secC .heading p {
   color: #8B94A4;
 }
-.booking-detail-secB .property-table-card {
+.booking-detail-secC .property-table-card {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
   margin-top: 30px;
 }
-.booking-detail-secB .property-table-card table {
+.booking-detail-secC .property-table-card table {
   width: 100%;
   border-collapse: collapse;
 }
-.booking-detail-secB .property-table-card td {
+.booking-detail-secC .property-table-card td {
   padding: 8px 20px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 15px;
   color: #000000;
 }
-.booking-detail-secB .property-table-card tr:last-child td {
+.booking-detail-secC .property-table-card tr:last-child td {
   border-bottom: none;
 }
-.booking-detail-secB .property-table-card tr td:nth-child(2) {
+.booking-detail-secC .property-table-card tr td:nth-child(2) {
   width: 340px;
   font-weight: 600;
   padding: 8px 20px 8px 8px;
 }
-.booking-detail-secB .property-table-card .icon-cell {
+.booking-detail-secC .property-table-card .icon-cell {
   width: 40px;
   color: #000000;
   padding-right: 0;
 }
-.booking-detail-secB .property-table-card .icon-cell i {
+.booking-detail-secC .property-table-card .icon-cell i {
   font-size: 18px;
   vertical-align: middle;
 }
-.booking-detail-secB .property-table-card .distance-cell {
+.booking-detail-secC .property-table-card .distance-cell {
   text-align: right;
   color: #000000;
   font-size: 14px;

@@ -12,6 +12,7 @@ import Motion from '@/components/organisms/Animate'
 
 const DetailSec = () => {
     const [activeTab, setActiveTab] = useState("overview");
+    const [activeLocationTab, setActiveLocationTab] = useState(0);
 
     const tabs = [
         { id: "overview", label: "Overview" },
@@ -143,6 +144,9 @@ const DetailSec = () => {
                                             <p>Spa</p>
                                         </div>
                                     </div>
+
+                                    <Link className='btn-border' href="/">Show All 10 Amenities</Link>
+
                                 </div>
                             </div>
                             <div className="flex-box-item">
@@ -168,65 +172,64 @@ const DetailSec = () => {
                         <Motion variant='fadeUp'>
                             <div className="flex-box">
                                 <div className="flex-box-item">
+
                                     <ul>
-                                        <li className='active'>
-                                            <figure>
-                                                <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
-                                            </figure>
-                                            Restaurant & Cafe
-                                        </li>
+                                        {locationData.map((item, i) => {
+                                            return (
+                                                <li
+                                                    key={i}
+                                                    className={activeLocationTab === i ? "active" : ""}
+                                                    onClick={() => setActiveLocationTab(i)}
+                                                >
+                                                    <figure>
+                                                        <Image
+                                                            src={item.titleIcon}
+                                                            width={25}
+                                                            height={25}
+                                                            alt={item.title}
+                                                        />
+                                                    </figure>
 
-                                        <li>
-                                            <Image src="/assets/icon/location.svg" width={25} height={25} alt='ico' ></Image>
-                                            Tourist Attraction
-                                        </li>
-
-                                        <li>
-                                            <Image src="/assets/icon/transport.svg" width={25} height={25} alt='ico' ></Image>
-                                            Transport
-                                        </li>
+                                                    {item.title}
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
-                                    <div className="card">
 
+                                    <div className="card">
                                         <table>
                                             <tbody>
-                                                <tr>
-                                                    <td className="icon-cell">
-                                                        <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
-                                                    </td>
-                                                    <td>Gunpowder</td>
-                                                    <td className="distance-cell">1.8 km</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="icon-cell">
-                                                        <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
-                                                    </td>
-                                                    <td>Daina</td>
-                                                    <td className="distance-cell">2.2 km</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="icon-cell">
-                                                        <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
-                                                    </td>
-                                                    <td>Rosberry</td>
-                                                    <td className="distance-cell">2.6 km</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="icon-cell">
-                                                        <Image src="/assets/icon/Amenities/restaurant.svg" width={25} height={25} alt='ico' ></Image>
-                                                    </td>
-                                                    <td>Normche Cafe</td>
-                                                    <td className="distance-cell">3.5 km</td>
-                                                </tr>
+                                                {locationData[activeLocationTab].list.map((item, i) => {
+                                                    return (
+                                                        <tr key={i}>
+                                                            <td className="icon-cell">
+                                                                <Image
+                                                                    src={item.icon}
+                                                                    width={25}
+                                                                    height={25}
+                                                                    alt={item.name}
+                                                                />
+                                                            </td>
+
+                                                            <td>{item.name}</td>
+
+                                                            <td className="distance-cell">
+                                                                {item.distance}
+                                                            </td>
+                                                        </tr>
+                                                    );
+                                                })}
                                             </tbody>
                                         </table>
                                     </div>
+
                                 </div>
 
                                 <div className="flex-box-item">
                                     <p>Lorem ipsum dolor sit amet consectetur. Proin mattis viverra habitant eget non. Duis pulvinar mauris hendrerit ac pulvinar. Diam rhoncus luctus orci non in. Purus tortor suspendisse neque malesuada. Commodo nisl a netus velit habitasse. In amet mattis morbi venenatis mi enim tempor. Vestibulum convallis elementum sed sem egestas neque faucibus. Nibh lectus ligula facilisi quis.</p>
                                     <p>Et neque ridiculus scelerisque quis sagittis lacus elit duis risus. Aliquet aliquam vitae consequat facilisis nunc quisque. Viverra neque netus rhoncus lacus in ac. Pharetra placerat pharetra varius phasellus tincidunt magnis duis tincidunt orci. Mattis feugiat a phasellus pulvinar platea. Euismod quam imperdiet nulla morbi porta. Faucibus suspendisse etiam maecenas velit dui...</p>
                                 </div>
+
                             </div>
                         </Motion>
                     </div>
@@ -445,3 +448,70 @@ const DetailSec = () => {
 }
 
 export default DetailSec
+
+
+export const locationData = [
+    {
+        title: "Restaurant & Cafe",
+        titleIcon: "/assets/icon/Amenities/restaurant.svg",
+        list: [
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Gunpowder",
+                distance: "1.8 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Daina",
+                distance: "2.2 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Rosberry",
+                distance: "2.6 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Normche Cafe",
+                distance: "3.5 km",
+            },
+        ]
+    },
+    {
+        title: "Tourist Attraction",
+        titleIcon: "/assets/icon/location.svg",
+        list: [
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Gunpowder",
+                distance: "1.8 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Daina",
+                distance: "2.2 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Rosberry",
+                distance: "2.6 km",
+            }
+        ]
+    },
+    {
+        title: "Transport",
+        titleIcon: "/assets/icon/transport.svg",
+        list: [
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Gunpowder",
+                distance: "1.8 km",
+            },
+            {
+                icon: "/assets/icon/Amenities/restaurant.svg",
+                name: "Daina",
+                distance: "2.2 km",
+            }
+        ]
+    }
+];

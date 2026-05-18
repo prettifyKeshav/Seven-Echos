@@ -35,7 +35,7 @@ export const HomesCraftedData = [
 
 export const OurVillasCardsData = [
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
             "/assets/images/home/our-villas/1.jpg",
@@ -62,7 +62,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Best Value",
         "images": [
             "/assets/images/home/our-villas/2.jpg",
@@ -90,7 +90,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Guest Favourite",
         "images": [
             "/assets/images/home/our-villas/3.jpg",
@@ -118,7 +118,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Best Location",
         "images": [
             "/assets/images/home/our-villas/4.jpg",
@@ -146,7 +146,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Best Value",
         "images": [
             "/assets/images/home/our-villas/1.jpg",
@@ -173,8 +173,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
-        // "tag": "Getaway Deal",
+        "link": "/projects/villa-serene-cove",
         "images": [
             "/assets/images/home/our-villas/2.jpg",
             "/assets/images/home/our-villas/3.jpg",
@@ -201,7 +200,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
             "/assets/images/home/our-villas/3.jpg",
@@ -229,7 +228,7 @@ export const OurVillasCardsData = [
         }
     },
     {
-        "link": "/abcdefghjklmnopqrstuvwxyz",
+        "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
             "/assets/images/home/our-villas/4.jpg",

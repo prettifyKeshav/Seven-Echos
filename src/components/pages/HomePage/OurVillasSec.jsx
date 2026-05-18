@@ -11,7 +11,7 @@ const OurVillasSec = () => {
             <section>
                 <div className="home-secC">
                     <Motion variant='fadeUp'>
-                        <div className="container" >
+                        <div className="container">
                             <div className="heading">
                                 <h2>Our Villas</h2>
                             </div>

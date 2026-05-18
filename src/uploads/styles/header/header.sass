@@ -19,9 +19,16 @@ header
         transition: 0.7s ease
     &.header-fixed::before, &.header-fill::before
         height: 100%
+    &.white-header
+        &::before
+            background: $white
+        .colB
+            ul li a
+                color: $black !important
+                &:hover
+                    color: #FAA935 !important
     .colA
         flex: 0 1 115px
-
     .header-wrapper
         display: flex
         flex-wrap: wrap

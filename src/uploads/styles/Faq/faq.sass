@@ -1,0 +1,44 @@
+@import '../_var'
+
+.heading
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    margin-top: calc( 250px - var(--headerheight) )
+    .search-group
+        border: 1.2px solid #DDDFE3
+        border-radius: 14.4px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 6px
+        padding: 0 10px 0 10px
+            
+        input
+            border: none
+            outline: none
+            width: 250px
+            min-width: 122.4px
+            padding: 9px 0px
+            color: $black
+            font-weight: 500
+            font-size: 18px
+.tab-nav
+    display: flex
+    justify-content: start
+    gap: 20px
+    align-items: center
+    margin-bottom: 40px
+    li
+        border: 1px solid #DDDFE3
+        border-radius: 10px
+        font-size: 16px
+        font-weight: 500
+        color: #BCBCBC
+        padding: 8px 20px
+        transition: 0.5s ease
+        cursor: pointer
+        &.active
+            border: 1px solid #FDA118
+            color: #FDA118

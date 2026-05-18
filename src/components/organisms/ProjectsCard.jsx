@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 const ProjectsCard = ({
     link,
@@ -31,7 +32,8 @@ const ProjectsCard = ({
                             spaceBetween={0}
                             speed={500}
                             slidesPerView={1}
-                            modules={[Pagination]}
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
                             pagination={{
                                 clickable: true,
                             }}

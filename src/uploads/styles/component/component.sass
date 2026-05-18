@@ -35,6 +35,19 @@
                     width: 100% 
                     height: 100%
                     object-fit: cover
+            .swiper-button-prev, .swiper-button-next
+                top: 50% !important
+                width: 38px
+                height: 38px
+                border-radius: 120px
+                background: #00000080
+                padding: 9px
+                svg
+                    path
+                        fill: $white
+                &.swiper-button-disabled
+                    cursor: no-drop
+                    pointer-events: auto
             .tag
                 position: absolute 
                 top: 0px 
@@ -211,17 +224,32 @@
         font-size: 14px
         display: inline-block
         cursor: pointer
-
+        position: relative
+        &.active
+            &::before
+                transform: translate(-50%) rotate(180deg)
+        &::before
+            content: ""
+            position: absolute
+            top: 40%
+            right: 3%
+            transform: translate(-50%)
+            z-index: 1
+            background: url(/assets/icon/down-arrow-gray.svg) no-repeat
+            width: 15px
+            height: 10px
+            background-size: contain
+            transition: 0.5s ease
     .custom-select-list
         border: 1px solid #ccc
         margin-top: 5px
         background: #fff
         border-radius: 5px
         position: absolute
+        width: 100%
         top: 100%
         left: 0
         z-index: 2
-
         max-height: 0
         opacity: 0
         transform: translateY(-6px)
@@ -241,6 +269,7 @@
             transform: translateY(0)
             pointer-events: all
             overflow-y: auto
+
     .option 
         padding: 8px 10px
         cursor: pointer
@@ -325,6 +354,7 @@
                     fill: $white
 
 .coastal-living-card
+    width: 100%
     &:hover
         figure
             @include shine
@@ -334,6 +364,7 @@
         border-radius: 25px
         overflow: hidden
         line-height: 0
+        width: 100%
         img
             height: 100%
             width: 100%
@@ -619,3 +650,20 @@
     p
         color: #626060
         padding: 10px 20px 40px 20px
+
+.add-on-service-card
+    border: 1px solid #00000033
+    border-radius: 19.2px
+    padding: 15px
+    width: fit-content
+    figure
+        height: 263px
+        line-height: 0
+        border-radius: 15px
+        overflow: hidden
+    figcaption
+        h4
+            font-weight: 600
+            font-size: 24px
+            text-align: center
+            margin: 10px auto 10px

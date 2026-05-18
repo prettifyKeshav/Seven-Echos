@@ -1,11 +1,25 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import "@/uploads/styles/booking-detail/booking-detail.css"
+import "@/uploads/styles/component/component.css"
 import Image from 'next/image'
 import CustomInput from '@/components/atom/CustomInput'
 import Motion from '@/components/organisms/Animate'
+import CustomSwiper from '@/components/organisms/CustomSwiper'
+import { AddOnServiceCardData, policiyData } from '@/data/BookingDetail/BookingDetailData'
+import { useHeaderFixed } from '@/context/useHeaderContext'
+
+
 
 const BookingDetailPage = () => {
+    const { setIsHeaderFixed, setIsWhiteHeader } = useHeaderFixed()
+
+    useEffect(() => {
+        setIsHeaderFixed(true)
+        setIsWhiteHeader(true)
+    }, [])
 
     return (
         <>
@@ -223,6 +237,26 @@ const BookingDetailPage = () => {
             <section>
                 <div className="booking-detail-secB">
                     <div className="container">
+                        <div className="heading">
+                            <h2>Add on Service</h2>
+                        </div>
+                        <CustomSwiper
+                            data={AddOnServiceCardData}
+                            spaceBetween="10"
+                            speed="800"
+                            slidesPerView="4"
+                            swiperSlideCard="AddOnServiceCard"
+                            showPagination={false}
+                            navigation={true}
+                        />
+
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="booking-detail-secC">
+                    <div className="container">
                         <Motion variant='fadeUp'>
                             <div className="heading">
                                 <h2>Policies</h2>
@@ -257,47 +291,3 @@ const BookingDetailPage = () => {
 }
 
 export default BookingDetailPage
-
-
-export const policiyData = [
-    {
-        "icon": "/assets/images/project/detail/policies/Check-in.svg",
-        "title": "Check-in",
-        "description": "From 14:00 to 15:00. You'll need to let the property know in advance what time you'll arrive."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/Check-out.svg",
-        "title": "Check-out",
-        "description": "From 8:00 to 11:00"
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/Cancellationpr-payment.svg",
-        "title": "Cancellation/prepayment",
-        "description": "Cancellation and prepayment policies vary according to accommodation type. Please check what conditions may apply to each option when making your selection."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/Family-Man-Woman.svg",
-        "title": "Children and beds",
-        "description": "Child policies: children of any age are welcome. To see correct prices and occupancy information, please add the number of children in your group and their ages to your search. Cot and extra bed policies: Cots and extra beds are not available at this property."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/No-age-restriction.svg",
-        "title": "No age restriction",
-        "description": "Guests of all ages are welcome."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/moon.svg",
-        "title": "Quiet hours",
-        "description": "Guests must be quiet between 22:00 and 10:00."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/no-smoking.svg",
-        "title": "Smoking",
-        "description": "Smoking is not allowed."
-    },
-    {
-        "icon": "/assets/images/project/detail/policies/pet-paw.svg",
-        "title": "Pets",
-        "description": "Pets are not allowed."
-    }
-]
