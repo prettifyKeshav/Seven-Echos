@@ -24,7 +24,6 @@ const Hero = () => {
         <>
             <div className="project-detail-secA">
                 <div className="container">
-
                     <ul className="breadcrumb">
                         <li><Link href="/">Home</Link></li>
                         <span>

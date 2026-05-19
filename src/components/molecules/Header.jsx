@@ -32,7 +32,7 @@ const Header = () => {
                     <div className="colA">
                         <Link href="/" className="logo">
                             <Image
-                                src={`${isWhiteHeader ? "/assets/prime-logo.svg" : "/assets/logo.svg"}`}
+                                src={`${isWhiteHeader ? "/assets/prime-logo.svg" : "/assets/prime-logo.svg"}`}
                                 width={80}
                                 height={77}
                                 alt="logo"
@@ -45,13 +45,13 @@ const Header = () => {
                                 <Link href="/about-us">Company</Link>
                             </li>
                             <li>
-                                <Link href="/">Goa Travel Guide</Link>
+                                <Link href="/">Travel Guides</Link>
                             </li>
                             <li>
                                 <Link href="/become-an-host">List Your Property</Link>
                             </li>
                             <li>
-                                <Link href="/">Our journal</Link>
+                                <Link href="/blogs">Our journal</Link>
                             </li>
                         </ul>
                     </div>

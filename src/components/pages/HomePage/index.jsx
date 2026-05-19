@@ -16,7 +16,9 @@ const HomePage = () => {
     return (
         <>
             <Hero
-                imgSrc="/assets/images/home/home-banner.jpg"
+                bgType="video"
+                imgSrc="/assets/video/home-banner.mp4"
+                poster="/assets/video/home-banner.png"
                 imgHeight="626"
                 imgWidth="1028"
                 heading="Where Every Stay Feels Like Coming Home"

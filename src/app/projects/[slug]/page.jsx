@@ -1,9 +1,7 @@
 import ProductDetail from '@/components/pages/ProjectListing/ProductDetail'
 import React from 'react'
 
-const page = async () => {
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(3000);
+const page = () => {
     return (
         <>
             <ProductDetail />

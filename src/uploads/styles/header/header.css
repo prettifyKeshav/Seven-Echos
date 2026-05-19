@@ -444,7 +444,7 @@ html {
 
 :root {
   --headerpadding: 35px;
-  --headerheight: 96px;
+  --headerheight: 99px;
   --headerfixed: 65px;
   --footerstrip: 66px;
   --breadcrumbheight: 44px;
@@ -2275,7 +2275,7 @@ header::before {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--black);
+  background: var(--white);
   height: 0;
   box-shadow: 0 2px 5px 2px rgba(99, 99, 99, 0.2);
   z-index: -1;
@@ -2284,17 +2284,27 @@ header::before {
 header.header-fixed::before, header.header-fill::before {
   height: 100%;
 }
-header.white-header::before {
+header.header-fixed .colA img {
+  filter: unset !important;
+}
+header.header-fixed::before {
   background: var(--white);
+  box-shadow: 0 2px 5px -2px rgba(99, 99, 99, 0.2);
+}
+header.header-fixed .colB ul li a {
+  color: var(--black) !important;
+}
+header.header-fixed .colB ul li a:hover {
+  color: #FAA935 !important;
+}
+header.white-header {
+  position: relative;
 }
 header.white-header .colB ul li a {
   color: var(--black) !important;
 }
 header.white-header .colB ul li a:hover {
   color: #FAA935 !important;
-}
-header .colA {
-  flex: 0 1 115px;
 }
 header .header-wrapper {
   display: flex;
@@ -2311,6 +2321,8 @@ header .header-wrapper .colA {
 header .header-wrapper .colA img {
   width: 100%;
   height: 100%;
+  filter: brightness(0) invert(1);
+  transition: 0.6s ease;
 }
 header .header-wrapper .colB ul {
   display: flex;
@@ -3573,4 +3585,185 @@ footer .bottom-footer ul p {
 }
 .login-pop .hide-model, .signUp-pop .hide-model {
   display: none;
+}
+
+.city-search-dropdown {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.city-search-dropdown .dropdown-menu {
+  transition: 0.7s ease;
+  background: var(--white);
+  border-radius: 4px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 20rem;
+  max-width: 20rem;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  max-height: 316px;
+  z-index: 999999;
+  overflow-y: auto;
+}
+.city-search-dropdown .dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+  background: #cccccc;
+}
+.city-search-dropdown .dropdown-menu::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.city-search-dropdown .dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background-color: var(--secondary);
+}
+@media only screen and (max-width: 540px) {
+  .city-search-dropdown .dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+}
+.city-search-dropdown .search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  outline: none;
+}
+.city-search-dropdown .search-input::-moz-placeholder {
+  color: #999;
+}
+.city-search-dropdown .search-input::placeholder {
+  color: #999;
+}
+.city-search-dropdown .suggestions-container .section {
+  border-bottom: 1px solid #eee;
+}
+.city-search-dropdown .suggestions-container .section:last-child {
+  border-bottom: none;
+}
+.city-search-dropdown .suggestions-container .section .section-title {
+  padding: 8px 16px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list .suggestion-item {
+  cursor: pointer;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background 0.2s;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list .suggestion-item:hover, .city-search-dropdown .suggestions-container .section .suggestions-list .suggestion-item:focus {
+  background: #f8f9fa;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list .suggestion-item:last-child {
+  border-bottom: none;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list .item-content .item-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.city-search-dropdown .suggestions-container .section .suggestions-list .item-content .item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.date-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.date-dropdown .rdp-months {
+  flex-wrap: nowrap !important;
+}
+.date-dropdown .rdp-month_caption span {
+  color: #2B3037;
+}
+.date-dropdown .rdp-nav button svg {
+  fill: var(--secondary);
+}
+.date-dropdown .rdp-range_end .rdp-day_button, .date-dropdown .rdp-range_start .rdp-day_button {
+  color: var(--white);
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+.date-dropdown .rdp-range_middle .rdp-day_button {
+  color: #2B3037;
+}
+.date-dropdown .rdp-today:not(.rdp-outside) {
+  color: var(--secondary);
+}
+.date-dropdown .rdp-selected {
+  font-weight: 600;
+}
+.date-dropdown .rdp-range_start {
+  background: linear-gradient(var(--rdp-gradient-direction), transparent 50%, #fef1df 50%);
+}
+.date-dropdown .rdp-range_end {
+  background: linear-gradient(var(--rdp-gradient-direction), #fef1df 50%, transparent 50%);
+}
+.date-dropdown .rdp-day_button:disabled {
+  text-decoration: line-through;
+  cursor: no-drop;
+}
+.date-dropdown .rdp-range_middle {
+  background: rgba(250, 169, 53, 0.1607843137);
+}
+.date-dropdown .date-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.date-dropdown .date-footer div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.date-dropdown .date-footer div button {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  padding: 8px 38px;
+  border-radius: 30px;
+  color: white;
+  transition: 0.5s ease;
+}
+.date-dropdown .date-footer div button:hover {
+  background: transparent;
+  color: var(--secondary);
+}
+.date-dropdown .date-footer div button:first-child {
+  background: transparent;
+  color: #666;
+  border: none;
+}
+.date-dropdown .date-footer div button:first-child:hover {
+  background: oklch(96.7% 0.001 286.375deg);
 }/*# sourceMappingURL=header.css.map */

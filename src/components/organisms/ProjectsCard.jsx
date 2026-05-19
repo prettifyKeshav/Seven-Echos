@@ -25,7 +25,7 @@ const ProjectsCard = ({
     return (
 
         <>
-            <Link href={link} className="product-card">
+            <Link href={link} className="product-card" target='_blank'>
                 <div className="hotel-card">
                     <figure>
                         <Swiper
