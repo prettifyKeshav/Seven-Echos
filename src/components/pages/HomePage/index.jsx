@@ -21,7 +21,12 @@ const HomePage = () => {
                 poster="/assets/video/home-banner.png"
                 imgHeight="626"
                 imgWidth="1028"
-                heading="Where Every Stay Feels Like Coming Home"
+                bannerClassName="home-banner"
+                heading={
+                    <>
+                        Where Every Stay Feels Like Coming <span>Home</span>
+                    </>
+                }
                 description="Stay at the finest villas, bungalows, apartments/flats that feel like home."
             />
             <PeopleBehind />

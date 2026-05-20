@@ -9,7 +9,7 @@ const AddOnServiceCard = ({ i, ...item }) => {
         <>
             <div className="add-on-service-card" key={i}>
                 <figure>
-                    <Image src={item.figureImage} width={284} height={284} alt="ico" ></Image>
+                    <Image src={item.figureImage} width={294} height={234} alt="ico" ></Image>
                 </figure>
                 <figcaption>
                     <h4>{item.title}</h4>

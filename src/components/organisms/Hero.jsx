@@ -7,6 +7,7 @@ const Hero = ({
     imgHeight,
     imgWidth,
     heading,
+    subHeading,
     description,
     bannerClassName,
     bgType = "image",
@@ -36,6 +37,7 @@ const Hero = ({
                 <div className="container">
                     <div className="bg-wrapper">
                         <Motion variant="fadeUp">
+                            <h2>{subHeading}</h2>
                             <h1>{heading}</h1>
                             <p>{description}</p>
                         </Motion>

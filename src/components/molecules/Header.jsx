@@ -25,9 +25,7 @@ const Header = () => {
 
     return (
         <>
-            <header
-                className={`${isFixed || isHeaderFixed ? "header-fixed" : ""} ${isWhiteHeader ? "white-header" : ""}`}
-            >
+            <header className={`${isFixed || isHeaderFixed ? "header-fixed" : ""} ${isWhiteHeader ? "white-header" : ""}`} >
                 <div className="container-fluid header-wrapper">
                     <div className="colA">
                         <Link href="/" className="logo">
@@ -44,8 +42,20 @@ const Header = () => {
                             <li>
                                 <Link href="/about-us">Company</Link>
                             </li>
-                            <li>
-                                <Link href="/">Travel Guides</Link>
+                            <li className="has-dropdown">
+                                <Link href="/" className="has-link">Travel Guides</Link>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                    <path d="M0 0h1024v1024H0z" fill="none" />
+                                    <path fill="#000" d="M104.7 338.8a64 64 0 0 1 90.5 0L512 655.6l316.8-316.8a64 64 0 0 1 90.5 90.4l-362 362.1a64 64 0 0 1-90.5 0l-362.1-362a64 64 0 0 1 0-90.5" />
+                                </svg>
+
+                                <ul className="dropdown-menu">
+                                    {travelGuide.map((item, i) => (
+                                        <li key={i}>
+                                            <Link href={item.titleLink} target="_blank">{item.title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
                             <li>
                                 <Link href="/become-an-host">List Your Property</Link>
@@ -168,3 +178,16 @@ const contactOptions = [
         href: "https://wa.me/+919593266777",
     },
 ];
+
+const travelGuide = [
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+    { title: "Goa", titleLink: "/travel-guide" },
+]

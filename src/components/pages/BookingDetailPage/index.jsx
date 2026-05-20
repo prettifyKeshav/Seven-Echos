@@ -10,6 +10,7 @@ import Motion from '@/components/organisms/Animate'
 import CustomSwiper from '@/components/organisms/CustomSwiper'
 import { AddOnServiceCardData, policiyData } from '@/data/BookingDetail/BookingDetailData'
 import { useHeaderFixed } from '@/context/useHeaderContext'
+import FilterSec from '@/components/organisms/FilterSec'
 
 
 
@@ -23,6 +24,9 @@ const BookingDetailPage = () => {
 
     return (
         <>
+
+            <FilterSec />
+
             <section>
                 <div className="booking-detail-secA">
                     <div className="container">

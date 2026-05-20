@@ -820,6 +820,12 @@
   border-radius: 15px;
   overflow: hidden;
 }
+.add-on-service-card figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .add-on-service-card figcaption h4 {
   font-weight: 600;
   font-size: 24px;

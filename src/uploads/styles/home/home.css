@@ -11,6 +11,14 @@
     left: 100%;
   }
 }
+.hero-banner .bg-background .container .bg-wrapper h1 {
+  max-width: 672px;
+  font-size: 58px;
+}
+.hero-banner .bg-background .container .bg-wrapper h1 span {
+  font-family: "Kaushan Script";
+}
+
 .home-secA {
   padding: 50px 0;
   overflow: hidden;

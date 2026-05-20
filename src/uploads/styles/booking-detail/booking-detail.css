@@ -12,7 +12,7 @@
   }
 }
 .booking-detail-secA {
-  margin-top: calc(var(--headerheight) + 50px);
+  margin-top: 70px;
   padding: 0 0 40px 0;
 }
 .booking-detail-secA .breadcrumb {
@@ -206,7 +206,7 @@
   border-radius: 14.4px;
   box-shadow: 0px 2.4px 24px 0px rgba(0, 0, 0, 0.1215686275);
   position: sticky;
-  top: calc(20px + var(--headerheight));
+  top: calc(0px + var(--headerheight));
   padding: 20px;
 }
 .booking-detail-secA .flex-box .col:last-child .hotel-info {
