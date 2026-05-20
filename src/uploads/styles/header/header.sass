@@ -1038,7 +1038,7 @@ footer
     position: absolute
     display: inline-block
     width: 100%
-    top: 0
+    top: 15%
     left: 0
     .dropdown-menu
         transition: .7s ease
@@ -1121,24 +1121,27 @@ footer
                     font-weight: 500
                     color: #333
                     // font-family: Poppins
-// .CitySearchdropdown-overlay
-//     position: fixed
-//     top: 0
-//     left: 0
-//     width: 100%
-//     height: 100%
-//     background: transparent
-//     z-index: 999
+.CitySearchdropdown-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: transparent
+    z-index: 999
+    transition: 0.5s ease
 // SearchFromPop END ===========================================>>>>
 
+// Date Start ===========================================>>>>
 .date-dropdown
     position: absolute
-    top: 100%
+    top: 115%
     left: 0
     background: white
     border-radius: 20px
     padding: 20px
     box-shadow: 0 10px 30px rgba(0,0,0,.1)
+    z-index: 999999
     .rdp-months
         flex-wrap: nowrap !important
     .rdp-month_caption
@@ -1194,4 +1197,76 @@ footer
                     border: none
                     &:hover
                         background: oklch(96.7% .001 286.375)
-                
+// Date END ===========================================>>>>
+
+
+// Guests Start ===========================================>>>>
+.guests-dropdown
+    position: absolute
+    top: 115%
+    left: 0
+
+    width: 300px
+    background: white
+    border-radius: 20px
+    padding: 20px
+    box-shadow: 0 10px 30px rgba(0,0,0,.1)
+    z-index: 999999
+    .guest-row 
+        display: flex 
+        align-items: center 
+        gap: 12px 
+        padding: 14px 0 
+        & + .guest-row 
+            border-top: 0.5px solid rgba(0, 0, 0, 0.1) 
+    .guest-icon 
+        font-size: 22px 
+        color: #555 
+        width: 28px 
+        flex-shrink: 0 
+    .guest-info 
+        flex: 1 
+        .label 
+            font-size: 14px 
+            font-weight: 600 
+            color: #1a1a1a 
+            margin: 0 0 2px 
+        .sublabel 
+            font-size: 12px 
+            color: #888 
+            margin: 0 
+    .counter 
+        display: flex 
+        align-items: center 
+        gap: 14px 
+    .count-val 
+        font-size: 16px 
+        font-weight: 500 
+        color: #1a1a1a 
+        min-width: 16px 
+        text-align: center 
+    .btn 
+        width: 34px 
+        height: 34px 
+        border-radius: 50% 
+        border: 1.5px solid #c8a0a0 
+        background: transparent 
+        display: flex 
+        align-items: center 
+        justify-content: center 
+        cursor: pointer 
+        color: #b06060 
+        font-size: 18px 
+        line-height: 1 
+        transition: background 0.15s 
+        padding: 0 
+        &:hover 
+            background: rgba(176, 96, 96, 0.1) 
+        &:active 
+            transform: scale(0.95) 
+        &.minus 
+            border-color: #ccc 
+            color: #999 
+            &:hover 
+                background: rgba(0, 0, 0, 0.05) 
+// Guests END ===========================================>>>>

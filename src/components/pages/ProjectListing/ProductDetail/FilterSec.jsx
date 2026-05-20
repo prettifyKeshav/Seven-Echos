@@ -18,6 +18,23 @@ const FilterSec = () => {
     const checkIn = range?.from;
     const checkOut = range?.to;
 
+    const [isGuestOpen, setIsGuestOpen] = useState(false);
+
+    const [guests, setGuests] = useState({
+        adults: 1,
+        children: 0,
+    });
+    const changeGuests = (type, value) => {
+        setGuests((prev) => ({
+            ...prev,
+            [type]: Math.max(
+                type === "adults" ? 1 : 0,
+                prev[type] + value
+            ),
+        }));
+    };
+    const totalGuests = guests.adults + guests.children;
+
     useEffect(() => {
         const handleScroll = () => {
             setIsFilter(window.scrollY > 120);
@@ -133,9 +150,9 @@ const FilterSec = () => {
                                     </div>
                                 )}
 
-                                {/* {isOpen && (
+                                {isOpen && (
                                     <div className="CitySearchdropdown-overlay" onClick={() => setIsOpen(false)} />
-                                )} */}
+                                )}
                             </div>
                         </div>
 
@@ -176,19 +193,11 @@ const FilterSec = () => {
 
                                         <div>
 
-                                            <button
-                                                onClick={() => {
-                                                    setRange(undefined)
-                                                }}
-                                            >
+                                            <button onClick={() => { setRange(undefined) }} >
                                                 Clear
                                             </button>
 
-                                            <button
-                                                onClick={() => {
-                                                    setIsDateOpen(false)
-                                                }}
-                                            >
+                                            <button onClick={() => { setIsDateOpen(false) }} >
                                                 Apply
                                             </button>
 
@@ -198,10 +207,14 @@ const FilterSec = () => {
 
                                 </div>
                             )}
+
+                            {isDateOpen && (
+                                <div className="CitySearchdropdown-overlay" onClick={() => setIsDateOpen(false)} />
+                            )}
                         </div>
 
 
-                        <div className="col">
+                        {/* <div className="col">
                             <figure>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path d="M0 0h24v24H0z" fill="none" />
@@ -213,6 +226,132 @@ const FilterSec = () => {
 
                             </figure>
                             <p>Add Guests</p>
+
+                            <div className="guests-dropdown">
+                                <div className="guest-row">
+                                    <span className="guest-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                            <path fill="#1f2226" d="M12 2a5 5 0 1 0 0 10a5 5 0 1 0 0-10M4 22h16c.55 0 1-.45 1-1v-1c0-3.86-3.14-7-7-7h-4c-3.86 0-7 3.14-7 7v1c0 .55.45 1 1 1" />
+                                        </svg>
+                                    </span>
+                                    <div className="guest-info">
+                                        <p className="label">Adults</p>
+                                        <p className="sublabel">18 years &amp; above</p>
+                                    </div>
+                                    <div className="counter">
+                                        <button className="btn minus">−</button>
+                                        <span className="count-val">1</span>
+                                        <button className="btn" >+</button>
+                                    </div>
+                                </div>
+
+                                <div className="guest-row">
+                                    <span className="guest-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1em" viewBox="0 0 640 512">
+                                            <path d="M0 0h640v512H0z" fill="none" />
+                                            <path fill="#1f2226" d="M160 0a64 64 0 1 1 0 128a64 64 0 1 1 0-128M88 480v-80H70.2c-10.9 0-18.6-10.7-15.2-21.1l31.1-93.4l-28.6 37.8c-10.7 14.1-30.8 16.8-44.8 6.2s-16.8-30.7-6.2-44.8L65.4 207c22.4-29.6 57.5-47 94.6-47s72.2 17.4 94.6 47l58.9 77.7c10.7 14.1 7.9 34.2-6.2 44.8s-34.2 7.9-44.8-6.2l-28.6-37.8l31.1 93.4c3.5 10.4-4.3 21.1-15.2 21.1H232v80c0 17.7-14.3 32-32 32s-32-14.3-32-32v-80h-16v80c0 17.7-14.3 32-32 32s-32-14.3-32-32M480 0a64 64 0 1 1 0 128a64 64 0 1 1 0-128m-8 384v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V300.5L395.1 321c-9.4 15-29.2 19.4-44.1 10s-19.4-29.2-10-44.1l51.7-82.1c17.6-27.9 48.3-44.9 81.2-44.9h12.3c33 0 63.7 16.9 81.2 44.9l51.7 82.2c9.4 15 4.9 34.7-10 44.1s-34.7 4.9-44.1-10l-13-20.6V480c0 17.7-14.3 32-32 32s-32-14.3-32-32v-96z" />
+                                        </svg>
+
+
+                                    </span>
+                                    <div className="guest-info">
+                                        <p className="label">Children</p>
+                                        <p className="sublabel">Below 12 years</p>
+                                    </div>
+                                    <div className="counter">
+                                        <button className="btn minus" onclick="change('children', -1)" aria-label="Decrease children">−</button>
+                                        <span className="count-val" id="children-count">0</span>
+                                        <button className="btn" onclick="change('children', 1)" aria-label="Increase children">+</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> */}
+
+                        <div
+                            className="col"
+                            onClick={() => setIsGuestOpen(!isGuestOpen)}
+                        >
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <g
+                                        fill="none"
+                                        stroke="#1f2226"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                    >
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.128a4 4 0 0 1 0 7.744M22 21v-2a4 4 0 0 0-3-3.87" />
+                                        <circle cx="9" cy="7" r="4" />
+                                    </g>
+                                </svg>
+                            </figure>
+
+                            <p>{totalGuests} Guests</p>
+
+                            {isGuestOpen && (
+                                <div className="guests-dropdown" onClick={(e) => e.stopPropagation()} >
+                                    <div className="guest-row">
+                                        <span className="guest-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                                <path d="M0 0h24v24H0z" fill="none" />
+                                                <path fill="#1f2226" d="M12 2a5 5 0 1 0 0 10a5 5 0 1 0 0-10M4 22h16c.55 0 1-.45 1-1v-1c0-3.86-3.14-7-7-7h-4c-3.86 0-7 3.14-7 7v1c0 .55.45 1 1 1" />
+                                            </svg>
+                                        </span>
+                                        <div className="guest-info">
+                                            <p className="label">Adults</p>
+                                            <p className="sublabel">
+                                                13 years & above
+                                            </p>
+                                        </div>
+
+                                        <div className="counter">
+
+                                            <button className="btn" onClick={() => changeGuests("adults", -1)} > − </button>
+
+                                            <span className="count-val">
+                                                {guests.adults}
+                                            </span>
+
+                                            <button className="btn" onClick={() => changeGuests("adults", 1)} > + </button>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="guest-row">
+                                        <span className="guest-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1em" viewBox="0 0 640 512">
+                                                <path d="M0 0h640v512H0z" fill="none" />
+                                                <path fill="#1f2226" d="M160 0a64 64 0 1 1 0 128a64 64 0 1 1 0-128M88 480v-80H70.2c-10.9 0-18.6-10.7-15.2-21.1l31.1-93.4l-28.6 37.8c-10.7 14.1-30.8 16.8-44.8 6.2s-16.8-30.7-6.2-44.8L65.4 207c22.4-29.6 57.5-47 94.6-47s72.2 17.4 94.6 47l58.9 77.7c10.7 14.1 7.9 34.2-6.2 44.8s-34.2 7.9-44.8-6.2l-28.6-37.8l31.1 93.4c3.5 10.4-4.3 21.1-15.2 21.1H232v80c0 17.7-14.3 32-32 32s-32-14.3-32-32v-80h-16v80c0 17.7-14.3 32-32 32s-32-14.3-32-32M480 0a64 64 0 1 1 0 128a64 64 0 1 1 0-128m-8 384v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V300.5L395.1 321c-9.4 15-29.2 19.4-44.1 10s-19.4-29.2-10-44.1l51.7-82.1c17.6-27.9 48.3-44.9 81.2-44.9h12.3c33 0 63.7 16.9 81.2 44.9l51.7 82.2c9.4 15 4.9 34.7-10 44.1s-34.7 4.9-44.1-10l-13-20.6V480c0 17.7-14.3 32-32 32s-32-14.3-32-32v-96z" />
+                                            </svg>
+                                        </span>
+
+                                        <div className="guest-info">
+                                            <p className="label">Children</p>
+                                            <p className="sublabel">
+                                                Below 12 years
+                                            </p>
+                                        </div>
+
+                                        <div className="counter">
+                                            <button className="btn" onClick={() => changeGuests("children", -1)}> − </button>
+                                            <span className="count-val">
+                                                {guests.children}
+                                            </span>
+                                            <button className="btn" onClick={() => changeGuests("children", 1)}>+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {isGuestOpen && (
+                                <div
+                                    className="CitySearchdropdown-overlay"
+                                    onClick={() => setIsGuestOpen(false)}
+                                />
+                            )}
                         </div>
                     </div>
                     <button className='search-btn'>
