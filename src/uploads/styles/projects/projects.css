@@ -377,6 +377,265 @@
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
+  position: relative;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .date-dropdown {
+  top: 0%;
+  left: initial;
+  right: 100%;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .guests-dropdown {
+  position: absolute;
+  top: 0%;
+  left: initial;
+  right: 100%;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .hotel-content {
+  flex: 1;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .hotel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .hotel-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .hotel-title .stars {
+  color: #FDA118;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .location {
+  color: #777;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .rating {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .rating .score {
+  background: #F1F2F3;
+  color: #FDA118;
+  padding: 2px 6px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .rating .excellent {
+  color: #ff9900;
+  font-weight: 600;
+  font-size: 14px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .rating .reviews {
+  color: #888;
+  font-size: 13px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details {
+  border: 1.2px solid #DDDFE3;
+  border-radius: 10px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  position: relative;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box {
+  flex: 1;
+  align-items: center;
+  cursor: pointer;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .label {
+  display: flex;
+  align-items: center;
+  color: #2B3037;
+  font-size: 19px;
+  gap: 10px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .label span {
+  color: #2B3037;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .check-in-date, .project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .check-out-date {
+  font-size: 15px;
+  font-weight: 400;
+  color: #383E48;
+  margin-bottom: 4px;
+  padding-left: 32px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .check-in-time, .project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .date-box .check-out-time {
+  font-size: 13px;
+  font-weight: 400;
+  padding-left: 32px;
+  color: #383E48;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .dates .divider {
+  width: 1px;
+  height: 48px;
+  background: #ddd;
+  margin: 0 16px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .guest-info {
+  border-top: 1px solid #ddd;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .guest-info h4 {
+  color: #2B3037;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .booking-details .guest-info p {
+  color: #383E48;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .promo-code input {
+  outline: none;
+  padding: 14px 20px;
+  border: 1.2px solid #DDDFE3;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .promo-code input::-moz-placeholder {
+  color: #BCBCBC;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .promo-code input::placeholder {
+  color: #BCBCBC;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .coupons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .coupons figure {
+  width: 20px;
+  height: 20px;
+  line-height: 0;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .coupons figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .coupons h4 {
+  color: #FDA118;
+  font-size: 15px;
+  font-weight: normal;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .badge {
+  border: 1.2px solid #0AFF3B;
+  background: #DCF7DB;
+  padding: 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .badge p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000000;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .badge a {
+  line-height: 0;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .cancellation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .cancellation p {
+  font-size: 12px;
+  color: #343434;
+  font-weight: 400;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .cancellation p a {
+  color: #277DFF;
+  text-decoration: underline;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price {
+  border: 1.2px solid #DDDFE3;
+  border-radius: 8px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price .tot {
+  display: flex;
+  flex-direction: column;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price .tot .totalLabel {
+  color: #1F2226;
+  font-size: 22px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price .tot .seeDetails {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price .totalPrice {
+  font-size: 22px;
+  font-weight: 400;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .total-price .totalPrice .taxNote {
+  color: #2B3037;
+  font-weight: 400;
+  font-size: 14px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .pay-btn {
+  width: 100%;
+  background: #FDA118;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 11px 0;
+  display: inline-block;
+  text-align: center;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .pay-btn:hover {
+  opacity: 0.9;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .contact-btn {
+  width: 100%;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 11px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.project-detail-page .project-detail-secC .flex-box .flex-box-item:last-child .contact-btn:hover {
+  opacity: 0.9;
 }
 .project-detail-page .project-detail-secD .map-wrapper {
   line-height: 0;

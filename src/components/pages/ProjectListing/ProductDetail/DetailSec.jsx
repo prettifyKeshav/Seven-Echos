@@ -7,8 +7,8 @@ import { reviewsData } from '@/data/ProductDetails/ProductDetails'
 import { policiyData } from '@/data/ProductDetails/ProductDetails'
 import { popularThingsCardData } from '@/data/ProductDetails/ProductDetails'
 import FaqSection from './FaqSection'
-import BookingSummary from './BookingSummary'
 import Motion from '@/components/organisms/Animate'
+import BookingCard from './BookingCard'
 
 const DetailSec = () => {
     const [activeTab, setActiveTab] = useState("overview");
@@ -150,7 +150,7 @@ const DetailSec = () => {
                                 </div>
                             </div>
                             <div className="flex-box-item">
-                                <BookingSummary />
+                                <BookingCard />
                             </div>
                         </div>
                     </div>

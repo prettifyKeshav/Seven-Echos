@@ -318,6 +318,222 @@
                 width: 420px
                 height: fit-content
                 border-radius: 20px
+                position: relative
+                .date-dropdown
+                    top: 0%
+                    left: initial
+                    right: 100%
+                .guests-dropdown
+                    position: absolute
+                    top: 0%
+                    left: initial
+                    right: 100%
+                .hotel-content 
+                    flex: 1 
+                .hotel-title 
+                    display: flex 
+                    justify-content: space-between 
+                    align-items: center 
+                    gap: 10px
+                    h3 
+                        font-size: 18px
+                        font-weight: 600
+                    .stars 
+                        color: #FDA118
+                        font-size: 14px 
+                        white-space: nowrap 
+                .location 
+                    color: #777 
+                    margin-top: 6px 
+                    font-size: 14px 
+                .rating 
+                    margin-top: 12px 
+                    display: flex 
+                    align-items: center 
+                    gap: 6px 
+                    flex-wrap: wrap 
+                    .score 
+                        background: #F1F2F3
+                        color: #FDA118
+                        padding: 2px 6px 
+                        border-top-left-radius: 10px
+                        border-bottom-left-radius: 10px
+                        border-bottom-right-radius: 10px
+                        font-size: 13px 
+                        font-weight: 600 
+                    .excellent 
+                        color: #ff9900 
+                        font-weight: 600 
+                        font-size: 14px 
+                    .reviews 
+                        color: #888 
+                        font-size: 13px 
+                .booking-details 
+                    border: 1.2px solid #DDDFE3
+                    border-radius: 10px 
+                    .dates 
+                        display: flex 
+                        align-items: center 
+                        padding: 12px
+                        position: relative
+                        .date-box 
+                            flex: 1 
+                            align-items: center
+                            cursor: pointer
+                            .label 
+                                display: flex
+                                align-items: center
+                                color: #2B3037
+                                font-size: 19px
+                                gap: 10px
+                                span
+                                    color: #2B3037
+                            .check-in-date,.check-out-date
+                                font-size: 15px 
+                                font-weight: 400
+                                color: #383E48 
+                                margin-bottom: 4px
+                                padding-left: 32px
+                            .check-in-time,.check-out-time
+                                font-size: 13px 
+                                font-weight: 400
+                                padding-left: 32px
+                                color: #383E48 
+                        .divider 
+                            width: 1px 
+                            height: 48px 
+                            background: #ddd 
+                            margin: 0 16px 
+                    .guest-info 
+                        border-top: 1px solid #ddd 
+                        padding: 12px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        h4  
+                            color: #2B3037
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 2
+
+                        p 
+                            color: #383E48
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 2
+                .promo-code
+                    input
+                        outline: none
+                        padding: 14px 20px
+                        border: 1.2px solid #DDDFE3
+                        width: 100%
+                        border-radius: 10px
+                        margin: 10px 0 
+                        font-size: 18px
+                        &::placeholder
+                            color: #BCBCBC
+                .coupons
+                    display: flex
+                    justify-content: start
+                    align-items: center
+                    gap: 10px
+                    margin: 5px 0   
+                    figure
+                        width: 20px
+                        height: 20px
+                        line-height: 0
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    h4
+                        color: #FDA118
+                        font-size: 15px
+                        font-weight: normal
+                
+                .badge
+                    border: 1.2px solid #0AFF3B
+                    background: #DCF7DB
+                    padding: 7px 20px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    border-radius: 6px
+                    margin: 10px 0 
+                    p
+                        font-size: 16px
+                        font-weight: normal
+                        color: #000000 
+                    a
+                        line-height: 0
+                .cancellation
+                    display: flex
+                    justify-content: start
+                    align-items: center
+                    gap: 10px
+                    p
+                        font-size: 12px
+                        color: #343434
+                        font-weight: 400
+                        a
+                            color: #277DFF
+                            text-decoration: underline
+                .total-price
+                    border: 1.2px solid #DDDFE3
+                    border-radius: 8px
+                    padding: 10px 10px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin: 10px 0 
+                    .tot
+                        display: flex
+                        flex-direction: column
+                        .totalLabel
+                            color: #1F2226
+                            font-size: 22px
+                        .seeDetails
+                            font-size: 12px
+                            text-decoration: underline
+                    .totalPrice
+                        font-size: 22px
+                        font-weight: 400
+                        .taxNote
+                            color: #2B3037
+                            font-weight: 400
+                            font-size: 14px
+
+                .pay-btn 
+                    width: 100% 
+                    background: #FDA118
+                    border: none
+                    border-radius: 10px 
+                    color: #fff 
+                    font-size: 18px 
+                    font-weight: 600 
+                    cursor: pointer 
+                    margin-top: 10px 
+                    padding: 11px 0
+                    display: inline-block
+                    text-align: center
+                    &:hover 
+                        opacity: 0.9 
+                .contact-btn
+                    width: 100% 
+                    border: 1px solid $black
+                    border-radius: 10px 
+                    color: #000000
+                    font-size: 14px 
+                    cursor: pointer 
+                    margin-top: 10px 
+                    padding: 11px 0 
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    gap: 5px
+                    &:hover 
+                        opacity: 0.9 
+                
 
     .project-detail-secD
         .map-wrapper
