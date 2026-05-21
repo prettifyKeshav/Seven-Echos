@@ -1,8 +1,11 @@
+"use client"
+
 import Hero from '@/components/organisms/Hero'
 import React from 'react'
 import "@/uploads/styles/projects/projects.css"
 import "@/uploads/styles/component/component.css"
 import Cards from './Cards'
+import ListingFilters from './ListingFilters'
 
 const ProjectListingPage = () => {
     return (
@@ -15,6 +18,7 @@ const ProjectListingPage = () => {
                 heading="Projects"
                 description="Discover our handpicked collection of premium villas, thoughtfully designed for comfort, privacy, and luxury living."
             />
+            <ListingFilters />
             <Cards />
         </>
     )
