@@ -110,9 +110,9 @@ const Header = () => {
                                     ></Image>
                                 </figure>
                                 <ul className="user-menu">
-                                    {userMenu.map(({ title, image }, index) => (
+                                    {userMenu.map(({ title, image, linkHref }, index) => (
                                         <li key={index}>
-                                            <a href="">
+                                            <Link href={linkHref} >
                                                 <figure>
                                                     <Image
                                                         src={image}
@@ -122,7 +122,7 @@ const Header = () => {
                                                     ></Image>
                                                 </figure>
                                                 {title}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                     <li onClick={() => setIsLogin(false)}>
@@ -156,14 +156,11 @@ const Header = () => {
 };
 export default Header;
 
-const userMenu = [
-    {
-        title: "Sneha Somani",
-        image: "/assets/images/profile/user.jpg",
-    },
-    { title: "My Profile", image: "/assets/icon/profile.svg" },
-    { title: "Trips", image: "/assets/icon/car.svg" },
-    { title: "Wishlist", image: "/assets/icon/heart.svg" },
+const userMenu = [  
+    { title: "Sneha Somani", image: "/assets/images/profile/user.jpg", linkHref: "/account/" },
+    { title: "My Profile", image: "/assets/icon/profile.svg", linkHref: "/account/my-profile" },
+    { title: "Trips", image: "/assets/icon/car.svg", linkHref: "/account/trips" },
+    { title: "Wishlist", image: "/assets/icon/heart.svg", linkHref: "/account/wishlist" },
 ];
 
 const contactOptions = [
