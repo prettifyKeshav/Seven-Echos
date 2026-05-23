@@ -1,11 +1,12 @@
-import MyProfile from '@/components/pages/AccountPage/MyProfile'
+import MyBooking from '@/components/pages/AccountPage/MyBooking'
 import React from 'react'
 
 const page = () => {
     return (
         <>
-            <MyProfile />
+            <MyBooking />
         </>
+
     )
 }
 

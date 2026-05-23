@@ -1,10 +1,10 @@
-import MyProfile from '@/components/pages/AccountPage/MyProfile'
+import Logout from '@/components/pages/AccountPage/LogOut'
 import React from 'react'
 
 const page = () => {
     return (
         <>
-            <MyProfile />
+            <Logout />
         </>
     )
 }

@@ -2,8 +2,16 @@
 
 import React, { useEffect } from 'react'
 import Image from 'next/image';
+import { useHeaderFixed } from '@/context/useHeaderContext';
 
 const MyProfile = () => {
+
+    const { setIsHeaderFixed } = useHeaderFixed()
+
+    useEffect(() => {
+        setIsHeaderFixed(true)
+    }, [])
+
     useEffect(() => {
         const inputBoxes = document.querySelectorAll('.form-control');
         const handleFocus = function () {

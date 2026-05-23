@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 import BookingCard from './BookingCard';
+import { useHeaderFixed } from '@/context/useHeaderContext';
 
 const MyBooking = () => {
     const [activeTab, setActiveTab] = useState("All");
@@ -9,6 +11,12 @@ const MyBooking = () => {
             : bookingData.filter(
                 item => item.status === activeTab
             );
+
+    const { setIsHeaderFixed } = useHeaderFixed()
+
+    useEffect(() => {
+        setIsHeaderFixed(true)
+    }, [])
 
     return (
         <>

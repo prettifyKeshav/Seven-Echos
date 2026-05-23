@@ -2,8 +2,15 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
+import { useHeaderFixed } from '@/context/useHeaderContext';
 
 const ChangePassword = () => {
+    const { setIsHeaderFixed } = useHeaderFixed()
+
+    useEffect(() => {
+        setIsHeaderFixed(true)
+    }, [])
+
     useEffect(() => {
         const inputBoxes = document.querySelectorAll('.form-control');
         const handleFocus = function () {

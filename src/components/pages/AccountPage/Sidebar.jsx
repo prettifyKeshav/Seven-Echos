@@ -1,15 +1,18 @@
 "use client"
 
 import Image from "next/image"
+import { usePathname } from 'next/navigation'
+import Link from "next/link"
 
-const Sidebar = ({ onViewChange, activeView }) => {
+const Sidebar = () => {
     const menuItems = [
-        { id: 'myprofile', label: 'My Profile' },
-        { id: 'mywishlist', label: 'My Wishlist' },
-        { id: 'mybooking', label: 'My Booking' },
-        { id: 'password', label: 'Change Password' },
-        { id: 'logout', label: 'Logout' },
+        { label: 'My Profile', href: '/account/my-profile' },
+        { label: 'My Wishlist', href: '/account/my-wishlist' },
+        { label: 'My Booking', href: '/account/my-booking' },
+        { label: 'Change Password', href: '/account/change-password' },
+        { label: 'Logout', href: '/account/log-out' }
     ];
+    const pathname = usePathname();
 
     return (
         <aside className="sidebar">
@@ -29,13 +32,16 @@ const Sidebar = ({ onViewChange, activeView }) => {
 
             <nav className="nav">
                 {menuItems.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => onViewChange(item.id)}
-                        className={`menuItem ${activeView === item.id ? 'active' : ''}`}
+                    <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`menuItem ${pathname === item.href
+                            ? "active"
+                            : ""
+                            }`}
                     >
-                        <span>{item.label}</span>
-                    </button>
+                        {item.label}
+                    </Link>
                 ))}
             </nav>
         </aside>

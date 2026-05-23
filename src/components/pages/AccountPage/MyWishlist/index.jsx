@@ -1,15 +1,23 @@
+"use client"
+
 import ProjectsCard from '@/components/organisms/ProjectsCard'
-import React from 'react'
+import { useHeaderFixed } from '@/context/useHeaderContext'
+import React, { useEffect } from 'react'
 
 const MyWishlist = ({
     data = OurVillasCardsData,
 }) => {
+    const { setIsHeaderFixed } = useHeaderFixed()
+
+    useEffect(() => {
+        setIsHeaderFixed(true)
+    }, [])
     return (
         <>
             <div className="my-wishlist-grid">
                 {data.map((item, i) => (
                     <div className="col" key={i}>
-                        <ProjectsCard {...item} isWishlistFill={true}/>
+                        <ProjectsCard {...item} isWishlistFill={true} />
                     </div>
                 ))}
             </div>
@@ -24,7 +32,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
-            "/assets/images/home/our-villas/1.jpg",
+            "/assets/images/home/our-villas/1.jpg"
         ],
         "title": "Villa Serene Cove",
         "rating": 5,
@@ -47,7 +55,7 @@ export const OurVillasCardsData = [
     {
         "link": "/projects/villa-serene-cove",
         "tag": "Best Value",
-        "images": [,
+        "images": [
             "/assets/images/home/our-villas/1.jpg"
         ],
 
@@ -73,7 +81,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Guest Favourite",
         "images": [
-            "/assets/images/home/our-villas/3.jpg",
+            "/assets/images/home/our-villas/3.jpg"
         ],
 
         "title": "Villa Serene Cove",
@@ -98,7 +106,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Best Location",
         "images": [
-            "/assets/images/home/our-villas/4.jpg",
+            "/assets/images/home/our-villas/4.jpg"
         ],
 
         "title": "Villa Serene Cove",
@@ -123,7 +131,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Best Value",
         "images": [
-            "/assets/images/home/our-villas/1.jpg",
+            "/assets/images/home/our-villas/1.jpg"
         ],
         "title": "Villa Serene Cove",
         "rating": 5,
@@ -145,7 +153,7 @@ export const OurVillasCardsData = [
     },
     {
         "link": "/projects/villa-serene-cove",
-        "images": [,
+        "images": [
             "/assets/images/home/our-villas/1.jpg"
         ],
 
@@ -171,7 +179,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
-            "/assets/images/home/our-villas/3.jpg",
+            "/assets/images/home/our-villas/3.jpg"
         ],
 
         "title": "Villa Serene Cove",
@@ -196,7 +204,7 @@ export const OurVillasCardsData = [
         "link": "/projects/villa-serene-cove",
         "tag": "Getaway Deal",
         "images": [
-            "/assets/images/home/our-villas/4.jpg",
+            "/assets/images/home/our-villas/4.jpg"
         ],
 
         "title": "Villa Serene Cove",

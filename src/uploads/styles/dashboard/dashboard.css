@@ -165,6 +165,29 @@
   width: 276px;
   height: 100%;
 }
+.dashboard-layout .contentArea .log-out {
+  background: #fff;
+  border-radius: 5px;
+  padding: 1.5rem 2.5rem;
+}
+.dashboard-layout .contentArea .log-out h1 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.dashboard-layout .contentArea .log-out p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #454C58;
+}
+.dashboard-layout .contentArea .log-out a {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 30px;
+}
 .dashboard-layout .contentArea .my-booking {
   background: #fff;
   border-radius: 5px;

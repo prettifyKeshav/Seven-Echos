@@ -156,12 +156,13 @@ const Header = () => {
 };
 export default Header;
 
-const userMenu = [  
-    { title: "Sneha Somani", image: "/assets/images/profile/user.jpg", linkHref: "/account/" },
+const userMenu = [
+    { title: "Sneha Somani", image: "/assets/images/profile/user.jpg", linkHref: "/account" },
     { title: "My Profile", image: "/assets/icon/profile.svg", linkHref: "/account/my-profile" },
-    { title: "Trips", image: "/assets/icon/car.svg", linkHref: "/account/trips" },
-    { title: "Wishlist", image: "/assets/icon/heart.svg", linkHref: "/account/wishlist" },
+    { title: "My Booking", image: "/assets/icon/car.svg", linkHref: "/account/my-booking" },
+    { title: "Wishlist", image: "/assets/icon/heart.svg", linkHref: "/account/my-wishlist" },
 ];
+
 
 const contactOptions = [
     {

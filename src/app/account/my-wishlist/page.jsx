@@ -1,10 +1,10 @@
-import MyProfile from '@/components/pages/AccountPage/MyProfile'
+import MyWishlist from '@/components/pages/AccountPage/MyWishlist'
 import React from 'react'
 
 const page = () => {
     return (
         <>
-            <MyProfile />
+            <MyWishlist />
         </>
     )
 }
