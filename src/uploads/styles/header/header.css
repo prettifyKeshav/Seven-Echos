@@ -2320,9 +2320,19 @@ header .header-wrapper {
   justify-content: space-between;
   padding: 15px var(--containerfluid);
 }
+@media only screen and (max-width: 540px) {
+  header .header-wrapper {
+    padding: 10px var(--containerfluid);
+  }
+}
 header .header-wrapper .colA {
   flex: 0 1 130px;
   transition: 0.7s ease;
+}
+@media only screen and (max-width: 540px) {
+  header .header-wrapper .colA {
+    flex: 0 110px;
+  }
 }
 header .header-wrapper .colA img {
   width: 100%;
@@ -2439,12 +2449,22 @@ header .header-wrapper .colC .btn-signin {
     padding: 8px 32px;
   }
 }
+@media only screen and (max-width: 540px) {
+  header .header-wrapper .colC .btn-signin {
+    padding: 5px 24px;
+  }
+}
 header .header-wrapper .colC .btn-contact {
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
   header .header-wrapper .colC .btn-contact {
     padding: 9px 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  header .header-wrapper .colC .btn-contact {
+    display: none;
   }
 }
 header .header-wrapper .colC .btn-contact:before {
@@ -2640,6 +2660,15 @@ header .header-wrapper .colC .ham-parent {
     --lineheight: 3px;
     position: relative;
   }
+}
+@media only screen and (max-width: 1024px) and (max-width: 540px) {
+  header .header-wrapper .colC .ham-parent .ham-btn {
+    height: 20px;
+    width: 36px;
+    --lineheight: 2px;
+  }
+}
+@media only screen and (max-width: 1024px) {
   header .header-wrapper .colC .ham-parent .ham-btn span {
     display: block;
     height: var(--lineheight);
@@ -2656,10 +2685,22 @@ header .header-wrapper .colC .ham-parent {
     top: 12px;
     right: 0px;
   }
+}
+@media only screen and (max-width: 1024px) and (max-width: 540px) {
+  header .header-wrapper .colC .ham-parent .ham-btn span:nth-child(2) {
+    top: 9px;
+  }
+}
+@media only screen and (max-width: 1024px) {
   header .header-wrapper .colC .ham-parent .ham-btn span:nth-child(3) {
     position: absolute;
     top: 24px;
     left: 0px;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-width: 540px) {
+  header .header-wrapper .colC .ham-parent .ham-btn span:nth-child(3) {
+    top: 18px;
   }
 }
 
@@ -2758,7 +2799,7 @@ footer .bottom-sec .grid-box .grid-box-item:nth-child(1) figure {
   footer .bottom-sec .grid-box .grid-box-item:nth-child(1) figure {
     margin: auto;
     height: auto;
-    width: 100px;
+    width: 180px;
   }
 }
 @media only screen and (max-width: 540px) {

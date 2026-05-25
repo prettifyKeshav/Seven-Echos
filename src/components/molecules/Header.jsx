@@ -31,7 +31,7 @@ const Header = () => {
                         <Link href="/" className="logo">
                             <Image
                                 src={`${isWhiteHeader ? "/assets/prime-logo.svg" : "/assets/prime-logo.svg"}`}
-                                width={80}
+                                width={130}
                                 height={77}
                                 alt="logo"
                             ></Image>

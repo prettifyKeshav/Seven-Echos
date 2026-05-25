@@ -51,9 +51,13 @@ header
         transition: 0.7s ease
         justify-content: space-between
         padding: 15px var(--containerfluid)
+        @include media(540)
+            padding: 10px var(--containerfluid)
         .colA
             flex: 0 1 130px
             transition: 0.7s ease
+            @include media(540)
+                flex: 0 110px
             img
                 width: 100%
                 height: 100%
@@ -147,10 +151,14 @@ header
                 padding: 10px 32px
                 @include media(1024)
                     padding: 8px 32px
+                @include media(540)
+                    padding: 5px 24px
             .btn-contact
                 position: relative
                 @include media(1024)
                     padding: 9px 20px
+                @include media(540)
+                    display: none
                 &:before
                     content: ""
                     position: absolute
@@ -314,6 +322,10 @@ header
                         gap: 8px
                         --lineheight: 3px
                         position: relative
+                        @include media(540)
+                            height: 20px
+                            width: 36px
+                            --lineheight: 2px
                         span
                             display: block
                             height: var(--lineheight)
@@ -327,10 +339,14 @@ header
                             position: absolute
                             top: 12px
                             right: 0px
+                            @include media(540)
+                                top: 9px
                         span:nth-child(3)
                             position: absolute
                             top: 24px
                             left: 0px
+                            @include media(540)
+                                top: 18px
 footer
     position: relative
     overflow: hidden
@@ -395,7 +411,7 @@ footer
                     @include media(768)
                         margin: auto
                         height: auto
-                        width: 100px
+                        width: 180px
                     @include media(540)
                         width: 250px
                         margin: 0 auto 30px
