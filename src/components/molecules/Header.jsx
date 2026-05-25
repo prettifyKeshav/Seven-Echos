@@ -147,6 +147,14 @@ const Header = () => {
                                 Sign In{" "}
                             </button>
                         )}
+
+                        <div className="ham-parent">
+                            <button type="button" className="ham-btn" onClick={() => openModal("hapPop")} >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </header >

@@ -33,6 +33,33 @@ const CoastalLivingSec = () => {
                                 spaceBetween="20"
                                 speed="800"
                                 slidesPerView="4"
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        speed: 500,
+                                    },
+                                    540: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    1280: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 10,
+                                        speed: 800,
+                                    },
+                                }}
                                 swiperSlideCard="CoastalLivingCard"
                                 navigation={true}
                                 swiperNavClass="center-full-full"

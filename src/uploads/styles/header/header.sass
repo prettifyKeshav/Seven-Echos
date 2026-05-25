@@ -60,6 +60,8 @@ header
                 filter: brightness(0) invert(1) 
                 transition: 0.6s ease
         .colB
+            @include media(1024)
+                display: none
             ul
                 display: flex
                 align-items: center
@@ -136,45 +138,19 @@ header
                             &:hover 
                                 background: $secondary
                                 color: $white !important
-
-                .ham-parent
-                    display: flex
-                    .ham-btn
-                        flex: 0 1 auto
-                        line-height: 0
-                        height: 24px
-                        width: 38px
-                        margin-left: auto
-                        flex-direction: column
-                        gap: 8px
-                        --lineheight: 2px
-                        position: relative
-                        span
-                            display: block
-                            height: var(--lineheight)
-                            width: inherit
-                            background: $secondary
-                        span:nth-child(1)
-                            position: absolute
-                            top: 0px
-                            left: 0px
-                        span:nth-child(2)
-                            position: absolute
-                            top: 9px
-                            right: 0px
-                        span:nth-child(3)
-                            position: absolute
-                            top: 18px
-                            left: 0px
         .colC
             display: flex
             align-items: center
-            gap: 15px
+            gap: 25px
             .btn-signin
                 border-radius: 50px
                 padding: 10px 32px
+                @include media(1024)
+                    padding: 8px 32px
             .btn-contact
                 position: relative
+                @include media(1024)
+                    padding: 9px 20px
                 &:before
                     content: ""
                     position: absolute
@@ -324,6 +300,37 @@ header
                         width: 24px
                         height: 24px
 
+            .ham-parent
+                display: none
+                @include media(1024)
+                    display: flex
+                    .ham-btn
+                        flex: 0 1 auto
+                        line-height: 0
+                        height: 26px
+                        width: 45px
+                        margin-left: auto
+                        flex-direction: column
+                        gap: 8px
+                        --lineheight: 3px
+                        position: relative
+                        span
+                            display: block
+                            height: var(--lineheight)
+                            width: inherit
+                            background: $secondary
+                        span:nth-child(1)
+                            position: absolute
+                            top: 0px
+                            left: 0px
+                        span:nth-child(2)
+                            position: absolute
+                            top: 12px
+                            right: 0px
+                        span:nth-child(3)
+                            position: absolute
+                            top: 24px
+                            left: 0px
 footer
     position: relative
     overflow: hidden
@@ -383,8 +390,8 @@ footer
                     width: 143px
                     height: fit-content
                     @include media(1024)
-                        width: 300px
-                        margin: 0 auto 30px
+                        width: 150px
+                        margin: 0 auto 10px
                     @include media(768)
                         margin: auto
                         height: auto
@@ -401,6 +408,9 @@ footer
                 p
                     color: white
                     max-width: 370px
+                    @include media(1024)
+                        margin: auto
+                        text-align: center
             .grid-box-item:nth-child(2)
                 display: grid
                 grid-template-columns: 1fr 1fr 1fr
@@ -447,8 +457,9 @@ footer
                         align-items: center
                         gap: 10px
                         @include media(1024)
-                            margin: 10px auto 30px
+                            margin: 30px 0 0 0 
                             width: fit-content
+
                         a
                             display: inline-flex
                             vertical-align: middle
@@ -849,16 +860,17 @@ footer
             display: flex
             align-items: center
             gap: 15px
-            margin-bottom: 50px
+            margin-bottom: 40px
             line-height: 0
             font-weight: 600
             letter-spacing: 4px
             font-size: 30px
             color: #000
             img,svg
-                width: 70px
+                width: 130px
                 height: auto
-                path
+                filter: brightness(0) saturate(100%) invert(74%) sepia(78%) saturate(1344%) hue-rotate(337deg) brightness(101%) contrast(96%)
+                path 
                     fill: #000
         .nav-list
             width: 100%
@@ -873,7 +885,7 @@ footer
                     display: inline-block
                     @include font(500)
                     &:hover
-                        color: $primary
+                        color: $secondary
                         transform: translateX(15px)
         .bottom-list
             margin-top: 4rem
@@ -1178,7 +1190,6 @@ footer
                 background: #ffa423
             img
                 filter: brightness(0) invert(1)
-
 
 
 // SearchFromPop Start ===========================================>>>>

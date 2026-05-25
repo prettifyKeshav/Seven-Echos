@@ -24,7 +24,8 @@ const CustomSwiper = ({
     showPagination = false,
     navigation = false,
     swiperNavBtn,
-    swiperNavClass
+    swiperNavClass,
+    breakpoints = {},
 }) => {
 
     const [swiperInstance, setSwiperInstance] = useState(null);
@@ -36,6 +37,7 @@ const CustomSwiper = ({
                     spaceBetween={spaceBetween}
                     speed={speed}
                     slidesPerView={slidesPerView}
+                    breakpoints={breakpoints}
                     navigation={false}
 
                     modules={[Pagination]}

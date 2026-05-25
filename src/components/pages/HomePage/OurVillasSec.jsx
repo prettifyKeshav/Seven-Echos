@@ -25,6 +25,33 @@ const OurVillasSec = () => {
                                 showPagination={false}
                                 navigation={true}
                                 swiperNavBtn="product-btn"
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        speed: 500,
+                                    },
+                                    540: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    1280: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 10,
+                                        speed: 800,
+                                    },
+                                }}
                             />
 
                             <div className="bottom-btn">
@@ -40,3 +67,4 @@ const OurVillasSec = () => {
 }
 
 export default OurVillasSec
+

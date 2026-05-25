@@ -16,3 +16,58 @@
     p
         margin: auto
         max-width: 712px !important
+
+.travel-guide-secA
+    padding: 60px 0
+    .heading
+        text-align: center
+        h2
+            font-weight: 400
+            font-size: 30px
+            line-height: 1
+        p
+            max-width: 550px
+            margin: 20px auto 0
+        h3
+            font-size: 60px
+            font-weight: 400
+            position: relative
+            width: fit-content
+            margin: auto
+            &::before
+                content: ""
+                background: var(--secondary)
+                width: 150px
+                height: 1px
+                position: absolute
+                bottom: 0px
+                left: 50%
+                transform: translate(-50%, -50%)
+    figure
+        margin: 40px auto 0 
+        line-height: 0
+        max-width: 1080px
+        height: 400px
+        overflow: hidden
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            
+.travel-guide-secB
+    padding: 50px 0
+    .tab-nav
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 30px
+        li
+            background: #FAA935
+            border: 1px solid #FAA935
+            color: $white
+            border-radius: 25px
+            padding: 10px 20px
+            transition: 0.5s ease
+            &:hover
+                background: $white
+                color: #FAA935

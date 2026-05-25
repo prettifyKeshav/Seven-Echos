@@ -73,7 +73,7 @@ const Footer = () => {
 
         <div className="bottom-footer">
           <div className="flex-box">
-            <p>© 2025 @Seven Echos | All rights raserved</p>
+            <p>© 2026 @Seven Echos | All rights raserved</p>
           </div>
 
           <ul>

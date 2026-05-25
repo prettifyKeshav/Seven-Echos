@@ -5,11 +5,19 @@
     h1
         max-width: 672px
         font-size: 58px
+        @include media(1024)
+            font-size: 54px
+        @include media(768)
+            font-size: 48px
         span
             font-family: 'Kaushan Script'
+    p
+        @include media(1024)
+            margin: auto
+            text-align: center
 
 .home-secA
-    padding: 50px 0 
+    padding: 50px 0
     overflow: hidden
     h2
         text-align: center
@@ -19,17 +27,27 @@
         justify-content: center
         align-items: center
         gap: 60px
+        @include media(768)
+            flex-direction: column
         .col:first-child
             flex: 0 1 50%
             figcaption
                 width: fit-content
                 margin-left: auto
+                @include media(768)
+                    text-align: center
                 p
                     font-size: 18px
                     max-width: 440px
                     margin-bottom: 30px
+                    @include media(768)
+                        margin-bottom: 10px
                     span
                         color: $secondary
+                .btn
+                    @include media(768)
+                        margin-top: 20px
+                        display: inline-block
         .col:last-child
             flex: 0 1 50%
             figure
@@ -48,6 +66,10 @@
         margin-bottom: 30px
         h2
             margin-bottom: 5px
+        p
+            @include media(768)
+                margin: auto
+                max-width: 440px
     .swiper-group
         .swiper
             .swiper-pagination
@@ -68,6 +90,10 @@
                             height: calc( 100vh - var(--headerheight) )
                             overflow: hidden
                             position: relative
+                            @include media(1024)
+                                height: calc(90vh - var(--headerheight))
+                            @include media(768)
+                                height: calc(70vh - var(--headerheight))
                             &::before
                                 content: ""
                                 position: absolute
@@ -110,6 +136,10 @@
         h2
             line-height: 1
     .swiper-group
+        .swiper-nav
+            width: fit-content
+            @include media(768)
+                top: -11%
         .swiper
             .swiper-wrapper
                 padding: 10px 0 
@@ -137,18 +167,28 @@
     .heading
         text-align: center
         margin-bottom: 30px
+        @include media(768)
+            margin-bottom: 50px
         h2
             margin-bottom: 10px
             line-height: 1
+            @include media(768)
+                max-width: 70%
+                margin: 0 auto 20px
         p
             max-width: 40%
             margin: auto
+            @include media(768)
+                max-width: 60%
     ul
         display: flex
         justify-content: center
         gap: 20px
         align-items: center
         margin-bottom: 30px
+        @include media(768)
+            justify-content: start
+            overflow: auto
         li
             border-radius: 60px
             padding: 12px 20px
@@ -156,6 +196,8 @@
             background: transparent
             color: #4B5563
             cursor: pointer
+            @include media(768)
+                white-space: nowrap
             &.active
                 background: $secondary
                 color: $white
@@ -180,15 +222,28 @@
         justify-content: space-between
         align-items: center
         gap: 50px
+        @include media(1024)
+            flex-direction: column
+            gap: 30px
         figcaption
             flex: 1
+            @include media(1024)
+                text-align: center
             h2
                 font-size: 48px
                 line-height: 1
                 margin-bottom: 20px
+                @include media(1024)
+                    margin-bottom: 10px
+                @include media(768)
+                    font-size: 36px
+                    margin: 0 auto 10px
+
             a
                 margin-top: 30px
                 display: inline-block
+                @include media(1024)
+                    margin-top: 20px
         figure
             width: 663px
             height: 390px
@@ -208,6 +263,8 @@
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 20px
+        @include media(1024)
+            grid-template-columns: repeat(2, 1fr)
         .col
             height: 300px
             border-radius: 10px
@@ -252,6 +309,8 @@
                         justify-content: space-between
                         align-items: center
                         gap: 40px
+                        @include media(768)
+                            gap: 20px
                         p
                             color: $white
                         button
@@ -270,11 +329,22 @@
         display: flex
         justify-content: space-between
         align-items: center
+        @include media(1024)
+            flex-direction: column
+            gap: 40px
         figcaption
             h2
                 font-size: 48px
                 line-height: 1.1
                 margin-bottom: 20px
+                @include media(1024)
+                    margin-bottom: 10px
+                @include media(768)
+                    font-size: 36px
+                    text-align: center
+            p
+                @include media(1024)
+                    text-align: center
             a
                 margin-top: 30px
                 display: inline-block
@@ -282,6 +352,8 @@
             display: grid
             grid-template-columns: repeat(3,1fr)
             gap: 10px
+            @include media(768)
+                grid-template-columns: repeat(2,1fr)
             .grid-box-item
                 background: $white
                 width: 100% 
@@ -311,18 +383,27 @@
     .heading
         text-align: left
         margin-bottom: 40px
+        @include media(1024)
+            text-align: center
         h2
             margin-bottom: 5px
     .flex-box
         display: flex
         gap: 40px
         justify-content: space-between
+        @include media(768)
+            justify-content: center
         figure
             width: 480px
             height: 532px
             border-radius: 20px
             line-height: 0
             overflow: hidden
+            @include media(1024)
+                position: sticky
+                top: calc( var(--headerheight) + 20px  )
+            @include media(768)
+                display: none
             img
                 height: 100%
                 width: 100%
@@ -331,6 +412,8 @@
             display: grid
             grid-template-columns: repeat(2, 1fr)
             gap: 30px 40px
+            @include media(768)
+                gap: 30px 80px
             .col
                 display: flex
                 gap: 20px
@@ -362,6 +445,10 @@
     .flex-box
         display: flex
         justify-content: center
+        @include media(1024)
+            justify-content: space-between
+        @include media(768)
+            flex-direction: column
         .col
             flex: 0 1 50%
         .col:first-child
@@ -369,6 +456,8 @@
                 font-size: 48px
                 line-height: 1.1
                 margin-bottom: 20px
+                @include media(1024)
+                    font-size: 36px
             p
                 color: #797979
                 max-width: 440px

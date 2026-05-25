@@ -1,6 +1,8 @@
 import Hero from '@/components/organisms/Hero'
 import React from 'react'
-import  "@/uploads/styles/travel-guide/travel-guide.css"
+import "@/uploads/styles/travel-guide/travel-guide.css"
+import AboutCity from './AboutCity'
+import ExploreLocalCulture from './ExploreLocalCulture'
 
 const TravelGuidePage = () => {
     return (
@@ -13,7 +15,9 @@ const TravelGuidePage = () => {
                 heading="A Thoughtful Journey Through Goa"
                 subHeading="Explore Goa,"
                 description="A thoughtfully curated North & South Goa travel guide blending culture, beaches, food, nature, and slow luxury."
-            />      
+            />
+            <AboutCity />
+            <ExploreLocalCulture />
         </>
     )
 }

@@ -31,4 +31,73 @@
 .travel-guide-banner p {
   margin: auto;
   max-width: 712px !important;
+}
+
+.travel-guide-secA {
+  padding: 60px 0;
+}
+.travel-guide-secA .heading {
+  text-align: center;
+}
+.travel-guide-secA .heading h2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+}
+.travel-guide-secA .heading p {
+  max-width: 550px;
+  margin: 20px auto 0;
+}
+.travel-guide-secA .heading h3 {
+  font-size: 60px;
+  font-weight: 400;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.travel-guide-secA .heading h3::before {
+  content: "";
+  background: var(--secondary);
+  width: 150px;
+  height: 1px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.travel-guide-secA figure {
+  margin: 40px auto 0;
+  line-height: 0;
+  max-width: 1080px;
+  height: 400px;
+  overflow: hidden;
+}
+.travel-guide-secA figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.travel-guide-secB {
+  padding: 50px 0;
+}
+.travel-guide-secB .tab-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.travel-guide-secB .tab-nav li {
+  background: #FAA935;
+  border: 1px solid #FAA935;
+  color: var(--white);
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: 0.5s ease;
+}
+.travel-guide-secB .tab-nav li:hover {
+  background: var(--white);
+  color: #FAA935;
 }/*# sourceMappingURL=travel-guide.css.map */
