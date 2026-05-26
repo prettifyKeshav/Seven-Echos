@@ -492,6 +492,11 @@
   line-height: 1.2;
   color: var(--black);
 }
+@media only screen and (max-width: 540px) {
+  .coastal-living-card figcaption h4 {
+    text-align: center;
+  }
+}
 
 .popular-things-card figure {
   height: 263px;

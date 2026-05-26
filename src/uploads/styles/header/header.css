@@ -3221,6 +3221,59 @@ footer .bottom-footer ul p {
 .footer-strip ul li a svg[fill] {
   fill: var(--white);
 }
+.footer-strip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background: var(--gradient-a);
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .footer-strip {
+    display: block;
+  }
+}
+.footer-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-strip ul li {
+  flex: 1;
+}
+.footer-strip ul li:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-strip ul li button {
+  width: 100%;
+}
+.footer-strip ul li a, .footer-strip ul li button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px;
+  color: var(--white);
+  font-size: 16px;
+  height: var(--footerstrip);
+}
+.footer-strip ul li a svg, .footer-strip ul li button svg {
+  width: 30px;
+  height: 30px;
+}
+.footer-strip ul li a svg[stroke], .footer-strip ul li button svg[stroke] {
+  stroke: var(--white);
+}
+.footer-strip ul li a svg[fill], .footer-strip ul li button svg[fill] {
+  fill: var(--white);
+}
+.footer-strip ul li a svg path[stroke], .footer-strip ul li button svg path[stroke] {
+  stroke: var(--white);
+}
+.footer-strip ul li a svg path[fill], .footer-strip ul li button svg path[fill] {
+  fill: var(--white);
+}
+
 .hero-banner {
   position: relative;
   color: white;
