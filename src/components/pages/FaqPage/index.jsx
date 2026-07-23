@@ -68,8 +68,7 @@ const FaqPage = () => {
                                     setActiveTab(i);
                                     setSearchQuery("");
                                 }}
-                                className={activeTab === i ? "active" : ""}
-                            >
+                                className={activeTab === i ? "active" : ""}>
                                 {item.title}
                             </li>
                         ))}

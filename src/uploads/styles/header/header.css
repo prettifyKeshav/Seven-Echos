@@ -2804,7 +2804,7 @@ footer .bottom-sec .grid-box .grid-box-item:nth-child(1) figure {
 }
 @media only screen and (max-width: 540px) {
   footer .bottom-sec .grid-box .grid-box-item:nth-child(1) figure {
-    width: 250px;
+    width: 150px;
     margin: 0 auto 30px;
   }
 }

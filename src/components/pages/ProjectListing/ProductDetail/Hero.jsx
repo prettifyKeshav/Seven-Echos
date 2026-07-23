@@ -10,7 +10,6 @@ import Motion from "@/components/organisms/Animate";
 import { GalleryBannerImg } from "@/data/ProductDetails/ProductDetails";
 
 const Hero = () => {
-
     useEffect(() => {
         Fancybox.bind("[data-fancybox='gallery']", {
             Thumbs: false,
