@@ -17,7 +17,7 @@
         margin: auto
         max-width: 712px !important
 
-.travel-guide-secA
+.direction-sec-secA
     padding: 60px 0
     .heading
         text-align: center
@@ -26,7 +26,7 @@
             font-size: 30px
             line-height: 1
         p
-            max-width: 550px
+            max-width: 590px
             margin: 20px auto 0
         h3
             font-size: 60px
@@ -44,7 +44,7 @@
                 left: 50%
                 transform: translate(-50%, -50%)
     figure
-        margin: 40px auto 0 
+        margin: 40px auto 0
         line-height: 0
         max-width: 1080px
         height: 400px
@@ -53,21 +53,263 @@
             height: 100%
             width: 100%
             object-fit: cover
-            
-.travel-guide-secB
-    padding: 50px 0
-    .tab-nav
+
+.travel-guide-secA
+    padding: 60px 0
+    .heading
+        text-align: center
+        h2
+            font-weight: 400
+            font-size: 30px
+            line-height: 1
+        p
+            max-width: 590px
+            margin: 20px auto 0
+        h3
+            font-size: 60px
+            font-weight: 400
+            position: relative
+            width: fit-content
+            margin: auto
+            &::before
+                content: ""
+                background: var(--secondary)
+                width: 150px
+                height: 1px
+                position: absolute
+                bottom: 0px
+                left: 50%
+                transform: translate(-50%, -50%)
+
+    .cat-grid-box
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 30px 
+        margin-top: 60px
+        .grid-box-item
+            flex: 0 1 50%
+            &:hover
+                figure
+                    .figinfo
+                        top: 0
+            figure
+                height: 473px
+                margin: 0
+                border-radius: 20px
+                line-height: 0
+                position: relative
+                overflow: hidden
+                backdrop-filter: blur(21px)
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+                .figinfo
+                    background: #FCC66FD9
+                    padding: 50px
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 100%
+                    left: 0
+                    text-align: center
+                    backdrop-filter: blur(6px)
+                    transition: 0.7s ease
+                    border-radius: 20px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    h4
+                        color: black
+                        font-size: 48px
+                        font-weight: 500
+                        line-height: 1.3
+                        margin-bottom: 20px
+                    p
+                        font-weight: 400
+                        font-size: 20px
+                        text-align: center
+                        color: black
+            .group-btn
+                width: 100%
+                text-align: center
+                .btn
+                    width: 80%
+                    margin: 20px auto 0 
+                    border-radius: 10px
+
+.journey-awaits-sec
+    padding: 70px 0
+    background: #49795A
+    .heading
+        text-align: center
+        h2
+            font-weight: 400
+            font-size: 30px
+            line-height: 1
+            color: white
+        p
+            max-width: 490px
+            margin: 20px auto 0
+            color: white
+        h3
+            font-size: 60px
+            font-weight: 400
+            position: relative
+            width: fit-content
+            margin: auto
+            color: white
+        h4
+            color: white
+            font-family: Kaushan Script
+            font-size: 55px
+            max-width: 100% !important
+            margin: 0px auto 40px !important
+            position: relative
+            display: inline-block
+            font-weight: 400
+            &::before
+                content: ""
+                background: var(--secondary)
+                width: 150px
+                height: 1px
+                position: absolute
+                bottom: -20px
+                left: 50%
+                transform: translate(-50%, -50%)
+    .group-btn
         display: flex
         justify-content: center
         align-items: center
+        margin: 40px auto 0 
         gap: 30px
-        li
-            background: #FAA935
-            border: 1px solid #FAA935
-            color: $white
-            border-radius: 25px
-            padding: 10px 20px
+        a
+            font-weight: 400
+            font-size: 16px
+            color: #49795A
+            background: white
+            padding: 8px 20px
+            border: 1px solid white
             transition: 0.5s ease
             &:hover
-                background: $white
-                color: #FAA935
+                background: transparent
+                color: white
+            &:last-child
+                background: transparent
+                color: white
+                &:hover
+                    background: white
+                    color: #49795A
+                
+
+.culture-heritage
+    padding: 50px 0
+    background: white   
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        margin-bottom: 30px
+        li
+            cursor: pointer
+            border-radius: 25px
+            padding: 10px 20px
+            border: 1px solid transparent
+            font-family: Marcellus
+            &.active
+                background: #FAA935
+                border: 1px solid #FAA935
+                color: $white
+                transition: 0.5s ease
+                
+    .heading
+        h2
+            text-align: center
+            font-weight: 700
+            font-size: 30px
+            margin-bottom: 30px
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 50px
+        &:nth-child(2n)
+            flex-direction: row-reverse
+        figure
+            flex: 0 1 50%
+            line-height: 0
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+        figcaption
+            flex: 0 1 50%
+            h3
+                font-weight: 400
+                font-size: 48px
+                color: black
+                line-height: 1
+                margin-bottom: 20px
+            p
+                max-width: 90%
+
+.explore-nearby
+    padding: 50px 0 
+    .tab-list 
+        display: grid
+        grid-template-columns: repeat(5,1fr)
+        gap: 10px
+        margin-bottom: 30px
+        li
+            cursor: pointer
+            border-radius: 25px
+            padding: 10px 20px
+            border: 1px solid transparent
+            font-family: Marcellus
+            text-align: center
+            &.active
+                background: #FAA935
+                border: 1px solid #FAA935
+                color: $white
+                transition: 0.5s ease
+    .heading
+        h2
+            text-align: center
+            font-weight: 700
+            font-size: 30px
+            margin-bottom: 30px
+    .grid-box 
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 24px
+        &.south-grid
+            grid-template-columns: repeat(2, 1fr)
+            figure
+                background: #0000004D
+            figcaption
+                backdrop-filter: none
+                
+    .box 
+        position: relative
+        overflow: hidden
+        figure 
+            img 
+                width: 100%
+                height: 310px
+                object-fit: cover
+                display: block
+        figcaption 
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            padding: 24px
+            color: #fff
+            backdrop-filter: blur(5.3828px)
+            background: linear-gradient( to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15), transparent )
+            h3 
+                margin-bottom: 10px
+                font-size: 22px
+            p
+                font-size: 16px
