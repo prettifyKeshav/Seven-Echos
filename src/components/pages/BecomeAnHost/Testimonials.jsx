@@ -19,7 +19,20 @@ const Testimonials = () => {
                                 swiperSlideCard="TestimonialsCard"
                                 spaceBetween="20"
                                 speed="800"
-                                slidesPerView="2"
+                                // slidesPerView="2"
+                                breakpoints={{
+                                    200: {
+                                        slidesPerView: 1.1,
+                                        spaceBetween: 20,
+                                        speed: 700,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                    },
+                                    1024: {
+                                        slidesPerView: 2,
+                                    }
+                                }}
                                 swiperNavBtn=""
                                 swiperNavClass=""
                                 navigation={true}

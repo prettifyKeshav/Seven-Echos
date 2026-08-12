@@ -135,11 +135,18 @@
             grid-template-columns: repeat(4,1fr)
             gap: 20px
             flex: 1
+            @include media(1024)
+                grid-template-columns: repeat(3,1fr)
+            @include media(768)
+                grid-template-columns: repeat(2,1fr)
+            @include media(540)
+                grid-template-columns: repeat(1,1fr)
             .product-card
+                min-width: 0
                 .hotel-card
                     figure
                         // width: 272px
-                        width: 287px
+                        width: 100%
                         height: 230px
 
 // Project Detail Sass ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -21,6 +21,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-banner {
+    padding-top: calc(100px + var(--headerheight));
+  }
+}
 .BecomeAnHost-banner::before {
   content: "";
   position: absolute;
@@ -42,6 +47,22 @@
   position: relative;
   z-index: 1;
 }
+@media only screen and (max-width: 1024px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper .col {
+    text-align: center;
+  }
+}
 .BecomeAnHost-banner .bg-background .container .bg-wrapper .col h1 {
   max-width: 510px;
   margin-bottom: 20px;
@@ -54,7 +75,6 @@
     line-height: 1.2;
     font-size: 40px;
     margin-left: 0;
-    text-align: center;
   }
 }
 @media only screen and (max-width: 540px) {
@@ -62,7 +82,6 @@
     max-width: 100%;
     font-size: 25px;
     line-height: 1.1;
-    text-align: center;
     padding: 0 20px;
     margin-bottom: 20px;
   }
@@ -75,6 +94,12 @@
   font-weight: 500;
   line-height: 1.4;
 }
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper .col p {
+    text-align: center;
+    margin: auto;
+  }
+}
 .BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child {
   width: 600px;
   height: -moz-fit-content;
@@ -83,6 +108,11 @@
   padding: 30px 20px;
   border-radius: 15px;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child {
+    width: 100%;
+  }
 }
 .BecomeAnHost-banner .bg-background .container .bg-wrapper .col:last-child h3 {
   font-size: 28px;
@@ -193,12 +223,24 @@
 .BecomeAnHost-secB .heading {
   text-align: left;
   margin-bottom: 30px;
+  width: 90%;
+}
+@media only screen and (max-width: 768px) {
+  .BecomeAnHost-secB .heading {
+    width: 70%;
+  }
 }
 .BecomeAnHost-secB .heading h2 {
   margin-bottom: 5px;
 }
 .BecomeAnHost-secB .swiper-nav {
   top: -14%;
+}
+@media only screen and (max-width: 1024px) {
+  .BecomeAnHost-secB .swiper-nav {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .BecomeAnHost-secC {
@@ -213,13 +255,28 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secC .grid-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .BecomeAnHost-secC .grid-box .col {
   box-shadow: 0px 0px 69.21px 28px rgba(0, 0, 0, 0.0509803922);
   padding: 20px 30px 50px 30px;
   border-radius: 10px;
 }
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secC .grid-box .col {
+    padding: 20px 20px 40px;
+  }
+}
 .BecomeAnHost-secC .grid-box .col:nth-child(3) {
   grid-column: span 2;
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secC .grid-box .col:nth-child(3) {
+    grid-column: span 1;
+  }
 }
 .BecomeAnHost-secC .grid-box .col h4 {
   color: var(--secondary);
@@ -231,6 +288,7 @@
   font-size: 18px;
   color: var(--secondary);
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 .BecomeAnHost-secC .grid-box .col p {
   font-size: 14px;
@@ -246,6 +304,11 @@
 
 .BecomeAnHost-secD {
   padding: 50px 0;
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secD {
+    padding: 20px 0 50px 0;
+  }
 }
 .BecomeAnHost-secD h2 {
   text-align: center;
@@ -270,6 +333,13 @@
 }
 .BecomeAnHost-secD .accordian-wrapper .title h4 {
   font-size: 24px;
+  width: 90%;
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secD .accordian-wrapper .title h4 {
+    font-size: 18px;
+    width: 90%;
+  }
 }
 .BecomeAnHost-secD .accordian-wrapper .title .ico {
   width: 33px;
@@ -279,6 +349,11 @@
   top: 29px;
   right: 30px;
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 540px) {
+  .BecomeAnHost-secD .accordian-wrapper .title .ico {
+    right: 10px;
+  }
 }
 .BecomeAnHost-secD .accordian-wrapper .title .ico img {
   height: 100%;

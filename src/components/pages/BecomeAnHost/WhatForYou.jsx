@@ -19,7 +19,21 @@ const WhatForYou = () => {
                                 swiperSlideCard="WhatForYouCard"
                                 spaceBetween="20"
                                 speed="800"
-                                slidesPerView="4"
+                                // slidesPerView="4"
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1.1,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                    },
+                                    1020: {
+                                        slidesPerView: 3,
+                                    },
+                                    1280: {
+                                        slidesPerView: 4,
+                                    },
+                                }}
                                 swiperNavBtn=""
                                 swiperNavClass=""
                                 navigation={true}

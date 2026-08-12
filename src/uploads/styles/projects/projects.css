@@ -166,8 +166,26 @@
   gap: 20px;
   flex: 1;
 }
+@media only screen and (max-width: 1024px) {
+  .projects-sec .flex-box .cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .projects-sec .flex-box .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .projects-sec .flex-box .cards-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.projects-sec .flex-box .cards-wrapper .product-card {
+  min-width: 0;
+}
 .projects-sec .flex-box .cards-wrapper .product-card .hotel-card figure {
-  width: 287px;
+  width: 100%;
   height: 230px;
 }
 
