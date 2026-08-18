@@ -2781,7 +2781,7 @@ footer .bottom-sec .grid-box {
 }
 @media only screen and (max-width: 540px) {
   footer .bottom-sec .grid-box {
-    gap: 10px;
+    gap: 30px;
   }
 }
 footer .bottom-sec .grid-box .grid-box-item:nth-child(1) figure {

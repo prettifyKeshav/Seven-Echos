@@ -552,7 +552,6 @@
   border: 1.2px solid #DDDFE3;
   padding: 10px;
   border-radius: 10px;
-  height: 264px;
   width: 100%;
   display: grid;
   grid-template-columns: 440px 1fr 200px;
@@ -560,11 +559,40 @@
   position: relative;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 1024px) {
+  .similar-properties-card {
+    grid-template-columns: 660px 1fr;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .similar-properties-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card {
+    gap: 0px;
+  }
+}
 .similar-properties-card .image-slider {
   height: 100%;
   border-radius: 7px;
   overflow: hidden;
   position: relative;
+  height: 264px;
+}
+@media only screen and (max-width: 1024px) {
+  .similar-properties-card .image-slider {
+    grid-column: 1/-1;
+    height: 420px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .image-slider {
+    height: 220px;
+  }
 }
 .similar-properties-card .image-slider .swiper {
   height: 100%;
@@ -597,9 +625,21 @@
   flex-direction: column;
   gap: 0.55rem;
 }
+@media only screen and (max-width: 1024px) {
+  .similar-properties-card .card-content {
+    padding: 0.5rem 0.5rem 0.5rem;
+  }
+}
 .similar-properties-card .card-content .top-flex {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .top-flex {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
 }
 .similar-properties-card .card-content .top-flex .rating-badge {
   display: flex;
@@ -644,6 +684,13 @@
   gap: 1.25rem;
   padding: 0 0 0 10px;
 }
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .villa-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
 .similar-properties-card .card-content .villa-meta .meta-item {
   display: flex;
   align-items: center;
@@ -652,8 +699,20 @@
   font-weight: 500;
   font-size: 16px;
 }
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .villa-meta .meta-item {
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+  }
+}
 .similar-properties-card .card-content .villa-meta .meta-icon {
   font-size: 1rem;
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .villa-meta .meta-icon {
+    line-height: 0;
+  }
 }
 .similar-properties-card .card-content .details-label {
   line-height: 1;
@@ -665,6 +724,12 @@
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .bottom-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .similar-properties-card .card-content .bottom-box .amenities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -672,6 +737,11 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 0 0 0 10px;
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .card-content .bottom-box .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .similar-properties-card .card-content .bottom-box .amenities-grid .amenity {
   display: flex;
@@ -712,6 +782,18 @@
   justify-content: space-between;
   gap: 1.5rem;
 }
+@media only screen and (max-width: 1024px) {
+  .similar-properties-card .pricing-panel {
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .pricing-panel {
+    border-left: none;
+    border-top: 1.2px solid #DDDFE3;
+    padding: 1rem 0 0 0;
+  }
+}
 .similar-properties-card .pricing-panel .not-available {
   font-weight: 400;
   font-size: 24px;
@@ -732,9 +814,19 @@
 .similar-properties-card .pricing-panel .price-block {
   text-align: right;
 }
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .pricing-panel .price-block {
+    text-align: left;
+  }
+}
 .similar-properties-card .pricing-panel .price-block .flex-box {
   justify-content: right;
   gap: 10px;
+}
+@media only screen and (max-width: 540px) {
+  .similar-properties-card .pricing-panel .price-block .flex-box {
+    justify-content: left;
+  }
 }
 .similar-properties-card .pricing-panel .price-block .price-original {
   font-weight: 400;
@@ -787,7 +879,7 @@
   cursor: pointer;
 }
 .accordian-wrapper.open .title {
-  padding: 40px 20px 0px 20px;
+  padding: 30px 20px 0px 20px;
 }
 .accordian-wrapper.open .title .ico {
   scale: 0;
@@ -796,8 +888,19 @@
   padding: 30px 20px;
   position: relative;
 }
+@media only screen and (max-width: 540px) {
+  .accordian-wrapper .title {
+    padding: 30px 45px 30px 20px;
+  }
+}
 .accordian-wrapper .title h4 {
   font-size: 24px;
+}
+@media only screen and (max-width: 540px) {
+  .accordian-wrapper .title h4 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
 }
 .accordian-wrapper .title .ico {
   width: 33px;
@@ -807,6 +910,11 @@
   top: 29px;
   right: 30px;
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 540px) {
+  .accordian-wrapper .title .ico {
+    right: 10px;
+  }
 }
 .accordian-wrapper .title .ico img {
   height: 100%;
@@ -823,8 +931,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 19.2px;
   padding: 15px;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 .add-on-service-card figure {
   height: 263px;

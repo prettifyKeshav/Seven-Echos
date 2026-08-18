@@ -20,6 +20,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 .booking-detail-secA .breadcrumb li a {
   color: #8B94A4;
@@ -45,6 +46,12 @@
   justify-content: space-between;
   gap: 100px;
   position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .booking-detail-secA .flex-box {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .booking-detail-secA .flex-box .col:first-child {
   flex: 1;
@@ -85,6 +92,13 @@
   align-items: center;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 540px) {
+  .booking-detail-secA .flex-box .col:first-child .group .gust-flex {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .booking-detail-secA .flex-box .col:first-child .group .gust-flex h4 {
   color: #454C58;
 }
@@ -117,6 +131,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 20px;
+}
+@media only screen and (max-width: 540px) {
+  .booking-detail-secA .flex-box .col:first-child .group .form-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 .booking-detail-secA .flex-box .col:first-child .group .form-wrapper .form-group.full {
   grid-column: span 2;
@@ -208,6 +227,11 @@
   position: sticky;
   top: calc(0px + var(--headerheight));
   padding: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .booking-detail-secA .flex-box .col:last-child {
+    width: 100%;
+  }
 }
 .booking-detail-secA .flex-box .col:last-child .hotel-info {
   display: flex;
@@ -460,6 +484,11 @@
   overflow: hidden;
   margin-top: 30px;
 }
+@media only screen and (max-width: 540px) {
+  .booking-detail-secC .property-table-card {
+    overflow-x: auto;
+  }
+}
 .booking-detail-secC .property-table-card table {
   width: 100%;
   border-collapse: collapse;
@@ -478,8 +507,21 @@
   font-weight: 600;
   padding: 8px 20px 8px 8px;
 }
+@media only screen and (max-width: 1024px) {
+  .booking-detail-secC .property-table-card tr td:nth-child(2) {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 8px 20px 8px 8px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .booking-detail-secC .property-table-card tr td:nth-child(3) {
+    padding: 8px 20px 8px 8px;
+    white-space: nowrap;
+  }
+}
 .booking-detail-secC .property-table-card .icon-cell {
-  width: 40px;
+  width: 50px;
   color: #000000;
   padding-right: 0;
 }
@@ -492,4 +534,10 @@
   color: #000000;
   font-size: 14px;
   white-space: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .filter-wrapper {
+    display: none;
+  }
 }/*# sourceMappingURL=booking-detail.css.map */

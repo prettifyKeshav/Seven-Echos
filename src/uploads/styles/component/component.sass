@@ -430,18 +430,32 @@
     border: 1.2px solid #DDDFE3
     padding: 10px
     border-radius: 10px
-    height: 264px
+    // height: 264px
     width: 100%
     display: grid
     grid-template-columns: 440px 1fr 200px
     overflow: hidden
     position: relative
     margin-bottom: 20px
+    @include media(1024)
+        grid-template-columns: 660px 1fr
+        gap: 20px
+    @include media(768)
+        grid-template-columns: 1fr
+        gap: 20px
+    @include media(540)
+        gap: 0px
     .image-slider
         height: 100%
         border-radius: 7px
         overflow: hidden
         position: relative
+        height: 264px
+        @include media(1024)
+            grid-column: 1 / -1
+            height: 420px
+        @include media(540)
+            height: 220px
         .swiper
             height: 100%
             width: 100%
@@ -470,10 +484,16 @@
         display: flex 
         flex-direction: column 
         gap: 0.55rem 
+        @include media(1024)
+            padding: 0.5rem 0.5rem 0.5rem
         .top-flex
             display: flex
             justify-content: space-between
             // margin-bottom: 10px
+            @include media(540)
+                flex-direction: column
+                gap: 10px
+                margin-bottom: 15px
             .rating-badge 
                 display: flex
                 gap: 10px
@@ -511,6 +531,10 @@
             display: flex 
             gap: 1.25rem 
             padding: 0 0 0 10px
+            @include media(540)
+                flex-direction: column
+                gap: 10px
+                align-items: flex-start
             .meta-item
                 display: flex 
                 align-items: center 
@@ -518,9 +542,14 @@
                 flex-direction: column
                 font-weight: 500
                 font-size: 16px
-
+                @include media(540)
+                    flex-direction: row
+                    gap: 6px
+                    align-items: center
             .meta-icon 
                 font-size: 1rem 
+                @include media(540)
+                    line-height: 0
         .details-label 
             line-height: 1
             font-weight: 500
@@ -529,12 +558,17 @@
         .bottom-box
             display: flex
             justify-content: space-between
+            @include media(540)
+                flex-direction: column
+                gap: 20px
             .amenities-grid 
                 display: grid 
                 grid-template-columns: repeat(3, 1fr)
                 gap: .3rem 0rem
                 width: fit-content
                 padding: 0 0 0 10px
+                @include media(540)
+                    grid-template-columns: repeat(2, 1fr)
                 .amenity 
                     display: flex 
                     align-items: center 
@@ -570,6 +604,12 @@
         align-items: flex-end
         justify-content: space-between 
         gap: 1.5rem
+        @include media(1024)
+            align-items: flex-start
+        @include media(540)
+            border-left: none
+            border-top: 1.2px solid #DDDFE3
+            padding: 1rem 0 0 0
         .not-available
             font-weight: 400
             font-size: 24px
@@ -588,9 +628,13 @@
             font-weight: 500
         .price-block 
             text-align: right 
+            @include media(540)
+                text-align: left
             .flex-box
                 justify-content: right
                 gap: 10px
+                @include media(540)
+                    justify-content: left
             .price-original 
                 font-weight: 400
                 font-size: 16px
@@ -635,14 +679,19 @@
     cursor: pointer
     &.open
         .title
-            padding: 40px 20px 0px 20px
+            padding: 30px 20px 0px 20px
             .ico
                 scale: 0
     .title
         padding: 30px 20px
         position: relative
+        @include media(540)
+            padding: 30px 45px 30px 20px
         h4
             font-size: 24px
+            @include media(540)
+                font-size: 18px
+                line-height: 1.2
         .ico
             width: 33px
             height: 33px
@@ -651,6 +700,8 @@
             top: 29px
             right: 30px
             transition: 0.5s ease
+            @include media(540)
+                right: 10px
             img
                 height: 100%
                 width: 100%
@@ -663,7 +714,7 @@
     border: 1px solid #00000033
     border-radius: 19.2px
     padding: 15px
-    width: fit-content
+    width: 100%
     figure
         height: 263px
         line-height: 0

@@ -9,6 +9,7 @@ import CustomSelect from '@/components/atom/CustomSelect';
 const ListingFilters = () => {
     const [selectedBedrooms, setSelectedBedrooms] = useState("")
     const [selectedBathrooms, setSelectedBathrooms] = useState("")
+    const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
     // const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -104,8 +105,28 @@ const ListingFilters = () => {
 
     return (
         <>
-            <div className={`listing-filter-wrapper filter-wrapper-fixed`}>
-                <div className="flex-wrapper">
+            <div className={`listing-filter-wrapper filter-wrapper-fixed ${isMobileFilterOpen ? 'is-mobile-open' : ''}`}>
+                <div className="mobile-filter-trigger" onClick={() => setIsMobileFilterOpen((prev) => !prev)}>
+                    <div className="trigger-content">
+                        <figure className="filter-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <path fill="none" stroke="#1f2226" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M7 12h10M10 18h4" />
+                            </svg>
+                        </figure>
+                        <span>{isMobileFilterOpen ? "Close Filter" : "Filter"}</span>
+                    </div>
+                </div>
+
+                <div className={`flex-wrapper ${isMobileFilterOpen ? 'mobile-visible' : ''}`}>
+                    <div className="mobile-filter-header">
+                        <span className="mobile-filter-title">Filters</span>
+                        <button type="button" className="mobile-close-btn" onClick={() => setIsMobileFilterOpen(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                            <span>Close</span>
+                        </button>
+                    </div>
                     <div className="col" onClick={handleToggle}>
                         <figure>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -408,7 +429,7 @@ const ListingFilters = () => {
                         </div>
 
                     </div>
-                    
+
                 </div>
             </div>
         </>

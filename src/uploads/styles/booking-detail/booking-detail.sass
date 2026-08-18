@@ -8,6 +8,7 @@
         align-items: center
         gap: 10px
         margin-bottom: 40px
+        flex-wrap: wrap
         li
             a
                 color: #8B94A4
@@ -28,6 +29,9 @@
         justify-content: space-between
         gap: 100px
         position: relative
+        @include media(1024)
+            flex-direction: column
+            gap: 30px
         .col:first-child
             flex: 1
             .group
@@ -59,6 +63,10 @@
                     justify-content: space-between
                     align-items: center
                     margin-bottom: 15px
+                    @include media(540)
+                        flex-direction: column-reverse
+                        align-items: flex-start
+                        gap: 10px
                     h4
                         color: #454C58
                     .rig
@@ -85,6 +93,8 @@
                     display: grid
                     grid-template-columns: repeat(2,1fr)
                     gap: 20px 20px
+                    @include media(540)
+                        grid-template-columns: 1fr
                     .form-group
                         &.full
                             grid-column: span 2
@@ -165,7 +175,8 @@
             position: sticky
             top: calc( 0px + var(--headerheight) )
             padding: 20px 
-
+            @include media(1024)
+                width: 100%
             .hotel-info 
                 display: flex 
                 gap: 14px 
@@ -278,9 +289,9 @@
                     margin-bottom: 12px 
                     font-size: 14px 
                 .total-row
-                    border-top: 1px solid #ddd 
+                    border-top: 1px solid #ddd
                     padding-top: 14px
-                    margin-top: 12px 
+                    margin-top: 12px
                     display: flex 
                     justify-content: space-between 
                     align-items: flex-start 
@@ -369,9 +380,11 @@
     .property-table-card 
         background: #ffffff 
         border: 1px solid #e0e0e0 
-        border-radius: 12px 
+        border-radius: 12px
         overflow: hidden
         margin-top: 30px
+        @include media(540)
+            overflow-x: auto
         table 
             width: 100% 
             border-collapse: collapse 
@@ -389,9 +402,16 @@
                     width: 340px
                     font-weight: 600
                     padding: 8px 20px 8px 8px
+                    @include media(1024)
+                        width: fit-content
+                        padding: 8px 20px 8px 8px
+                &:nth-child(3)
+                    @include media(540)
+                        padding: 8px 20px 8px 8px
+                        white-space: nowrap
                     
         .icon-cell 
-            width: 40px
+            width: 50px
             color: #000000
             padding-right: 0 
             i
@@ -401,4 +421,8 @@
             text-align: right 
             color: #000000
             font-size: 14px 
-            white-space: nowrap 
+            white-space: nowrap
+
+.filter-wrapper
+    @include media(768)
+        display: none

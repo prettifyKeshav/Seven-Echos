@@ -248,12 +248,28 @@ const BookingDetailPage = () => {
                             data={AddOnServiceCardData}
                             spaceBetween="10"
                             speed="800"
-                            slidesPerView="4"
+                            // slidesPerView="4"
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1.1,
+                                },
+                                540: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                                1280: {
+                                    slidesPerView: 4,
+                                },
+                            }}
                             swiperSlideCard="AddOnServiceCard"
                             showPagination={false}
                             navigation={true}
                         />
-
                     </div>
                 </div>
             </section>

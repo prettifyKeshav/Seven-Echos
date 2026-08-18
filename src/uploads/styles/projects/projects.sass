@@ -5,18 +5,23 @@
 #most-popular-things,
 #similar-properties,
 #policy,
-#reviews, 
+#reviews,
 #faq
     scroll-margin-top: 100px
 
-.project-banner
+.hero-banner.project-banner
     height: 80vh
-    .bg-wrapper
-        text-align: center
-        h1
-            margin: 0 auto 20px
-        p
-            margin: 0 auto 20px
+    @include media(540)
+        height: 50vh
+    .bg-background .container 
+        .bg-wrapper
+            text-align: center
+            h1
+                margin: 0 auto 20px
+            p
+                margin: 0 auto 20px
+                @include media(540)
+                    font-size: 16px
 
 .listing-filter-wrapper
     margin: 0px auto 0
@@ -25,7 +30,7 @@
     max-width: 100%
     position: sticky
     top: var(--headerheight)
-    z-index: 4  
+    z-index: 4
     background: $white
     box-shadow: 0 2px 5px 2px rgba(99, 99, 99, .2)
     transition: 0.7s ease
@@ -34,6 +39,31 @@
     align-items: center
     padding: 12px 25px
     transition: 0.7s ease
+    .mobile-filter-trigger
+        display: none
+        width: auto
+        cursor: pointer
+        .trigger-content
+            display: flex
+            align-items: center
+            gap: 8px
+            padding: 8px 16px
+            border: 1px solid lab(88 0 -0.01)
+            border-radius: 6px
+            background: $white
+            font-weight: 500
+            font-size: 14px
+            color: #1F2226
+            figure
+                display: flex
+                align-items: center
+                justify-content: center
+                margin: 0
+                width: 18px
+                height: 18px
+                svg
+                    width: 100%
+                    height: 100%
     .flex-wrapper
         width: 100%
         margin: auto
@@ -41,6 +71,33 @@
         justify-content: start
         align-items: center
         gap: 10px
+        .mobile-filter-header
+            display: none
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            padding-bottom: 10px
+            border-bottom: 1px solid #eee
+            margin-bottom: 5px
+            .mobile-filter-title
+                font-weight: 600
+                font-size: 16px
+                color: #1F2226
+            .mobile-close-btn
+                display: flex
+                align-items: center
+                gap: 6px
+                background: transparent
+                border: 1px solid #ddd
+                border-radius: 4px
+                padding: 4px 10px
+                font-size: 13px
+                font-weight: 500
+                color: #555
+                cursor: pointer
+                &:hover
+                    background: #f5f5f5
+                    color: #1F2226
         .col
             border: 1px solid lab(88 0 -0.01)
             padding: 12px 10px
@@ -114,10 +171,33 @@
                     align-items: center
                     padding: 0 20px
                     margin-bottom: 20px
-
+    @include media(767)
+        padding: 10px 15px
+        flex-direction: column
+        align-items: flex-start
+        .mobile-filter-trigger
+            display: flex
+        .flex-wrapper
+            display: none
+            flex-direction: column
+            gap: 12px
+            width: 100%
+            margin-top: 10px
+            &.mobile-visible
+                display: flex
+            .mobile-filter-header
+                display: flex
+            .col
+                width: 100%
+                &:has(.custom-select-box)
+                    width: 100%
+                &:has(.flight-price-range)
+                    width: 100%
+                .flight-price-range
+                    width: 100%
 
 .projects-sec
-    margin: 50px 0 
+    margin: 50px 0
     .flex-box
         display: flex
         gap: 40px
@@ -152,8 +232,7 @@
 // Project Detail Sass ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .project-detail-page
-    padding: 0 0 60px 0 
-
+    padding: 0 0 60px 0
     .filter-wrapper
         margin: 30px auto 0
         // height: 50px
@@ -171,6 +250,8 @@
         padding: 12px 25px
         border-radius: 10px
         transition: 0.7s ease
+        @include media(768)
+            display: none
         &.filter-wrapper-fixed
             max-width: 100%
             border-radius: 0px
@@ -190,7 +271,7 @@
                 flex: 1
                 .col
                     // border: 1px solid red
-                    height: 40px 
+                    height: 40px
                     display: flex
                     justify-content: start
                     align-items: center
@@ -224,7 +305,7 @@
                 align-items: center
                 gap: 5px
                 padding: 8px 20px
-                border-radius: 25px 
+                border-radius: 25px
                 transition: 0.5s ease
                 &:hover
                     background: #ffa423
@@ -243,6 +324,8 @@
             align-items: center
             gap: 10px
             margin-bottom: 40px
+            @include media(768)
+                margin-bottom: 30px
             li
                 a
                     color: #8B94A4
@@ -257,6 +340,10 @@
                 grid-template-columns: repeat(4, 1fr)
                 gap: 15px
                 position: relative
+                @include media(1024)
+                    grid-template-columns: repeat(3, 1fr)
+                @include media(540)
+                    grid-template-columns: repeat(2, 1fr)
                 .more-img-ico
                     position: absolute
                     right: 20px
@@ -268,7 +355,7 @@
                     display: flex
                     justify-content: center
                     align-items: center
-                    color: white 
+                    color: white
                     gap: 10px
                     pointer-events: none
                     figure
@@ -289,8 +376,13 @@
                     display: none
                     &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5)
                         display: block
+                    @include media(768)
+                        &:nth-child(6)
+                            display: block
+                    @include media(540)
+                        &:nth-child(4),&:nth-child(5),&:nth-child(6)
+                            display: none
                     &:nth-child(5)
-
                     img
                         height: 100%
                         width: 100%
@@ -300,15 +392,28 @@
                         grid-row: span 2
             .project-info
                 display: flex
-                justify-content: space-between  
-                margin: 30px 0 0 0 
+                justify-content: space-between
+                margin: 30px 0 0 0
+                @include media(768)
+                    flex-direction: column
+                    gap: 20px
                 .col:first-child
                     display: flex
                     justify-content: start
                     align-items: baseline
                     gap: 25px
+                    @include media(540)
+                        // flex-direction: column
+                        // align-items: flex-start
+                        // gap: 10px
+                        display: grid
+                        grid-template-columns: repeat(2, 1fr)
+                        gap: 10px
                     .item:nth-child(1)
                         display: block
+                        @include media(540)
+                            grid-column: span 2
+                            grid-row: span 1
                         h1
                             line-height: 1
                             font-size: 38px
@@ -351,15 +456,24 @@
             display: flex
             justify-content: space-between
             align-items: center
+            @include media(1024)
+                flex-direction: column
+                align-items: flex-start
+                gap: 20px
         ul
             display: flex
             gap: 30px
             align-items: center
+            width: 100%
+            @include media(1024)
+                overflow-x: auto
+            @include media(768)
             li
                 color: #8B94A4
-                padding: 0 0 13px 0 
+                padding: 0 0 13px 0
                 position: relative
                 cursor: pointer
+                white-space: nowrap
                 &::before
                     content: ""
                     position: absolute
@@ -373,7 +487,7 @@
                     a
                         color: $secondary
                     &::before
-                        width: 100% 
+                        width: 100%
                 a
                     color: #8B94A4
         .btn-borchure
@@ -398,6 +512,9 @@
             display: flex
             justify-content: space-between
             gap: 100px
+            @include media(1024)
+                flex-direction: column
+                gap: 0px
             .flex-box-item:first-child
                 flex: 1
                 p
@@ -408,11 +525,13 @@
                 .btn-border
                     margin-top: 30px
                 .col
-                    margin: 0 0 30px 0 
+                    margin: 0 0 30px 0
                 .grid-box
                     display: grid
                     grid-template-columns: repeat(3 ,1fr)
                     gap: 20px 30px
+                    @include media(540)
+                        grid-template-columns: repeat(2, 1fr)
                     .grid-box-item
                         display: flex
                         gap: 10px
@@ -424,6 +543,11 @@
                 height: fit-content
                 border-radius: 20px
                 position: relative
+                @include media(1024)
+                    width: 100%
+                    margin-bottom: 30px
+                @include media(540)
+                    padding: 10px
                 .date-dropdown
                     top: 0%
                     left: initial
@@ -433,59 +557,59 @@
                     top: 0%
                     left: initial
                     right: 100%
-                .hotel-content 
-                    flex: 1 
-                .hotel-title 
-                    display: flex 
-                    justify-content: space-between 
-                    align-items: center 
+                .hotel-content
+                    flex: 1
+                .hotel-title
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
                     gap: 10px
-                    h3 
+                    h3
                         font-size: 18px
                         font-weight: 600
-                    .stars 
+                    .stars
                         color: #FDA118
-                        font-size: 14px 
-                        white-space: nowrap 
-                .location 
-                    color: #777 
-                    margin-top: 6px 
-                    font-size: 14px 
-                .rating 
-                    margin-top: 12px 
-                    display: flex 
-                    align-items: center 
-                    gap: 6px 
-                    flex-wrap: wrap 
-                    .score 
+                        font-size: 14px
+                        white-space: nowrap
+                .location
+                    color: #777
+                    margin-top: 6px
+                    font-size: 14px
+                .rating
+                    margin-top: 12px
+                    display: flex
+                    align-items: center
+                    gap: 6px
+                    flex-wrap: wrap
+                    .score
                         background: #F1F2F3
                         color: #FDA118
-                        padding: 2px 6px 
+                        padding: 2px 6px
                         border-top-left-radius: 10px
                         border-bottom-left-radius: 10px
                         border-bottom-right-radius: 10px
-                        font-size: 13px 
-                        font-weight: 600 
-                    .excellent 
-                        color: #ff9900 
-                        font-weight: 600 
-                        font-size: 14px 
-                    .reviews 
-                        color: #888 
-                        font-size: 13px 
-                .booking-details 
+                        font-size: 13px
+                        font-weight: 600
+                    .excellent
+                        color: #ff9900
+                        font-weight: 600
+                        font-size: 14px
+                    .reviews
+                        color: #888
+                        font-size: 13px
+                .booking-details
                     border: 1.2px solid #DDDFE3
-                    border-radius: 10px 
-                    .dates 
-                        display: flex 
-                        align-items: center 
+                    border-radius: 10px
+                    .dates
+                        display: flex
+                        align-items: center
                         padding: 12px
                         position: relative
-                        .date-box 
-                            flex: 1 
+                        .date-box
+                            flex: 1
                             align-items: center
                             cursor: pointer
-                            .label 
+                            .label
                                 display: flex
                                 align-items: center
                                 color: #2B3037
@@ -494,34 +618,34 @@
                                 span
                                     color: #2B3037
                             .check-in-date,.check-out-date
-                                font-size: 15px 
+                                font-size: 15px
                                 font-weight: 400
-                                color: #383E48 
+                                color: #383E48
                                 margin-bottom: 4px
                                 padding-left: 32px
                             .check-in-time,.check-out-time
-                                font-size: 13px 
+                                font-size: 13px
                                 font-weight: 400
                                 padding-left: 32px
-                                color: #383E48 
-                        .divider 
-                            width: 1px 
-                            height: 48px 
-                            background: #ddd 
-                            margin: 0 16px 
-                    .guest-info 
-                        border-top: 1px solid #ddd 
+                                color: #383E48
+                        .divider
+                            width: 1px
+                            height: 48px
+                            background: #ddd
+                            margin: 0 16px
+                    .guest-info
+                        border-top: 1px solid #ddd
                         padding: 12px
                         display: flex
                         justify-content: space-between
                         align-items: center
-                        h4  
+                        h4
                             color: #2B3037
                             font-weight: 500
                             font-size: 18px
                             line-height: 2
 
-                        p 
+                        p
                             color: #383E48
                             font-weight: 500
                             font-size: 18px
@@ -533,7 +657,7 @@
                         border: 1.2px solid #DDDFE3
                         width: 100%
                         border-radius: 10px
-                        margin: 10px 0 
+                        margin: 10px 0
                         font-size: 18px
                         &::placeholder
                             color: #BCBCBC
@@ -542,7 +666,7 @@
                     justify-content: start
                     align-items: center
                     gap: 10px
-                    margin: 5px 0   
+                    margin: 5px 0
                     figure
                         width: 20px
                         height: 20px
@@ -555,7 +679,7 @@
                         color: #FDA118
                         font-size: 15px
                         font-weight: normal
-                
+
                 .badge
                     border: 1.2px solid #0AFF3B
                     background: #DCF7DB
@@ -564,11 +688,11 @@
                     justify-content: space-between
                     align-items: center
                     border-radius: 6px
-                    margin: 10px 0 
+                    margin: 10px 0
                     p
                         font-size: 16px
                         font-weight: normal
-                        color: #000000 
+                        color: #000000
                     a
                         line-height: 0
                 .cancellation
@@ -590,7 +714,7 @@
                     display: flex
                     justify-content: space-between
                     align-items: center
-                    margin: 10px 0 
+                    margin: 10px 0
                     .tot
                         display: flex
                         flex-direction: column
@@ -607,38 +731,36 @@
                             color: #2B3037
                             font-weight: 400
                             font-size: 14px
-
-                .pay-btn 
-                    width: 100% 
+                .pay-btn
+                    width: 100%
                     background: #FDA118
                     border: none
-                    border-radius: 10px 
-                    color: #fff 
-                    font-size: 18px 
-                    font-weight: 600 
-                    cursor: pointer 
-                    margin-top: 10px 
+                    border-radius: 10px
+                    color: #fff
+                    font-size: 18px
+                    font-weight: 600
+                    cursor: pointer
+                    margin-top: 10px
                     padding: 11px 0
                     display: inline-block
                     text-align: center
-                    &:hover 
-                        opacity: 0.9 
+                    &:hover
+                        opacity: 0.9
                 .contact-btn
-                    width: 100% 
+                    width: 100%
                     border: 1px solid $black
-                    border-radius: 10px 
+                    border-radius: 10px
                     color: #000000
-                    font-size: 14px 
-                    cursor: pointer 
-                    margin-top: 10px 
-                    padding: 11px 0 
+                    font-size: 14px
+                    cursor: pointer
+                    margin-top: 10px
+                    padding: 11px 0
                     display: flex
                     justify-content: center
                     align-items: center
                     gap: 5px
-                    &:hover 
-                        opacity: 0.9 
-                
+                    &:hover
+                        opacity: 0.9
 
     .project-detail-secD
         .map-wrapper
@@ -647,6 +769,8 @@
             height: 500px
             overflow: hidden
             border-radius: 10px
+            @include media(540)
+                height: 340px
             iframe
                 width: 100%
                 height: 100%
@@ -655,12 +779,21 @@
             display: flex
             justify-content: space-between
             gap: 20px
-            margin: 30px 0 
+            margin: 30px 0
+            @include media(1024)
+                flex-direction: column
+                gap: 30px
             .flex-box-item:first-child
                 ul
                     display: flex
                     justify-content: space-between
                     gap: 0px
+                    @include media(1024)
+                        gap: 20px
+                        justify-content: start
+                    @include media(540)
+                        overflow-x: auto
+                        width: 100%
                     li
                         padding: 8px 24px
                         transition: 0.5s ease
@@ -674,13 +807,15 @@
                         padding: 8px 14px
                         display: flex
                         width: fit-content
+                        @include media(540)
+                            white-space: nowrap
                         &.active
                             border: 1px solid $secondary
                             color: $secondary
                             figure
                                 img
                                     filter: brightness(0) saturate(100%) invert(73%) sepia(63%) saturate(1372%) hue-rotate(343deg) brightness(101%) contrast(96%)
-                        
+
                         figure
                             line-height: 0
                             width: 25px
@@ -689,36 +824,36 @@
                                 height: 100%
                                 width: 100%
                                 object-fit: contain
-                .card 
-                    background: #ffffff 
-                    border: 1px solid #e0e0e0 
-                    border-radius: 12px 
+                .card
+                    background: #ffffff
+                    border: 1px solid #e0e0e0
+                    border-radius: 12px
                     overflow: hidden
                     margin-top: 30px
-                table 
-                    width: 100% 
-                    border-collapse: collapse 
-                td 
+                table
+                    width: 100%
+                    border-collapse: collapse
+                td
                     padding: 8px 20px
-                    border-bottom: 1px solid #f0f0f0 
-                    font-size: 15px 
+                    border-bottom: 1px solid #f0f0f0
+                    font-size: 15px
                     color: #000000
-                tr 
-                    &:last-child 
-                        td 
-                            border-bottom: none 
-                .icon-cell 
+                tr
+                    &:last-child
+                        td
+                            border-bottom: none
+                .icon-cell
                     width: 40px
                     color: #000000
-                    padding-right: 0 
+                    padding-right: 0
                     i
-                        font-size: 18px 
-                        vertical-align: middle 
-                .distance-cell 
-                    text-align: right 
+                        font-size: 18px
+                        vertical-align: middle
+                .distance-cell
+                    text-align: right
                     color: #000000
-                    font-size: 14px 
-                    white-space: nowrap 
+                    font-size: 14px
+                    white-space: nowrap
             .flex-box-item
                 flex: 0 1 50%
                 p
@@ -743,6 +878,9 @@
             gap: 20px
             align-items: center
             margin-bottom: 30px
+            @include media(540)
+                overflow-x: auto
+                width: 100%
             li
                 border-radius: 60px
                 padding: 8px 20px
@@ -751,6 +889,8 @@
                 color: $black
                 cursor: pointer
                 border: 1px solid #121316
+                @include media(540)
+                    white-space: nowrap
                 &.active
                     background: $secondary
                     border: 1px solid $secondary
@@ -774,53 +914,66 @@
                 color: #8B94A4
                 font-weight: 500
                 font-size: 18px
-        .property-table-card 
-            background: #ffffff 
-            border: 1px solid #e0e0e0 
-            border-radius: 12px 
+        .property-table-card
+            background: #ffffff
+            border: 1px solid #e0e0e0
+            border-radius: 12px
             overflow: hidden
             margin-top: 30px
-            table 
-                width: 100% 
-                border-collapse: collapse 
-            td 
+            @include media(540)
+                overflow-x: auto
+            table
+                width: 100%
+                border-collapse: collapse
+            td
                 padding: 8px 20px
-                border-bottom: 1px solid #f0f0f0 
-                font-size: 15px 
+                border-bottom: 1px solid #f0f0f0
+                font-size: 15px
                 color: #000000
-            tr 
-                &:last-child 
-                    td 
-                        border-bottom: none 
+            tr
+                &:last-child
+                    td
+                        border-bottom: none
                 td
                     &:nth-child(2)
                         width: 340px
                         font-weight: 600
                         padding: 8px 20px 8px 8px
-                        
-            .icon-cell 
-                width: 40px
+                        @include media(768)
+                            width: fit-content
+                            padding: 8px 20px 8px 8px
+                    &:nth-child(3)
+                        @include media(540)
+                            padding: 8px 20px 8px 8px
+                            white-space: nowrap
+
+            .icon-cell
+                width: 50px
                 color: #000000
-                padding-right: 0 
+                padding-right: 0
                 i
-                    font-size: 18px 
-                    vertical-align: middle 
-            .distance-cell 
-                text-align: right 
+                    font-size: 18px
+                    vertical-align: middle
+            .distance-cell
+                text-align: right
                 color: #000000
-                font-size: 14px 
-                white-space: nowrap 
+                font-size: 14px
+                white-space: nowrap
 
     .project-detail-secH
-        padding: 10px 0 50px 0 
-        .overall-badge 
+        padding: 10px 0 50px 0
+        .flex-box
+            @include media(1024)
+                flex-direction: column
+                gap: 30px
+        .overall-badge
             display: flex
             align-items: center
             gap: 5px
-            margin-bottom: 20px 
-            .score 
+            margin-bottom: 20px
+            .score
                 font-size: 15px
-                font-weight: bold            
+                font-weight: bold
                 background: #F1F2F3
                 font-weight: 500
                 font-size: 18px
@@ -837,13 +990,13 @@
                 border-top-left-radius: 18px
                 border-bottom-right-radius: 12px
                 border-bottom-left-radius: 18px
-            .label 
+            .label
                 font-size: 16px
                 font-weight: 600
                 color: $secondary
                 padding: 2px 8px
                 border-radius: 4px
-            .count 
+            .count
                 font-size: 16px
                 color: #8B94A4
                 font-weight: 500
@@ -851,35 +1004,42 @@
             display: grid
             grid-template-columns: 200px 1fr
             gap: 24px
-            .bar-chart 
-                display: flex 
-                flex-direction: column 
-                gap: 4px 
-                min-width: 120px 
-                .bar-row 
-                    display: flex 
-                    align-items: center 
-                    gap: 6px 
-                    font-size: 14px 
+            @include media(1024)
+                grid-template-columns: 1fr
+            .bar-chart
+                display: flex
+                flex-direction: column
+                gap: 4px
+                min-width: 120px
+                .bar-row
+                    display: flex
+                    align-items: center
+                    gap: 6px
+                    font-size: 14px
                     color: $black
                     font-weight: 600
-                    .bar-num 
-                        width: 8px 
-                        text-align: right 
-                .bar-track 
-                    flex: 1 
-                    height: 6px 
+                    .bar-num
+                        width: 8px
+                        text-align: right
+                .bar-track
+                    flex: 1
+                    height: 6px
                     background-color: #DDDFE3
-                    border-radius: 3px 
-                    overflow: hidden 
-                .bar-fill 
-                    height: 100% 
-                    background-color: $secondary 
-                    border-radius: 3px 
+                    border-radius: 3px
+                    overflow: hidden
+                .bar-fill
+                    height: 100%
+                    background-color: $secondary
+                    border-radius: 3px
 
         .category-scores
             display: flex
             width: 100%
+            @include media(540)
+                flex-direction: column
+                gap: 0px
+                justify-content: start
+                align-items: flex-start
             .category-item
                 width: 100%
                 text-align: center
@@ -889,6 +1049,12 @@
                 align-items: center
                 flex-direction: column
                 gap: 10px
+                @include media(540)
+                    border-left: none
+                    border-top: 1px solid #DDDFE3
+                    padding: 10px 10px
+                    gap: 0px
+                    align-items: flex-start
                 .inner-flex
                     display: flex
                     align-items: center
@@ -898,58 +1064,60 @@
                         font-size: 18px
                 .cat-score
                     font-size: 20px
-
         .reviews-cards
-            display: grid 
-            grid-template-columns: repeat(3, 1fr) 
-            gap: 20px 
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 20px
             margin-top: 40px
-            .review-card 
+            @include media(768)
+                grid-template-columns: 1fr
+                gap: 20px
+            .review-card
                 border: 1.2px solid #DDDFE3
-                border-radius: 8px 
-                padding: 16px 
-                background-color: #fff 
-            .review-header 
-                display: flex 
-                align-items: center 
-                justify-content: space-between 
-                margin-bottom: 10px 
-            .reviewer-info 
-                display: flex 
-                align-items: center 
-                gap: 10px 
-            .avatar 
-                width: 38px 
-                height: 38px 
-                border-radius: 50% 
-                display: flex 
-                align-items: center 
-                justify-content: center 
-                font-weight: bold 
-                font-size: 14px 
-                color: #fff 
-                flex-shrink: 0 
+                border-radius: 8px
+                padding: 16px
+                background-color: #fff
+            .review-header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 10px
+            .reviewer-info
+                display: flex
+                align-items: center
+                gap: 10px
+            .avatar
+                width: 38px
+                height: 38px
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: bold
+                font-size: 14px
+                color: #fff
+                flex-shrink: 0
             figure
-                width: 38px 
-                height: 38px 
+                width: 38px
+                height: 38px
                 border-radius: 50%
                 overflow: hidden
                 img
                     height: 100%
                     width: 100%
                     object-fit: cover
-            .avatar-teal 
-                background-color: #2b9e8a 
-            .avatar-amber 
-                background-color: #c47a1e 
-            .reviewer-name 
-                font-size: 14px 
-                font-weight: bold 
-                color: #222 
-            .review-date 
-                font-size: 12px 
-                color: #888 
-            .review-score 
+            .avatar-teal
+                background-color: #2b9e8a
+            .avatar-amber
+                background-color: #c47a1e
+            .reviewer-name
+                font-size: 14px
+                font-weight: bold
+                color: #222
+            .review-date
+                font-size: 12px
+                color: #888
+            .review-score
                 text-align: center
                 color: var(--secondary)
                 background: #f1f2f3
@@ -965,21 +1133,21 @@
                 font-size: 18px
                 font-weight: 500
                 display: flex
-            .review-text 
+            .review-text
                 font-size: 14px
                 color: #2B3037
                 line-height: 1.4
-                overflow: hidden 
-            .show-more 
-                display: block 
-                text-align: right 
-                margin-top: 10px 
-                font-size: 16px 
+                overflow: hidden
+            .show-more
+                display: block
+                text-align: right
+                margin-top: 10px
+                font-size: 16px
                 font-weight: 500
                 color: #656F81
                 cursor: pointe
-                background: none 
-                border: none 
+                background: none
+                border: none
                 width: 100%
 
     .project-detail-secI
@@ -988,6 +1156,10 @@
             justify-content: space-between
             align-items: center
             margin-bottom: 20px
+            @include media(540)
+                flex-direction: column
+                align-items: flex-start
+                gap: 10px
             .search-group
                 border: 1.2px solid #DDDFE3
                 border-radius: 14.4px
@@ -996,7 +1168,7 @@
                 align-items: center
                 gap: 6px
                 padding: 0 10px 0 10px
-                    
+
                 input
                     border: none
                     outline: none
@@ -1012,6 +1184,9 @@
             gap: 20px
             align-items: center
             margin-bottom: 40px
+            @include media(1024)
+                overflow-x: auto
+                -webkit-overflow-scrolling: touch
             li
                 border: 1px solid #DDDFE3
                 border-radius: 10px

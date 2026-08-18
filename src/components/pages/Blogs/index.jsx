@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <>
       <Hero
-        bannerClassName="about-banner"
+        bannerClassName="blog-banner"
         imgSrc="/assets/images/about/banner.jpg"
         imgHeight="626"
         imgWidth="1028"
