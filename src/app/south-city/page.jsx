@@ -1,5 +1,5 @@
 import React from 'react'
-import SouthCityPage from '../../../components/frontendcomponents/pages/SouthCityPage'
+import SouthCityPage from '../../components/pages/SouthCityPage/index'
 
 const page = () => {
     return (

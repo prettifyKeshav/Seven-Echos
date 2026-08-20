@@ -122,4 +122,15 @@
 }
 .blog-secB .container .blog-article img {
   margin: 26px 0;
+}
+.blog-secB .container .sidebar .social-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.blog-secB .container .sidebar .social-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=blogs-detail.css.map */

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '@/components/frontendcomponents/organisms/Hero'
+import Hero from '../../organisms/Hero'
 import "@/uploads/styles/travel-guide/travel-guide.css"
 import DirectionSec from '../TravelGuidePage/DirectionSec'
 import JourneyAwaitsSec from '../TravelGuidePage/JourneyAwaitsSec'
